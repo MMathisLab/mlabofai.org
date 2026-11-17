@@ -101,7 +101,10 @@
       '<div class="pub-icon a-' + area + (p.thumb ? " has-thumb" : "") + '" title="' + esc(areaName[area]) + '">' + icon + "</div>" +
       '<div class="pub-venue">' + esc(p.venue) + '<span class="yr">' + p.year + "</span></div>" +
       '<div class="pub-main"><div class="pub-title"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></div>" +
-      '<div class="pub-authors">' + p.authors + "</div></div>" +
+      '<div class="pub-authors">' + p.authors + "</div>" +
+      (p.press && p.press.length ? '<div class="pub-press">' + p.press.map(function (l) {
+        return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + " ↗</a>";
+      }).join(" · ") + "</div>" : "") + "</div>" +
       '<div class="pub-side">' + badge +
       '<a class="pub-link" href="' + esc(p.url) + '" target="_blank" rel="noopener" aria-label="Open paper: ' + esc(p.title) + '">Paper ↗</a></div>' +
       "</li>";
