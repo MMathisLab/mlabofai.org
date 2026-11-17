@@ -946,3 +946,38 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .th-ml { color: var(--magenta); }
 .th-sw { color: var(--muted); }
 .pi-themes { margin: -10px 0 16px; }
+
+/* Team graph */
+.team-graph { margin: 8px 0 56px; padding: 32px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.tg-head h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); margin: 10px 0 6px; }
+.tg-head .muted { margin: 0 0 18px; }
+.tg-body { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px; align-items: start; }
+.tg-svg { width: 100%; height: auto; display: block; user-select: none; }
+.tg-edge { stroke-width: 1.4; opacity: .28; transition: opacity .2s, stroke-width .2s; }
+.tg-theme circle { opacity: .9; transition: opacity .2s, r .2s; }
+.tg-theme text { fill: var(--text); font-size: 13px; font-weight: 600; pointer-events: none; }
+.tg-theme, .tg-person { cursor: pointer; outline: none; transition: opacity .2s; }
+.tg-ring { fill: var(--surface); stroke: rgba(var(--fg-rgb), .35); stroke-width: 1.5; transition: stroke .2s, stroke-width .2s; }
+.tg-person.is-pi .tg-ring { stroke: var(--text); stroke-width: 2; }
+.tg-name { fill: var(--muted); font-size: 11px; pointer-events: none; }
+.tg-person:hover .tg-ring, .tg-person:focus-visible .tg-ring { stroke: var(--text); stroke-width: 2.5; }
+.tg-theme:focus-visible circle, .tg-theme:hover circle { opacity: 1; }
+.tg-svg.has-sel .tg-edge { opacity: .06; }
+.tg-svg.has-sel .tg-edge.on { opacity: .95; stroke-width: 2.4; }
+.tg-svg.has-sel .tg-person, .tg-svg.has-sel .tg-theme { opacity: .25; }
+.tg-svg.has-sel .tg-person.on, .tg-svg.has-sel .tg-theme.on { opacity: 1; }
+.tg-person.on .tg-ring { stroke: var(--text); stroke-width: 3; }
+.tg-person.on .tg-name { fill: var(--text); font-weight: 600; }
+.tg-panel { border: 1px solid var(--line); border-radius: 14px; padding: 20px; min-height: 220px; background: rgba(var(--fg-rgb), .02); }
+.tg-panel h4 { margin: 10px 0 2px; font-size: 1.05rem; }
+.tg-role { color: var(--muted); font-size: .85rem; margin: 0; }
+.tg-photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; display: block; }
+.tg-hint { color: var(--dim); font-size: .9rem; margin: 0; }
+.tg-site { display: inline-block; margin-top: 16px; padding: 9px 16px; border-radius: 999px; background: var(--text); color: var(--bg); font-weight: 600; font-size: .88rem; text-decoration: none; }
+.tg-site:hover { background: var(--teal); color: #000; }
+.tg-links, .tg-people-list { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .88rem; }
+.tg-links a { color: var(--text-2); }
+.tg-people-list { flex-direction: column; gap: 4px; }
+.tg-people-list button { background: none; border: 0; padding: 2px 0; color: var(--text-2); font: inherit; cursor: pointer; text-align: left; }
+.tg-people-list button:hover { color: var(--text); text-decoration: underline; }
+@media (max-width: 860px) { .team-graph { padding: 20px; } .tg-body { grid-template-columns: 1fr; } .tg-panel { min-height: 0; } }

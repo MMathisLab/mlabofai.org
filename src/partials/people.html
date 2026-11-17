@@ -41,6 +41,18 @@
           </div>
         </article>
 
+        <div class="team-graph reveal" id="team-graph">
+          <div class="tg-head">
+            <span class="eyebrow">Who works on what</span>
+            <h3>One lab, five themes.</h3>
+            <p class="muted">Click a person to see their themes and links, or click a theme to see who works on it.</p>
+          </div>
+          <div class="tg-body">
+            <svg class="tg-svg" id="tg-svg" viewBox="0 0 900 640" role="group" aria-label="Interactive graph of lab members and research themes"></svg>
+            <aside class="tg-panel" id="tg-panel" aria-live="polite"><p class="tg-hint">Select a person or a theme.</p></aside>
+          </div>
+        </div>
+
         <div class="group-title reveal"><h3>Administration</h3></div>
         <div class="people">
           <div class="person reveal"><div class="avatar" style="--a:var(--violet);--b:var(--teal)">MV<img src="assets/img/people/mioara-vasile.webp" alt="Mioara Vasile" loading="lazy" onerror="this.remove()"></div><h4>Mioara Vasile</h4><p>Executive Admin</p></div>
@@ -138,6 +150,7 @@
               <li>Aristotelis Economides <span>2022 · Google DeepMind</span></li>
               <li>Niels Poulsen <span>2023–2025 · Jua AI</span></li>
               <li>Maxim Pavliv <span>2024–2025 · Groupe Mutuel</span></li>
+              <li>Mariia Popova</li>
             </ul>
           </div>
           <div class="alumni-group">
@@ -158,3 +171,4 @@
       </div>
     </section>
   </main>
+    <script src="assets/js/team-graph.js" defer></script>
