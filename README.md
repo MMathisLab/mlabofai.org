@@ -28,7 +28,7 @@ CNAME                 Custom domain for GitHub Pages
 
 ## Everyday edits
 
-- **Add a paper:** add a line at the top of `MLAB.publications` in `assets/js/data.js`. Set `latest: true` to show it on the homepage (the first 8 are shown). Wrap lab members in `<b>…</b>`.
+- **Add a paper:** add a line to `MLAB.publications` in `assets/js/data.js` with `year` and `month` (1–12); the site sorts newest first by year, then month. Set `latest: true` to show it on the homepage (the first 8 are shown). Wrap lab members in `<b>…</b>`.
 - **Add news:** add an item to the first period in `MLAB.news` (or a new period at the top). `type` sets the dot color: `paper`, `award`, `grant`, `people`.
 - **Highlight videos:** the "Highlights" section on the homepage plays project videos muted, looping, and only while on screen. To add one, compress it (`ffmpeg -i in.mp4 -an -c:v libx264 -preset veryfast -crf 26 -pix_fmt yuv420p -movflags +faststart assets/video/name.mp4`), grab a poster frame (`ffmpeg -ss 10 -i in.mp4 -frames:v 1 -vf scale=1280:-1 assets/video/name-poster.jpg`) and copy the `<article class="highlight">` block in `index.html`.
 - **Team changes:** edit `people.html`. Photos live in `assets/img/people/`; each person's `.avatar` holds an `<img>` that hides itself if the file is missing.
