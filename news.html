@@ -37,7 +37,12 @@
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
       <ul class="nav-links" id="nav-links">
         <li><a href="./#research">Research</a></li>
-        <li><a href="software.html">Software</a></li>
+        <li class="has-sub"><a href="software.html" aria-haspopup="true">Software<svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="sub" aria-label="Key tools">
+            <li><a href="deeplabcut.html"><b>DeepLabCut</b><span>Markerless pose estimation, any species</span></a></li>
+            <li><a href="https://cebra.ai" target="_blank" rel="noopener"><b>CEBRA <i aria-hidden="true">↗</i></b><span>Consistent embeddings of behavior &amp; neural data</span></a></li>
+          </ul>
+        </li>
         <li><a href="people.html">People</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="news.html" aria-current="page">News</a></li>
