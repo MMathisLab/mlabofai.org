@@ -945,3 +945,4 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .th-neuro { color: var(--violet); }
 .th-ml { color: var(--magenta); }
 .th-sw { color: var(--muted); }
+.pi-themes { margin: -10px 0 16px; }
