@@ -929,3 +929,6 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .bio[data-collapsed="false"] .bio-toggle span { transform: rotate(180deg); }
 @media (min-width: 861px) { .pi > .pi-photo { position: sticky; top: 100px; align-self: start; } }
 .facts.one { grid-template-columns: 1fr; }
+.pi-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(var(--fg-rgb), .35); text-underline-offset: 3px; transition: color .2s, text-decoration-color .2s; }
+.pi-link:hover { color: var(--text); text-decoration-color: var(--teal); }
+#mackenzie { scroll-margin-top: 96px; }
