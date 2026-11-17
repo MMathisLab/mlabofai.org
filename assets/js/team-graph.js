@@ -40,7 +40,8 @@
     }).sort(function (a, b) { return LINK_ORDER.indexOf(a.type) - LINK_ORDER.indexOf(b.type); });
     var img = card.querySelector(imgSel);
     var role = (card.querySelector(roleSel) || {}).textContent || "";
-    return { name: name, role: role.trim(), themes: themes, links: links, img: img ? img.getAttribute("src") : null };
+    return { name: name, role: role.trim(), themes: themes, links: links, img: img ? img.getAttribute("src") : null,
+             lean: card.getAttribute("data-lean") };
   }
   var people = [];
   var pi = document.getElementById("mackenzie");
@@ -63,11 +64,12 @@
   var byKey = {}; THEMES.forEach(function (t) { byKey[t.key] = t; });
   people.forEach(function (p, i) {
     if (p.pi) { p.x = CX; p.y = CY; return; }
-    var sx = 0, sy = 0;
-    p.themes.forEach(function (k) { sx += byKey[k].x; sy += byKey[k].y; });
-    sx /= p.themes.length; sy /= p.themes.length;
+    // weighted centroid of the person's themes; data-lean="ml" on a card pulls that person toward one theme
+    var sx = 0, sy = 0, sw = 0;
+    p.themes.forEach(function (k) { var w = k === p.lean ? 4 : 1; sx += w * byKey[k].x; sy += w * byKey[k].y; sw += w; });
+    sx /= sw; sy /= sw;
     // single-theme people sit just inside their theme; multi-theme people sit between theirs
-    var pull = p.themes.length === 1 ? 0.7 : 0.78;
+    var pull = p.lean ? 0.8 : (p.themes.length === 1 ? 0.7 : 0.78);
     p.tx = CX + (sx - CX) * pull; p.ty = CY + (sy - CY) * pull;
     var j = (i * 137.5) * Math.PI / 180;
     p.x = p.tx + 18 * Math.cos(j); p.y = p.ty + 18 * Math.sin(j);
