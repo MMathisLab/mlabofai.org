@@ -984,3 +984,5 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .pub-press { margin-top: 6px; font-size: .8rem; }
 .pub-press a { color: var(--teal); text-decoration: none; }
 .pub-press a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.alumni-group li > a { color: inherit; text-decoration: underline; text-decoration-color: rgba(var(--fg-rgb), .3); text-underline-offset: 3px; }
+.alumni-group li > a:hover { text-decoration-color: var(--teal); }
