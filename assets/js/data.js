@@ -108,120 +108,121 @@ MLAB.publications = [
    images (optional): photos shown under that period */
 MLAB.news = [
   { period: "Fall 2026", items: [
-    { type: "paper", text: "New preprint: PSI (Programmable Semantic Interventions) finds the subspace of a frozen language model's activations that carries a named variable, without labels (Paolo Muratore, Mackenzie Weygandt Mathis)." }
+    { type: "paper", text: "New preprint: PSI (Programmable Semantic Interventions) finds the subspace of a frozen language model's activations that carries a named variable, without labels (Paolo Muratore, Mackenzie Weygandt Mathis).", links: [["Preprint", "https://arxiv.org/abs/2611.21307"], ["Project page", "https://adaptivemotorcontrollab.github.io/psi/"]] }
   ]},
   { period: "Winter / Spring 2026", items: [
-    { type: "paper", text: "FMPose3D, our state-of-the-art monocular 3D pose estimation method, is published at CVPR 2026 (Ti Wang, Xiaohang Yu, Mackenzie Weygandt Mathis)." },
-    { type: "paper", text: "LLaVAction, the lab's first multimodal LLM for action understanding, is published at ICLR 2026." },
-    { type: "paper", text: "Mackenzie Weygandt Mathis's piece on leveraging neuroscience for more adaptive AI is published in Nature Neuroscience." },
-    { type: "paper", text: "Our review on jointly modeling neural and behavioral data is published in Nature Reviews Neuroscience." },
-    { type: "people", text: "The software team grows: Jaap, Cyril and Leonardo join to support the SCENE collaboration and DeepLabCut." }
+    { type: "paper", text: "FMPose3D, our state-of-the-art monocular 3D pose estimation method, is published at CVPR 2026 (Ti Wang, Xiaohang Yu, Mackenzie Weygandt Mathis).", links: [["Paper", "https://xiu-cs.github.io/FMPose3D/"]] },
+    { type: "paper", text: "LLaVAction, the lab's first multimodal LLM for action understanding, is published at ICLR 2026.", links: [["Paper", "https://arxiv.org/abs/2503.18712"]] },
+    { type: "paper", text: "Mackenzie Weygandt Mathis's piece on leveraging neuroscience for more adaptive AI is published in Nature Neuroscience.", links: [["Paper", "https://www.nature.com/articles/s41593-025-02169-w"]] },
+    { type: "paper", text: "Our review on jointly modeling neural and behavioral data is published in Nature Reviews Neuroscience.", links: [["Paper", "https://www.nature.com/articles/s41583-025-00996-1"]] },
+    { type: "people", text: "The software team grows: Jaap, Cyril and Leonardo join to support the SCENE collaboration and DeepLabCut.", links: [["SCENE", "https://project-scene.org"]] }
   ]},
   { period: "Summer / Fall 2025", images: ["assets/img/news/news-247b158b61.webp", "assets/img/news/news-be936da0a8.webp", "assets/img/news/news-f7f848cda2.webp"], items: [
+    { type: "grant", text: "The lab joins the Simons Collaboration on Ecological Neuroscience (SCENE) with $8M in funding from the Simons Foundation, kicking off in July 2025. Mackenzie Weygandt Mathis heads the data science core and joins the mouse and theory teams.", links: [["project-scene.org", "https://project-scene.org"]] },
     { type: "award", text: "Mackenzie Weygandt Mathis receives the 2025 SGV Award for non-invasive animal tracking with DeepLabCut." },
     { type: "people", text: "Ti Wang and Xiaohang Yu pass their candidacy exams; Ananda Wolz and Sander Meisen complete their master's theses." },
-    { type: "paper", text: "DISTIL is accepted to ICCV 2025 (Hossein Mirzaei, with interns Zeinab Taghavi, Sepehr Rezaee, Masoud Hadi and Moein Madadi)." },
+    { type: "paper", text: "DISTIL is accepted to ICCV 2025 (Hossein Mirzaei, with interns Zeinab Taghavi, Sepehr Rezaee, Masoud Hadi and Moein Madadi).", links: [["Paper", "https://arxiv.org/abs/2507.22813"]] },
     { type: "people", text: "Hossein Mirzaei passes his candidacy exam." },
-    { type: "award", text: "Célia Benquet is accepted to the EPFL PhD Excellence Program." },
-    { type: "paper", text: "A collaborative study analyzing ant behavior is published in Cell (Anastasiia, Mackenzie Weygandt Mathis)." },
-    { type: "people", text: "Shaokai Ye earns his PhD (AmadeusGPT, SuperAnimal, LLaVAction) and moves to Apple." },
+    { type: "award", text: "Célia Benquet is accepted to the EPFL PhD Excellence Program.", links: [["EPFL PhD Excellence Program", "https://actu.epfl.ch/news/welcoming-the-fourth-cohort-of-the-phd-excellenc-3/"]] },
+    { type: "paper", text: "A collaborative study analyzing ant behavior is published in Cell (Anastasiia, Mackenzie Weygandt Mathis).", links: [["Paper", "https://www.cell.com/cell/fulltext/S0092-8674(25)00573-2"]] },
+    { type: "people", text: "Shaokai Ye earns his PhD (AmadeusGPT, SuperAnimal, LLaVAction) and moves to Apple.", links: [["AmadeusGPT", "software.html#amadeusgpt"], ["SuperAnimal", "https://www.nature.com/articles/s41467-024-48792-2"], ["LLaVAction", "https://llavaction.epfl.ch/"]] },
     { type: "people", text: "Ruth Gutjahr and Artur Schneider join as postdocs." },
-    { type: "paper", text: "Our preprint on sensorimotor neural dynamics and mouse arm biomechanics is updated on bioRxiv (postdoc Paolo Muratore)." }
+    { type: "paper", text: "Our preprint on sensorimotor neural dynamics and mouse arm biomechanics is updated on bioRxiv (postdoc Paolo Muratore).", links: [["MusBioMaus", "https://www.mausspaun.org/"], ["Preprint", "https://www.biorxiv.org/content/10.1101/2024.09.11.612513v3"]] }
   ]},
   { period: "Winter / Spring 2025", images: ["assets/img/news/news-b247909f3c.webp", "assets/img/news/news-a4443e27ec.webp", "assets/img/news/news-99ead6b026.webp", "assets/img/news/news-d3ceed45e9.webp"], items: [
-    { type: "paper", text: "AROS is accepted to ICLR 2025 (Hossein Mirzaei, Mackenzie Weygandt Mathis)." },
-    { type: "paper", text: "COBRA is accepted to ICLR 2025 (Hossein Mirzaei)." },
-    { type: "paper", text: "Time-series attribution maps are accepted to AISTATS 2025 (Steffen, Rodrigo, Anastasiia, Markus, Mackenzie Weygandt Mathis)." },
+    { type: "paper", text: "AROS is accepted to ICLR 2025 (Hossein Mirzaei, Mackenzie Weygandt Mathis).", links: [["Paper", "https://arxiv.org/abs/2410.10744"]] },
+    { type: "paper", text: "COBRA is accepted to ICLR 2025 (Hossein Mirzaei).", links: [["Paper", "https://arxiv.org/pdf/2501.15434"]] },
+    { type: "paper", text: "Time-series attribution maps are accepted to AISTATS 2025 (Steffen, Rodrigo, Anastasiia, Markus, Mackenzie Weygandt Mathis).", links: [["Paper", "https://arxiv.org/abs/2502.12977"]] },
     { type: "grant", text: "The lab receives an SNSF Starting Grant (CHF 1.5M) to study the neural dynamics of visuomotor learning." },
     { type: "people", text: "Sebastien Hausmann earns his PhD." },
-    { type: "paper", text: "Hossein Mirzaei's contrastive teacher–student framework for novelty detection is preprinted." },
+    { type: "paper", text: "Hossein Mirzaei's contrastive teacher–student framework for novelty detection is preprinted.", links: [["Preprint", "https://arxiv.org/abs/2501.17289"]] },
     { type: "people", text: "Paolo Muratore joins as a postdoc." },
-    { type: "award", text: "CEBRA receives the Swiss Society for Neuroscience best paper award (accepted by Dr. Steffen Schneider)." },
-    { type: "award", text: "Mackenzie Weygandt Mathis is co-awarded the Robert Bing Prize from the Swiss Academy of Medical Sciences, with Alexander Mathis and Susanne Wegener." }
+    { type: "award", text: "CEBRA receives the Swiss Society for Neuroscience best paper award (accepted by Dr. Steffen Schneider).", links: [["Best paper award", "https://swissneuroscience.ch/our-support/publication-awards/"]] },
+    { type: "award", text: "Mackenzie Weygandt Mathis is co-awarded the Robert Bing Prize from the Swiss Academy of Medical Sciences, with Alexander Mathis and Susanne Wegener.", links: [["Swiss Academy of Medical Sciences", "https://www.samw.ch/en.html"]] }
   ]},
   { period: "Summer / Fall 2024", items: [
-    { type: "award", text: "Mackenzie Weygandt Mathis is awarded the Swiss Science Prize Latsis 2024." },
+    { type: "award", text: "Mackenzie Weygandt Mathis is awarded the Swiss Science Prize Latsis 2024.", links: [["Swiss Science Prize Latsis", "https://www.snf.ch/en/ZsCZuO5EfyWR8yIy/page/swiss-science-prize-latsis"]] },
     { type: "people", text: "Hossein Mirzaei, Ti Wang and Xiaohang Yu join as PhD students." },
-    { type: "grant", text: "The Kavli Foundation supports DeepLabCut and AmadeusGPT through the CZI EOSS Program." },
+    { type: "grant", text: "The Kavli Foundation supports DeepLabCut and AmadeusGPT through the CZI EOSS Program.", links: [["Kavli Foundation", "https://www.kavlifoundation.org/news/empowering-neuroscience-through-open-source-software"]] },
     { type: "grant", text: "Alexander Mathis and Mackenzie Weygandt Mathis are awarded an SNSF Project Grant (CHF 1.2M)." },
-    { type: "paper", text: "CellSeg3D is preprinted and reviewed at eLife (Cyril)." },
+    { type: "paper", text: "CellSeg3D is preprinted and reviewed at eLife (Cyril).", links: [["CellSeg3D", "https://github.com/AdaptiveMotorControlLab/CellSeg3d"]] },
     { type: "award", text: "Mackenzie Weygandt Mathis and Alexander Mathis give the FENS 2024 Kandel Prize Lecture in Vienna." }
   ]},
   { period: "Winter / Spring 2024", images: ["assets/img/news/news-53d2fb9457.webp", "assets/img/news/news-0686d97fab.webp", "assets/img/news/news-bb05721350.webp", "assets/img/news/news-4efb3c09d5.webp", "assets/img/news/news-491b5a6b6e.webp"], items: [
-    { type: "paper", text: "SuperAnimal is accepted in Nature Communications (Shaokai Ye), with a companion paper in Nature Methods." },
+    { type: "paper", text: "SuperAnimal is accepted in Nature Communications (Shaokai Ye), with a companion paper in Nature Methods.", links: [["Paper", "https://www.nature.com/articles/s41467-024-48792-2"], ["Companion paper", "https://www.nature.com/articles/s41592-024-02318-2"], ["EPFL news", "https://actu.epfl.ch/news/unifying-behavioral-analysis-through-animal-founda/"]] },
     { type: "people", text: "Célia Benquet becomes a PhD candidate." },
-    { type: "award", text: "DeepLabCut receives the Frontiers of Science Award 2023." }
+    { type: "award", text: "DeepLabCut receives the Frontiers of Science Award 2023.", links: [["Frontiers of Science Award", "https://2023.icbs.cn/en/web/index/18009_1581229__"]] }
   ]},
   { period: "Summer / Fall 2023", items: [
-    { type: "paper", text: "AmadeusGPT is accepted to NeurIPS 2023 (Shaokai Ye, Jessy Lauer, Mackenzie Weygandt Mathis)." },
-    { type: "award", text: "Mackenzie Weygandt Mathis is awarded the 2023/24 Eric Kandel Young Neuroscientists Prize, with Alexander Mathis." },
-    { type: "award", text: "The original DeepLabCut paper receives the Frontiers of Science Award 2023." },
-    { type: "people", text: "Steffen Schneider will start his own research group at Helmholtz AI in spring 2024." },
-    { type: "paper", text: "Our work on pose estimation in crowded scenes is accepted to ICCV 2023." },
-    { type: "paper", text: "Our study of proprioception with hierarchical models is published in eLife (co-first authors Kai and Pranav)." },
+    { type: "paper", text: "AmadeusGPT is accepted to NeurIPS 2023 (Shaokai Ye, Jessy Lauer, Mackenzie Weygandt Mathis).", links: [["Paper", "https://openreview.net/pdf?id=9AcG3Tsyoq"]] },
+    { type: "award", text: "Mackenzie Weygandt Mathis is awarded the 2023/24 Eric Kandel Young Neuroscientists Prize, with Alexander Mathis.", links: [["Eric Kandel Young Neuroscientists Prize", "https://www.ghst.de/en/kandelprize"], ["Süddeutsche Zeitung", "https://pressemitteilungen.sueddeutsche.de/gemeinnutzige-hertie-stiftung-5563772"]] },
+    { type: "award", text: "The original DeepLabCut paper receives the Frontiers of Science Award 2023.", links: [["Frontiers of Science Award", "https://2023.icbs.cn/en/web/index/18009_1581229__"]] },
+    { type: "people", text: "Steffen Schneider will start his own research group at Helmholtz AI in spring 2024.", links: [["Helmholtz AI group", "https://dynamical-inference.ai"]] },
+    { type: "paper", text: "Our work on pose estimation in crowded scenes is accepted to ICCV 2023.", links: [["Paper", "https://openaccess.thecvf.com/content/ICCV2023/papers/Zhou_Rethinking_Pose_Estimation_in_Crowds_Overcoming_the_Detection_Information_Bottleneck_ICCV_2023_paper.pdf"]] },
+    { type: "paper", text: "Our study of proprioception with hierarchical models is published in eLife (co-first authors Kai and Pranav).", links: [["Paper", "https://elifesciences.org/articles/81499"]] },
     { type: "people", text: "Célia Benquet joins as a PhD student." }
   ]},
   { period: "Winter / Spring 2023", items: [
-    { type: "paper", text: "CEBRA is published in Nature (Steffen Schneider, Jin Lee), with coverage in more than 40 news outlets." },
+    { type: "paper", text: "CEBRA is published in Nature (Steffen Schneider, Jin Lee), with coverage in more than 40 news outlets.", links: [["Paper", "https://www.nature.com/articles/s41586-023-06031-6"], ["Research Briefing", "https://www.nature.com/articles/d41586-023-01339-9"], ["cebra.ai", "https://cebra.ai"], ["News coverage", "https://nature.altmetric.com/details/125945062/news"]] },
     { type: "paper", text: "SuperAnimal models are released in DeepLabCut, with an arXiv paper led by Shaokai Ye." },
-    { type: "paper", text: "A review in Cell (Thomas Sainsbury) and a Dispatch in Current Biology (Markus Frey) are published." },
+    { type: "paper", text: "A review in Cell (Thomas Sainsbury) and a Dispatch in Current Biology (Markus Frey) are published.", links: [["Cell review", "https://www.sciencedirect.com/science/article/pii/S0092867422015240"], ["Current Biology Dispatch", "https://www.sciencedirect.com/science/article/pii/S0960982223000659"]] },
     { type: "people", text: "The CEBRA dev team runs its first workshops." }
   ]},
   { period: "Summer / Fall 2022", items: [
     { type: "award", text: "Mackenzie Weygandt Mathis is named a Vallee Foundation Scholar." },
-    { type: "paper", text: "Multi-animal DeepLabCut (Jessy Lauer) is featured in Nature." }
+    { type: "paper", text: "Multi-animal DeepLabCut (Jessy Lauer) is featured in Nature.", links: [["Nature", "https://www.nature.com/articles/d41586-022-02964-6"]] }
   ]},
   { period: "Winter / Spring 2022", items: [
     { type: "grant", text: "Radala Foundation funding supports ALS research with the Schneider and Courtine labs." },
-    { type: "paper", text: "Our call to action on machine learning for wildlife conservation is published in Nature Communications." },
+    { type: "paper", text: "Our call to action on machine learning for wildlife conservation is published in Nature Communications.", links: [["Paper", "https://www.nature.com/articles/s41467-022-27980-y"]] },
     { type: "grant", text: "CZI funds a napari plugin system for DeepLabCut." },
-    { type: "paper", text: "Multi-animal DeepLabCut is published in Nature Methods (Jessy Lauer)." }
+    { type: "paper", text: "Multi-animal DeepLabCut is published in Nature Methods (Jessy Lauer).", links: [["Paper", "https://www.nature.com/articles/s41592-022-01443-0"]] }
   ]},
   { period: "Summer / Fall 2021", items: [
-    { type: "award", text: "Steffen Schneider is awarded a 2021 Google PhD Fellowship." },
+    { type: "award", text: "Steffen Schneider is awarded a 2021 Google PhD Fellowship.", links: [["Google PhD Fellowship", "https://research.google/outreach/phd-fellowship/recipients/"]] },
     { type: "people", text: "Shaokai Ye becomes a PhD candidate." },
-    { type: "paper", text: "Two papers are accepted to the CVPR CV4Animals workshop, a new multi-animal DeepLabCut preprint is posted, and Mackenzie Weygandt Mathis gives a keynote." },
+    { type: "paper", text: "Two papers are accepted to the CVPR CV4Animals workshop, a new multi-animal DeepLabCut preprint is posted, and Mackenzie Weygandt Mathis gives a keynote.", links: [["Keynote talk", "https://www.youtube.com/watch?v=U39OAOpSraw"]] },
     { type: "grant", text: "A Novartis grant supports the EPFL MausHaus." },
     { type: "people", text: "Sebastien Hausmann passes his candidacy exam." },
     { type: "award", text: "Mackenzie Weygandt Mathis is awarded the FENS EJN 2022 Young Investigator Prize." }
   ]},
   { period: "Winter / Spring 2021", items: [
     { type: "paper", text: "A paper is accepted to the ICML SSL-RL Workshop (Steffen Schneider, Jin Lee)." },
-    { type: "paper", text: "A Current Biology Dispatch on motor control is published (Steffen Schneider)." },
+    { type: "paper", text: "A Current Biology Dispatch on motor control is published (Steffen Schneider).", links: [["Dispatch", "https://www.sciencedirect.com/science/article/pii/S0960982221001524"]] },
     { type: "grant", text: "An SNSF grant supports our work on forelimb motor adaptation." },
-    { type: "paper", text: "Thomas Biasi's first-author WACV 2021 paper, with a benchmark by Steffen Schneider; Thomas interns at Amazon." },
+    { type: "paper", text: "Thomas Biasi's first-author WACV 2021 paper, with a benchmark by Steffen Schneider; Thomas interns at Amazon.", links: [["Paper", "https://arxiv.org/abs/1909.11229"]] },
     { type: "people", text: "Mert Yüksekgönül is accepted to several top CS programs and heads to Stanford for his PhD." },
     { type: "people", text: "Valentin Bruttin graduates from EPFL with top marks." },
-    { type: "paper", text: "3D cheetah modeling with Amir Patel's group is accepted to ICRA 2021." }
+    { type: "paper", text: "3D cheetah modeling with Amir Patel's group is accepted to ICRA 2021.", links: [["Paper", "https://ieeexplore.ieee.org/document/9561338"]] }
   ]},
   { period: "Fall / Winter 2020", items: [
-    { type: "paper", text: "Our real-time, low-latency behavior tracking paper is published in eLife (alumnus Gary Kane)." },
-    { type: "paper", text: "A Primer on Motion Capture with Deep Learning is published in Neuron." },
-    { type: "paper", text: "Steffen Schneider's work is accepted to a NeurIPS 2020 workshop." }
+    { type: "paper", text: "Our real-time, low-latency behavior tracking paper is published in eLife (alumnus Gary Kane).", links: [["Paper", "https://elifesciences.org/articles/61909"], ["Press release", "https://www.eurekalert.org/pub_releases/2020-12/epfd-drm120920.php"], ["Radio (RTS)", "https://www.rts.ch/play/radio/cqfd/audio/capturer-les-mouvements-des-animaux-en-temps-reel?id=11782529"]] },
+    { type: "paper", text: "A Primer on Motion Capture with Deep Learning is published in Neuron.", links: [["Paper", "https://doi.org/10.1016/j.neuron.2020.09.017"]] },
+    { type: "paper", text: "Steffen Schneider's work is accepted to a NeurIPS 2020 workshop.", links: [["Paper", "https://preregister.science/papers_20neurips/57_paper.pdf"]] }
   ]},
   { period: "Summer 2020", items: [
-    { type: "people", text: "The lab moves to EPFL (Campus Biotech, Geneva) with support from the Bertarelli Foundation; Mackenzie Weygandt Mathis is appointed Bertarelli Foundation Chair of Integrative Neuroscience." },
-    { type: "paper", text: "Our work on robustness in animal pose estimation is accepted to the ICML 2020 UDL Workshop." },
+    { type: "people", text: "The lab moves to EPFL (Campus Biotech, Geneva) with support from the Bertarelli Foundation; Mackenzie Weygandt Mathis is appointed Bertarelli Foundation Chair of Integrative Neuroscience.", links: [["Campus Biotech", "https://www.campusbiotech.ch/en/"], ["Bertarelli Foundation Chair", "https://www.campusbiotech.ch/en/node/581"]] },
+    { type: "paper", text: "Our work on robustness in animal pose estimation is accepted to the ICML 2020 UDL Workshop.", links: [["ICML 2020 UDL Workshop", "https://sites.google.com/view/udlworkshop2020/accepted-papers?authuser=0"]] },
     { type: "people", text: "Daniel Soberanes graduates from Harvard College." },
-    { type: "people", text: "Kai Sandbrink graduates from ETH Zurich and posts his first-author preprint on bioRxiv." },
+    { type: "people", text: "Kai Sandbrink graduates from ETH Zurich and posts his first-author preprint on bioRxiv.", links: [["Preprint", "https://www.biorxiv.org/content/10.1101/2020.05.06.081372v2"]] },
     { type: "award", text: "Thomas Biasi is awarded the Herschel-Smith Fellowship." }
   ]},
   { period: "Winter / Spring 2020", items: [
-    { type: "people", text: "We host the second DeepLabCut workshop and our first hackathon, and attend the CZI EOSS meeting." }
+    { type: "people", text: "We host the second DeepLabCut workshop and our first hackathon, and attend the CZI EOSS meeting.", links: [["DeepLabCut", "deeplabcut.html"]] }
   ]},
   { period: "Summer / Fall 2019", items: [
-    { type: "grant", text: "CZI awards a grant to support DeepLabCut." },
-    { type: "paper", text: "Nature covers two of our articles: DeepLabCut, and two-photon imaging during motor adaptation." },
-    { type: "paper", text: "Bloomberg Businessweek covers the lab's work." },
-    { type: "paper", text: "DeepLabCut 2.0 is published in Nature Protocols, with the team featured on the cover." }
+    { type: "grant", text: "CZI awards a grant to support DeepLabCut.", links: [["DeepLabCut", "https://www.deeplabcut.org"]] },
+    { type: "paper", text: "Nature covers two of our articles: DeepLabCut, and two-photon imaging during motor adaptation.", links: [["DeepLabCut in Nature", "https://www.nature.com/articles/d41586-019-02942-5"], ["Motor adaptation in Nature", "https://www.nature.com/articles/d41586-019-03632-y"]] },
+    { type: "paper", text: "Bloomberg Businessweek covers the lab's work.", links: [["Bloomberg Businessweek", "https://www.bloomberg.com/news/features/2019-06-18/apple-google-and-facebook-are-raiding-animal-research-labs"]] },
+    { type: "paper", text: "DeepLabCut 2.0 is published in Nature Protocols, with the team featured on the cover.", links: [["Paper", "https://www.nature.com/articles/s41596-019-0176-0"], ["Code", "https://github.com/DeepLabCut/DeepLabCut"]] }
   ]},
   { period: "Fall / Winter 2018", items: [
     { type: "people", text: "The first DeepLabCut workshop takes place in January 2019." },
-    { type: "paper", text: "November: DeepLabCut extensions are accepted to Cosyne 2019, and an NCM 2019 talk is accepted." },
+    { type: "paper", text: "November: DeepLabCut extensions are accepted to Cosyne 2019, and an NCM 2019 talk is accepted.", links: [["DeepLabCut", "deeplabcut.html"]] },
     { type: "people", text: "September: Adrian receives his master's degree." },
-    { type: "paper", text: "August: DeepLabCut is published in Nature Neuroscience." },
-    { type: "paper", text: "The NVIDIA Developer Blog highlights DeepLabCut." },
-    { type: "paper", text: "July: The Atlantic covers the DeepLabCut preprint." },
+    { type: "paper", text: "August: DeepLabCut is published in Nature Neuroscience.", links: [["Paper", "https://www.nature.com/articles/s41593-018-0209-y"]] },
+    { type: "paper", text: "The NVIDIA Developer Blog highlights DeepLabCut.", links: [["NVIDIA Developer Blog", "https://news.developer.nvidia.com/ai-enables-markerless-animal-tracking/"]] },
+    { type: "paper", text: "July: The Atlantic covers the DeepLabCut preprint.", links: [["The Atlantic", "https://www.theatlantic.com/science/archive/2018/07/deeplabcut-tracking-animal-movements/564338/"]] },
     { type: "paper", text: "June: The lab's first paper is accepted." },
     { type: "paper", text: "April: The lab's first preprint (with Matthias Bethge) is posted on arXiv." },
     { type: "people", text: "February: Melony Tong completes her senior thesis." }

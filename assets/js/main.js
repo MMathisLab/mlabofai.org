@@ -140,15 +140,24 @@
     initAltmetric();
   }
 
+  /* news links: [["Label", "url"], ...] -> " Label ↗ · Label ↗" (internal links without the arrow) */
+  function newsLinks(it) {
+    if (!it.links || !it.links.length) return "";
+    return ' <span class="n-links">' + it.links.map(function (l) {
+      var ext = /^https?:/.test(l[1]);
+      return '<a href="' + esc(l[1]) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" + esc(l[0]) + (ext ? " ↗" : " →") + "</a>";
+    }).join(" · ") + "</span>";
+  }
+
   /* ---------- homepage: recent news ---------- */
   var recentEl = document.getElementById("recent-news");
   if (recentEl && M.news) {
     var out = [];
     M.news.slice(0, 2).forEach(function (g) {
-      g.items.forEach(function (it) { out.push({ when: g.period, text: it.text }); });
+      g.items.forEach(function (it) { out.push({ when: g.period, text: it.text, it: it }); });
     });
     recentEl.innerHTML = out.slice(0, 6).map(function (n) {
-      return '<li class="reveal"><span class="when">' + esc(n.when) + "</span><span>" + esc(n.text) + "</span></li>";
+      return '<li class="reveal"><span class="when">' + esc(n.when) + "</span><span>" + esc(n.text) + newsLinks(n.it) + "</span></li>";
     }).join("");
   }
 
@@ -201,7 +210,7 @@
       var season = parts.slice(0, -1).join(" ");
       return '<div class="tl-group"><div class="tl-period"><span class="mono">' + esc(year) + "</span><h3>" + esc(season || year) + "</h3></div>" +
         '<div><ul class="tl-items">' + g.items.map(function (it) {
-          return '<li class="n-' + esc(it.type) + '">' + esc(it.text) + "</li>";
+          return '<li class="n-' + esc(it.type) + '">' + esc(it.text) + newsLinks(it) + "</li>";
         }).join("") + "</ul>" +
         (g.images && g.images.length ? '<div class="tl-photos">' + g.images.map(function (src) {
           return '<a href="' + esc(src) + '" target="_blank" rel="noopener"><img src="' + esc(src) + '" alt="Lab photo, ' + esc(g.period) + '" loading="lazy"></a>';
