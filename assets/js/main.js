@@ -243,6 +243,17 @@
     });
   });
 
+  /* links like #highlights with data-hl="musbiomaus" open that tab */
+  function openHighlight(id) {
+    var t = document.getElementById("tab-" + id);
+    if (t) t.click();
+  }
+  document.querySelectorAll("a[data-hl]").forEach(function (a) {
+    a.addEventListener("click", function () { openHighlight(a.getAttribute("data-hl")); });
+  });
+  var hm = location.hash.match(/^#hl-(\w+)$/);
+  if (hm) openHighlight(hm[1]);
+
   /* ---------- highlight videos: play when visible, pause otherwise ---------- */
   document.querySelectorAll(".highlight-media").forEach(function (box) {
     var v = box.querySelector("video"), btn = box.querySelector(".hl-toggle");

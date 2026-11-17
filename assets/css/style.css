@@ -868,3 +868,7 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .dlc-logo img { width: min(760px, 100%); height: auto; }
 #papers .sub-h { margin-bottom: 12px; }
 #papers .mt-64 { margin-top: 56px; }
+
+.hl-also { margin-top: 18px; font-size: .88rem; color: var(--dim); }
+.hl-also a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.hl-also a:hover { color: var(--text); }

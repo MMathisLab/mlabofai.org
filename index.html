@@ -89,7 +89,7 @@
             <span class="eyebrow">Biomechanics</span>
             <h3>Model the body that produces behavior</h3>
             <p>Musculoskeletal models across species, from the mouse to the human arm, plus body-constrained 3D pose, linking movement to muscles and back to the brain.</p>
-            <ul class="chips"><li><a class="chip chip-link" href="#biomechanics">Musculoskeletal models across species</a></li><li><a class="chip chip-link" href="https://www.mausspaun.org/" target="_blank" rel="noopener">MusBioMaus<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://elifesciences.org/articles/81499" target="_blank" rel="noopener">DeepDraw<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://ieeexplore.ieee.org/document/9561338" target="_blank" rel="noopener">AcinoSet<span aria-hidden="true">↗</span></a></li></ul>
+            <ul class="chips"><li><a class="chip chip-link" href="#highlights" data-hl="musbiomaus">Musculoskeletal models across species</a></li><li><a class="chip chip-link" href="https://www.mausspaun.org/" target="_blank" rel="noopener">MusBioMaus<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://elifesciences.org/articles/81499" target="_blank" rel="noopener">DeepDraw<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://ieeexplore.ieee.org/document/9561338" target="_blank" rel="noopener">AcinoSet<span aria-hidden="true">↗</span></a></li></ul>
           </article>
           <article class="pillar neuro reveal">
             <div class="pillar-media"><img src="assets/img/media/cebra-sphere.webp" alt="A CEBRA latent embedding of neural data" loading="lazy"></div>
@@ -134,23 +134,6 @@
         </div>
         </div>
 
-        <div class="spotlight-video reveal">
-          <video src="assets/video/musbiomaus-mimic.mp4" poster="assets/video/musbiomaus-mimic.jpg" muted loop playsinline preload="none" aria-label="Mimic the mouse: MusBioMaus (left) re-enacts a real mouse (right) reaching, pulling and returning its hand to base"></video>
-          <p class="mono">Mimic the mouse: MusBioMaus re-enacts a reach, pull and return, alongside the real animal. <a href="https://www.mausspaun.org/videos/v/mimic-the-mouse" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Source ↗</a></p>
-        </div>
-        <div class="spotlight reveal" id="biomechanics">
-          <div>
-            <span class="eyebrow">Spotlight · biomechanics</span>
-            <h3>From brain to muscle, across species.</h3>
-            <p>Behavior is produced by bodies, so we model them: from a neuro-musculoskeletal model of the mouse that links sensorimotor cortex to individual muscles, to human arm models of proprioception, to body-constrained 3D pose of cheetahs running in the wild.</p>
-            <div class="card-links"><a href="https://www.mausspaun.org/" target="_blank" rel="noopener">MusBioMaus ↗</a><a href="https://www.biorxiv.org/content/10.1101/2024.09.11.612513" target="_blank" rel="noopener">Preprint ↗</a></div>
-          </div>
-          <ul class="bio-list">
-            <li><a href="https://www.biorxiv.org/content/10.1101/2024.09.11.612513" target="_blank" rel="noopener"><b>MusBioMaus</b><span>Mouse neuro-musculoskeletal model · bioRxiv 2024</span></a></li>
-            <li><a href="https://elifesciences.org/articles/81499" target="_blank" rel="noopener"><b>DeepDraw</b><span>Human arm biomechanics &amp; proprioception models · eLife 2023</span></a></li>
-            <li><a href="https://ieeexplore.ieee.org/document/9561338" target="_blank" rel="noopener"><b>AcinoSet</b><span>Body-constrained 3D pose of cheetahs in the wild · ICRA 2021</span></a></li>
-          </ul>
-        </div>
 
       </div>
     </section>
@@ -167,6 +150,7 @@
         <div class="hl-tabs reveal" role="tablist" aria-label="Highlights">
           <button role="tab" id="tab-dysco" aria-controls="hl-dysco" aria-selected="true">DYSCO</button>
           <button role="tab" id="tab-fmpose3d" aria-controls="hl-fmpose3d" aria-selected="false">FMPose3D</button>
+          <button role="tab" id="tab-musbiomaus" aria-controls="hl-musbiomaus" aria-selected="false">MusBioMaus</button>
           <button role="tab" id="tab-cebra" aria-controls="hl-cebra" aria-selected="false">CEBRA</button>
         </div>
         <div class="hl-panels reveal">
@@ -196,6 +180,21 @@
             <p>FMPose3D trains with 3D data, then lifts 2D keypoints from a single camera into plausible 3D poses, for humans and animals alike.</p>
             <p class="hl-authors">Ti Wang, Xiaohang Yu &amp; Mackenzie Weygandt Mathis</p>
             <div class="card-links" style="--accent:var(--teal)"><a href="https://arxiv.org/abs/2602.05755" target="_blank" rel="noopener">Paper ↗</a><a href="https://xiu-cs.github.io/FMPose3D/" target="_blank" rel="noopener">Project ↗</a></div>
+          </div>
+        </article>
+        <article class="highlight" id="hl-musbiomaus" role="tabpanel" aria-labelledby="tab-musbiomaus" hidden>
+          <div class="highlight-media">
+            <video class="hl-video" src="assets/video/musbiomaus-mimic.mp4" poster="assets/video/musbiomaus-mimic.jpg" muted loop playsinline preload="none" aria-label="Mimic the mouse: MusBioMaus (left) re-enacts a real mouse (right) reaching, pulling and returning its hand to base"></video>
+            <button class="hl-toggle" type="button" aria-label="Pause video"><span class="i-pause" aria-hidden="true"></span></button>
+          </div>
+          <div class="highlight-text">
+            <span class="badge" style="--accent:var(--blue)">Spotlight · biomechanics</span>
+            <h3>MusBioMaus</h3>
+            <p class="hl-tag">From brain to muscle, across species.</p>
+            <p>Behavior is produced by bodies, so we model them. MusBioMaus is a neuro-musculoskeletal model of the mouse that links sensorimotor cortex to individual muscles. Here it re-enacts a real mouse's reach, pull and return.</p>
+            <p class="hl-authors">Travis DeWolf, Steffen Schneider, Paul Soubiran, Adrian Roggenbach, Paolo Muratore &amp; Mackenzie Weygandt Mathis</p>
+            <div class="card-links" style="--accent:var(--blue)"><a href="https://www.biorxiv.org/content/10.1101/2024.09.11.612513" target="_blank" rel="noopener">Preprint ↗</a><a href="https://www.mausspaun.org/" target="_blank" rel="noopener">MusBioMaus ↗</a></div>
+            <p class="hl-also">Also in biomechanics: <a href="https://elifesciences.org/articles/81499" target="_blank" rel="noopener">DeepDraw</a>, human arm models of proprioception (eLife 2023), and <a href="https://ieeexplore.ieee.org/document/9561338" target="_blank" rel="noopener">AcinoSet</a>, body-constrained 3D pose of cheetahs in the wild (ICRA 2021).</p>
           </div>
         </article>
         <article class="highlight" id="hl-cebra" role="tabpanel" aria-labelledby="tab-cebra" hidden>
