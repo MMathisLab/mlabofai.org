@@ -13,8 +13,7 @@
     { key: "cv", label: "Computer vision", color: "var(--teal)" },
     { key: "bio", label: "Biomechanics", color: "var(--blue)" },
     { key: "neuro", label: "Neural dynamics", color: "var(--violet)" },
-    { key: "ml", label: "Machine learning", color: "var(--magenta)" },
-    { key: "sw", label: "Software", color: "var(--muted)" }
+    { key: "ml", label: "Machine learning", color: "var(--magenta)" }
   ];
   var LINK_ORDER = ["Website", "GitHub", "Google Scholar", "LinkedIn"];
 
@@ -33,7 +32,7 @@
     name = name.replace(/, PhD$/, "").trim();
     var themes = [].slice.call(card.querySelectorAll(".theme")).map(function (t) {
       var m = t.className.match(/th-(\w+)/); return m ? m[1] : null;
-    }).filter(Boolean);
+    }).filter(function (k) { return k && THEMES.some(function (t) { return t.key === k; }); });
     if (!themes.length) return null;
     var links = [].slice.call(card.querySelectorAll(".person-links a")).map(function (a) {
       var lab = (a.getAttribute("aria-label") || "").split(": ").pop();
@@ -89,10 +88,10 @@
 
   /* crop the view to the occupied area so the graph fills its box */
   var all = people.concat(THEMES);
-  var x0 = Math.min.apply(null, all.map(function (n) { return n.x; })) - 60;
-  var x1 = Math.max.apply(null, all.map(function (n) { return n.x; })) + 60;
-  var y0 = Math.min.apply(null, all.map(function (n) { return n.y; })) - 44;
-  var y1 = Math.max.apply(null, all.map(function (n) { return n.y; })) + 62;
+  var x0 = Math.min.apply(null, all.map(function (n) { return n.x; })) - 150;
+  var x1 = Math.max.apply(null, all.map(function (n) { return n.x; })) + 150;
+  var y0 = Math.min.apply(null, all.map(function (n) { return n.y; })) - 80;
+  var y1 = Math.max.apply(null, all.map(function (n) { return n.y; })) + 80;
   svg.setAttribute("viewBox", [x0, y0, x1 - x0, y1 - y0].map(Math.round).join(" "));
 
   /* ---- draw ---- */
@@ -113,10 +112,14 @@
   THEMES.forEach(function (t) {
     var g = el("g", { "class": "tg-theme", tabindex: "0", role: "button", "aria-label": t.label + ": show who works on this" }, gThemes);
     el("circle", { cx: t.x, cy: t.y, r: 30, style: "fill:" + t.color }, g);
+    // label on the outside of the ring, away from the people
+    var ux = t.x - CX, uy = t.y - CY, ul = Math.sqrt(ux * ux + uy * uy) || 1; ux /= ul; uy /= ul;
     var words = t.label.split(" ");
-    var txt = el("text", { x: t.x, y: t.y + (words.length > 1 ? 44 : 50), "text-anchor": "middle" }, g);
+    var side = Math.abs(ux) > Math.abs(uy);
+    var lx = t.x + ux * (side ? 40 : 0), ly = t.y + uy * 44 + (side ? -6 : (uy < 0 ? -10 * words.length : 6));
+    var txt = el("text", { x: lx, y: ly, "text-anchor": side ? (ux > 0 ? "start" : "end") : "middle", "dominant-baseline": "middle" }, g);
     words.forEach(function (w, wi) {
-      var ts = el("tspan", { x: t.x, dy: wi ? "1.1em" : "0" }, txt); ts.textContent = w;
+      var ts = el("tspan", { x: lx, dy: wi ? "1.15em" : "0" }, txt); ts.textContent = w;
     });
     t.g = g;
     g.addEventListener("click", function () { selectTheme(t); });
