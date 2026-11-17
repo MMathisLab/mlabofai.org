@@ -37,7 +37,7 @@
     b.addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
       root.setAttribute("data-theme", next);
-      try { localStorage.setItem("theme", next); } catch (e) {}
+      try { sessionStorage.setItem("theme", next); } catch (e) {}
       setThemeLabel();
     });
   });

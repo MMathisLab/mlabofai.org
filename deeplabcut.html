@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <script>(function(){var t="dark";try{t=localStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+  <script>(function(){var t="dark";try{localStorage.removeItem("theme");t=sessionStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DeepLabCut · M-Lab of Adaptive Intelligence</title>
   <meta name="description" content="DeepLabCut: markerless 2D and 3D pose estimation for any species, with the SuperAnimal Model Zoo. Open source, from the M-Lab of Adaptive Intelligence at EPFL.">

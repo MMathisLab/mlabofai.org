@@ -655,6 +655,7 @@ a.card:hover .go { transform: translate(3px, -3px); }
 
 /* person profile links + smaller PI photo */
 .pi { grid-template-columns: 200px 1fr; }
+@media (max-width: 860px) { .pi { grid-template-columns: 1fr; } .pi h2 { overflow-wrap: anywhere; } }
 .pi-photo { max-width: 200px; }
 @media (max-width: 860px) { .pi-photo { max-width: 160px; } }
 .person-links { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }

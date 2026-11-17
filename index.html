@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <script>(function(){var t="dark";try{t=localStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+  <script>(function(){var t="dark";try{localStorage.removeItem("theme");t=sessionStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>M-Lab of Adaptive Intelligence · EPFL</title>
   <meta name="description" content="The M-Lab of Adaptive Intelligence at EPFL, led by Prof. Mackenzie Weygandt Mathis, studies how brains and bodies adapt, and builds AI that is robust and interpretable. Home of DeepLabCut and CEBRA.">

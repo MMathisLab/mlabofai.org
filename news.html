@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <script>(function(){var t="dark";try{t=localStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+  <script>(function(){var t="dark";try{localStorage.removeItem("theme");t=sessionStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>News · M-Lab of Adaptive Intelligence</title>
   <meta name="description" content="News from the M-Lab of Adaptive Intelligence: papers, awards, grants and people since 2017.">
