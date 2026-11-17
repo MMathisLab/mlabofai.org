@@ -76,6 +76,7 @@
 
   /* Altmetric identifier: explicit doi / arxiv / pmid fields win, otherwise derived from the URL */
   function altmetricId(p) {
+    if (p.altmetric) return { type: "altmetric-id", id: String(p.altmetric) };
     if (p.doi) return { type: "doi", id: p.doi };
     if (p.arxiv) return { type: "arxiv-id", id: p.arxiv };
     if (p.pmid) return { type: "pmid", id: p.pmid };
