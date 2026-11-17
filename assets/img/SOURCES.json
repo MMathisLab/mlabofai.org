@@ -1,0 +1,225 @@
+{
+ "note": "Images migrated from the old Squarespace site (mlabofai.org) on 2026-11-17, resized and converted to WebP.",
+ "images": [
+  {
+   "file": "assets/img/papers/benquet2026-curbio.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/8aa251ec-d0d2-44f7-9bb9-dd7836d5abee/F4.large.jpg"
+  },
+  {
+   "file": "assets/img/papers/angelaki2026-neuron.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/35f884b8-e949-4bf9-9b5b-423f7093f556/HKYX0haWIAEEZy6.png"
+  },
+  {
+   "file": "assets/img/papers/llavaction2026-iclr.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/d226387a-21fa-40a9-9df3-84f038ce82a0/Screenshot+2026-01-26+at+5.43.35%E2%80%AFPM.png"
+  },
+  {
+   "file": "assets/img/papers/mathis2026-natneuro.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/d0298fe1-70dc-4c56-8bdb-d756a0414182/41593_2025_2169_Fig4_HTML.webp"
+  },
+  {
+   "file": "assets/img/papers/mathis2026-conb.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/8d8acb97-a72b-4352-8370-9a0efbcee3bd/1-s2.0-S0959438826001017-gr1_lrg.jpg"
+  },
+  {
+   "file": "assets/img/papers/rosenberg2026-curbio.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/3796848d-5e46-4370-bb50-a106c17f5f10/1-s2.0-S0960982225016707-fx1_lrg.jpg"
+  },
+  {
+   "file": "assets/img/papers/mathis2025-nrn.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/b1b7e495-3bea-4896-ab56-21e385b38664/Screenshot+2025-11-13+at+16.18.12.png"
+  },
+  {
+   "file": "assets/img/papers/distil2025-iccv.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/3b93faad-21c1-4d74-8d95-c2b8c17b67f0/Screenshot+2025-12-17+at+11.56.12%E2%80%AFAM.png"
+  },
+  {
+   "file": "assets/img/papers/gilbert2025-cell.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/2740e0d1-f5bd-41e2-a080-4f0d95b75b45/fx1_lrg.jpg"
+  },
+  {
+   "file": "assets/img/papers/aros2025-iclr.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/daa949a0-bbe4-4060-862f-abe85b6465c3/iclr-aros.png"
+  },
+  {
+   "file": "assets/img/papers/schneider2025-aistats.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/45184782-587d-4d7f-8c4f-ff5365436596/aistats-poster.jpg"
+  },
+  {
+   "file": "assets/img/papers/mathis2024-cell.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/7b09f2d1-3ccf-4ce3-a60e-c88e4ed6a217/gr5_lrg.jpg"
+  },
+  {
+   "file": "assets/img/papers/weinreb2024-natmeth.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/5104679c-3e0e-47c5-82d2-93fa61742b27/41592_2024_2318_Fig5_HTML.png"
+  },
+  {
+   "file": "assets/img/papers/monosov2024-conb.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/fb8b366d-c216-4a31-b73a-90f64e5e747e/CON_2024.jpg"
+  },
+  {
+   "file": "assets/img/papers/superanimal2024-natcomms.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/601888d1-5dd4-413d-af27-3cdab40ae6f8/SA.png"
+  },
+  {
+   "file": "assets/img/papers/amadeusgpt2023-neurips.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/7573a5b9-0ab0-4643-8bed-0818cc0a0141/Group+436.png"
+  },
+  {
+   "file": "assets/img/papers/zhou2023-iccv.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/6bcc119d-42e3-4cef-b97d-7f16ae956e2c/iccv2023-icon.jpg"
+  },
+  {
+   "file": "assets/img/papers/sandbrink2023-elife.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/9c088460-86a9-4765-9a8c-06781c133db5/Screen+Shot+2023-07-16+at+10.38.30+AM.jpg"
+  },
+  {
+   "file": "assets/img/papers/cebra2023-nature.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/5188f275-2529-4202-83b5-d93cd8ebc378/abstract_cebra.jpg"
+  },
+  {
+   "file": "assets/img/papers/frey2023-curbio.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/7862f0e6-7553-460a-9278-e28012d70270/squirrel_gif.gif"
+  },
+  {
+   "file": "assets/img/papers/mathis2023-nrn.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/33daffb5-dc4c-40c7-813d-c2c224cdf1b7/Screen+Shot+2023-02-04+at+7.41.47+PM.png"
+  },
+  {
+   "file": "assets/img/papers/koch2022-neuron.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/cda47fe7-7b26-43f7-8d23-e1916eebd2fd/1-s2.0-S0896627322008996-gr1.jpg"
+  },
+  {
+   "file": "assets/img/papers/akiti2022-neuron.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/5c04ef47-cf7d-460e-beac-90f705b5d7ce/akiti2022.png"
+  },
+  {
+   "file": "assets/img/papers/maDLC2022-natmeth.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/2419258c-7c52-490f-9278-8be4810f9901/ezgif.com-gif-maker+%282%29.gif"
+  },
+  {
+   "file": "assets/img/papers/tuia2022-natcomms.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/742de4cb-6255-43b8-a3a3-5d530523eae9/newzebraWorldScreen%404x.png"
+  },
+  {
+   "file": "assets/img/papers/hausmann2021-conb.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1623342482826-6T79LDOZ97I310OCTP1K/1-s2.0-S0959438821000519-gr1_lrg.jpg"
+  },
+  {
+   "file": "assets/img/papers/acinoset2021-icra.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/e288a186-f59b-4ef5-aa5a-1cd1ece8c1eb/Joska.jpg"
+  },
+  {
+   "file": "assets/img/papers/mann2021-iclrw.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1620643603719-Y9BNVJ7OI6VT43BVH21G/pybulletM.png"
+  },
+  {
+   "file": "assets/img/papers/mathis2021-curbio.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1618239686086-DFPG8V19DUYLOXV2UWJ1/1-s2.0-S0960982221001524-gr1_lrg.jpg"
+  },
+  {
+   "file": "assets/img/papers/mouilleau2021-dev.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/b8119dde-1d3d-4970-9184-04583d9a5eb9/Screen+Shot+2021-04-12+at+5.06.12+PM.jpg"
+  },
+  {
+   "file": "assets/img/papers/mathis2021-wacv.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/14da5e89-8a44-4eff-879e-12edce2090be/Screenshot%2Bfrom%2B2020-12-03%2B13-46-46.jpg"
+  },
+  {
+   "file": "assets/img/papers/kane2020-elife.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/3ee64090-c93d-44bd-a32c-866098692ccb/DLCLiveBanner.jpg"
+  },
+  {
+   "file": "assets/img/papers/schneider2020-neuripsw.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1607791021202-QRXZRXTWGQ17D288Y5F9/ezgif.com-gif-maker+%285%29.gif"
+  },
+  {
+   "file": "assets/img/papers/mathis2020-neuron.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/736d89cd-2dbc-4556-a690-5f45f71c0b63/cover.tif.jpg"
+  },
+  {
+   "file": "assets/img/papers/mathis2019-natneuro.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1570125747062-DYM54ACS6KLEQ2UXD43A/fidgets.png"
+  },
+  {
+   "file": "assets/img/papers/nath2019-natprot.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1570120535869-P39T6EZ4TOPVCW2OMLBG/NProt_cover_JUL19"
+  },
+  {
+   "file": "assets/img/papers/dlc2018-natneuro.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1570117705475-03R8C12JALENJ9QFGAQE/MATHIS_2018_odortrail.gif"
+  },
+  {
+   "file": "assets/img/papers/mathis2017-neuron.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1506880660724-71MGNKR2LGFUB10EUCL5/inline-graphic-1.gif"
+  },
+  {
+   "file": "assets/img/people/mackenzie-weygandt-mathis.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/59bd9d65-292f-4b36-9f1c-3c513f4a7389/306739BE-650E-4DB4-8BB9-8A69C9159BF7.PNG"
+  },
+  {
+   "file": "assets/img/people/mioara-vasile.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1745343698605-7RVQL3EU8CAEQEKI2SPC/mioara.jpg"
+  },
+  {
+   "file": "assets/img/people/paolo-muratore.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1758119110199-Y1VTD81XUGHRXTBN8D7B/Paolo.jpg"
+  },
+  {
+   "file": "assets/img/people/ruth-gutjahr.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1745331093422-JTYDGK1XM4MB4FOKN3PO/ruth.jpg"
+  },
+  {
+   "file": "assets/img/people/artur-schneider.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1745330088567-OKQ4X6S2YR0NY9GF6B7F/artur.jpg"
+  },
+  {
+   "file": "assets/img/people/spencer-bowles.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1708681798286-63UEMJMTG7DFHZZFW3OS/UPMWMATHIS_portrait_vertical_2024-19.jpg"
+  },
+  {
+   "file": "assets/img/people/ingvild-glrum.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1780600429173-ZUZNMZWTBXNW28FTHDCM/IMG_6152+%281%29.jpeg"
+  },
+  {
+   "file": "assets/img/people/max-chalabi.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1780600424971-PT0Z0V31TDIUZF91DUKH/40766+%281%29.jpg"
+  },
+  {
+   "file": "assets/img/people/celia-benquet.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1708688905769-9KQT2J7D62MGLY9S67BX/UPMWMATHIS_portrait_vertical_2024-24.jpg"
+  },
+  {
+   "file": "assets/img/people/hossein-mirzaei.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1725894978028-GJMV8YFJ9I9SBAIVFHF2/IMG_0710.jpg"
+  },
+  {
+   "file": "assets/img/people/ti-wang.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1725896076442-LVTB1HVPDNVAHFN4UVFV/IMG_0699.jpg"
+  },
+  {
+   "file": "assets/img/people/hugo-may.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1791940874653-9IQF8WN1V6DDP0NGNS37/UPMWMATHIS_portrait_vertical_2024-18.webp"
+  },
+  {
+   "file": "assets/img/people/xiaohang-yu.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1725895593120-NESH6AN7OR98KSF517LE/IMG_5454.jpg"
+  },
+  {
+   "file": "assets/img/people/travis-dewolf.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1687370851837-V36QP8ZNLLCP24EY2JFU/IMG_5771.jpg"
+  },
+  {
+   "file": "assets/img/people/cyril-achard.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1767719831374-P6QCYCDSFIK1KJAS00BS/IMG_1760.webp"
+  },
+  {
+   "file": "assets/img/people/jaap-de-ruyter.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1768610788952-YDF68FBYFFP2JD2Y1BC3/IMG_2419_square.jpg"
+  },
+  {
+   "file": "assets/img/people/leo-bruneau.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1780600631744-ENTD67AHPRZ8SEVZEUNK/1730826079995.jpeg"
+  }
+ ]
+}

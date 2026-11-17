@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){var t="dark";try{t=localStorage.getItem("theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software · M-Lab of Adaptive Intelligence</title>
+  <meta name="description" content="Open-source software from the M-Lab of Adaptive Intelligence at EPFL: DeepLabCut, CEBRA, LLaVAction, AmadeusGPT, FMPose3D, CellSeg3D and more.">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://mlabofai.org/software.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Software · M-Lab of Adaptive Intelligence">
+  <meta property="og:description" content="Open-source software from the M-Lab of Adaptive Intelligence at EPFL: DeepLabCut, CEBRA, LLaVAction, AmadeusGPT, FMPose3D, CellSeg3D and more.">
+  <meta property="og:url" content="https://mlabofai.org/software.html">
+  <meta property="og:image" content="https://mlabofai.org/assets/img/overview-dark.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="./" aria-label="M-Lab of Adaptive Intelligence, home">
+        <img class="brand-logo only-dark" src="assets/img/logo-mark-dark.webp" width="63" height="40" alt=""><img class="brand-logo only-light" src="assets/img/logo-mark-light.webp" width="63" height="40" alt="">
+        <span class="brand-name">M-Lab <small>of Adaptive Intelligence</small></span>
+      </a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle light / dark mode">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./#research">Research</a></li>
+        <li><a href="software.html" aria-current="page">Software</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li class="nav-cta"><a href="join.html">Join us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Software</span>
+        <h1>Open-source tools.</h1>
+        <p class="lede">We ship our methods as open-source software, so that other labs can measure, model and understand behavior too.</p>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="grid grid-3">
+          <article class="card feature sw teal reveal" id="deeplabcut">
+            <div class="card-media"><video src="assets/video/reel/mice-multi.mp4" poster="assets/video/reel/mice-multi.jpg" muted loop playsinline preload="none" aria-label="Multi-animal tracking with DeepLabCut"></video></div>
+            <span class="badge">Pose estimation</span>
+            <h3>DeepLabCut</h3>
+            <p>Markerless pose estimation of user-defined body parts with deep learning, for animals of any species. DeepLabCut supports 3D and multi-animal tracking, and ships the SuperAnimal pretrained foundation models, so you can analyze behavior with few or no labels.</p>
+            <ul class="sw-papers">
+              <li><a href="https://www.nature.com/articles/s41593-018-0209-y" target="_blank" rel="noopener">Nature Neuroscience 2018</a></li>
+              <li><a href="https://www.nature.com/articles/s41596-019-0176-0" target="_blank" rel="noopener">Nature Protocols 2019</a></li>
+              <li><a href="https://www.nature.com/articles/s41592-022-01443-0" target="_blank" rel="noopener">Nature Methods 2022</a></li>
+              <li><a href="https://www.nature.com/articles/s41467-024-48792-2" target="_blank" rel="noopener">Nature Communications 2024</a></li>
+            </ul>
+            <div class="card-links"><a href="https://deeplabcut.org" target="_blank" rel="noopener">Website ↗</a><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card feature sw violet reveal" id="cebra">
+            <div class="card-media contain"><img src="assets/img/media/cebra-sphere.webp" alt="A CEBRA latent embedding" loading="lazy"></div>
+            <span class="badge">Representation learning</span>
+            <h3>CEBRA</h3>
+            <p>Self-supervised learning that produces consistent, identifiable latent embeddings of behavioral and neural data, across sessions, animals and recording modalities, with attribution maps to see what drives them.</p>
+            <ul class="sw-papers">
+              <li><a href="https://www.nature.com/articles/s41586-023-06031-6" target="_blank" rel="noopener">Nature 2023</a></li>
+              <li><a href="https://arxiv.org/abs/2502.12977" target="_blank" rel="noopener">AISTATS 2025</a></li>
+            </ul>
+            <div class="card-links"><a href="https://cebra.ai" target="_blank" rel="noopener">Website ↗</a><a href="https://github.com/AdaptiveMotorControlLab/CEBRA" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card feature sw blue reveal" id="musbiomaus">
+            <div class="card-media mm"><video src="assets/video/musbiomaus-mimic.mp4" poster="assets/video/musbiomaus-mimic.jpg" muted loop playsinline preload="none" aria-label="MusBioMaus re-enacting a mouse reach"></video></div>
+            <span class="badge">Biomechanics</span>
+            <h3>MusBioMaus</h3>
+            <p>A neuro-musculoskeletal model of the mouse that merges neural control and musculoskeletal modeling, to study adaptive motor control from cortex to individual muscles.</p>
+            <ul class="sw-papers"><li><a href="https://www.biorxiv.org/content/10.1101/2024.09.11.612513" target="_blank" rel="noopener">bioRxiv 2024</a></li></ul>
+            <div class="card-links"><a href="https://www.mausspaun.org/" target="_blank" rel="noopener">Website ↗</a></div>
+          </article>
+        </div>
+
+        <div class="grid grid-3 mt-24">
+          <article class="card sw violet reveal" id="llavaction">
+            <span class="badge">Multimodal LLM</span>
+            <h3>LLaVAction</h3>
+            <p>Evaluating and training multimodal large language models for action recognition.</p>
+            <ul class="sw-papers"><li><a href="https://arxiv.org/abs/2503.18712" target="_blank" rel="noopener">ICLR 2026</a></li></ul>
+            <div class="card-links"><a href="https://mmathislab.github.io/llavaction" target="_blank" rel="noopener">Project ↗</a></div>
+          </article>
+          <article class="card sw violet reveal" id="amadeusgpt">
+            <span class="badge">Language interface</span>
+            <h3>AmadeusGPT</h3>
+            <p>A natural language interface for interactive animal behavioral analysis.</p>
+            <ul class="sw-papers"><li><a href="https://openreview.net/pdf?id=9AcG3Tsyoq" target="_blank" rel="noopener">NeurIPS 2023</a></li></ul>
+            <div class="card-links"><a href="https://github.com/AdaptiveMotorControlLab/AmadeusGPT" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card sw teal reveal" id="fmpose3d">
+            <span class="badge">3D pose</span>
+            <h3>FMPose3D</h3>
+            <p>Monocular 3D pose estimation via flow matching.</p>
+            <ul class="sw-papers"><li><a href="https://arxiv.org/abs/2602.05755" target="_blank" rel="noopener">CVPR 2026</a></li></ul>
+            <div class="card-links"><a href="https://xiu-cs.github.io/FMPose3D/" target="_blank" rel="noopener">Project ↗</a></div>
+          </article>
+          <article class="card sw magenta reveal" id="cellseg3d">
+            <span class="badge">Microscopy</span>
+            <h3>CellSeg3D</h3>
+            <p>Self-supervised (and supervised) 3D cell segmentation with deep learning, primarily for mesoSPIM data.</p>
+            <div class="card-links"><a href="https://github.com/AdaptiveMotorControlLab/CellSeg3D" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card sw teal reveal" id="dlc2kinematics">
+            <span class="badge">Kinematics</span>
+            <h3>DLC2Kinematics</h3>
+            <p>A post-DeepLabCut module for kinematic analysis of pose estimation outputs.</p>
+            <div class="card-links"><a href="https://github.com/AdaptiveMotorControlLab/DLC2Kinematics" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="card sw magenta reveal">
+            <span class="badge">More</span>
+            <h3>Everything else</h3>
+            <p>Code for our other papers, research releases and datasets.</p>
+            <div class="card-links"><a href="https://github.com/AdaptiveMotorControlLab" target="_blank" rel="noopener">GitHub ↗</a><a href="https://github.com/DeepLabCut" target="_blank" rel="noopener">DeepLabCut org ↗</a></div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="eyebrow">Build with us</span>
+          <h2>Contribute to open-source science.</h2>
+          <p class="lede">Our software team supports DeepLabCut and our other tools. Engineers can join through our open positions.</p>
+          <div class="btn-row"><a class="btn btn-primary" href="join.html">Open positions <span class="arrow">→</span></a><a class="btn" href="https://github.com/AdaptiveMotorControlLab" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand footer-brand" href="./" aria-label="M-Lab of Adaptive Intelligence, home"><img class="only-dark" src="assets/img/logo-full-dark.webp" width="669" height="500" alt="M-Lab of Adaptive Intelligence logo"><img class="only-light" src="assets/img/logo-full-light.webp" width="705" height="500" alt="M-Lab of Adaptive Intelligence logo"></a>
+          <p class="footer-tag">Robust &amp; interpretable AI, grounded in real-world behavior.</p>
+        </div>
+        <div>
+          <h4>Lab</h4>
+          <ul>
+            <li><a href="./#research">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="people.html#alumni">Alumni</a></li>
+            <li><a href="join.html">Open positions</a></li>
+            <li><a href="./#funding">Funding</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Work</h4>
+          <ul>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <address>EPFL · Campus Biotech<br>Building B1, 3rd floor<br>9 Chemin des Mines<br>1202 Geneva, Switzerland</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2017–<span data-year>2026</span> M-Lab of Adaptive Intelligence</span>
+        <div class="socials">
+          <a href="https://x.com/TrackingActions" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://bsky.app/profile/trackingactions.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg></a>
+          <a href="https://github.com/AdaptiveMotorControlLab" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
