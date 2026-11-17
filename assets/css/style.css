@@ -981,3 +981,6 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .tg-people-list button { background: none; border: 0; padding: 2px 0; color: var(--text-2); font: inherit; cursor: pointer; text-align: left; }
 .tg-people-list button:hover { color: var(--text); text-decoration: underline; }
 @media (max-width: 860px) { .team-graph { padding: 20px; } .tg-body { grid-template-columns: 1fr; } .tg-panel { min-height: 0; } }
+.pub-press { margin-top: 6px; font-size: .8rem; }
+.pub-press a { color: var(--teal); text-decoration: none; }
+.pub-press a:hover { text-decoration: underline; text-underline-offset: 3px; }
