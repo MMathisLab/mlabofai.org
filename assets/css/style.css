@@ -70,7 +70,8 @@
   --amber: #c98a00;
 }
 :root[data-theme="light"] .avatar { color: rgba(20, 18, 30, .7); }
-:root[data-theme="light"] .goal, :root[data-theme="light"] .pillar::after { opacity: .6; }
+:root[data-theme="light"] .pillar::after { opacity: .6; }
+:root[data-theme="light"] .goal { box-shadow: 0 0 60px -30px rgba(226, 60, 224, .35); }
 :root[data-theme="light"] .card, :root[data-theme="light"] .pillar, :root[data-theme="light"] .person,
 :root[data-theme="light"] .pi, :root[data-theme="light"] .info-card { box-shadow: 0 1px 2px rgba(20, 18, 30, .04); }
 
@@ -705,7 +706,22 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .card.blue { --accent: var(--blue); }
 
 /* approach block inside research, under the goal */
-.approach { margin: 72px 0 72px; }
+.approach {
+  position: relative; margin: 56px 0 72px; padding: 44px 44px 36px;
+  border: 1px solid rgba(226, 60, 224, .32); border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(226, 60, 224, .07), rgba(226, 60, 224, 0) 55%), var(--surface);
+}
+/* stem joining the goal pill to the approach panel */
+.approach::before {
+  content: ""; position: absolute; left: 50%; top: -57px; width: 1px; height: 56px;
+  background: linear-gradient(rgba(226, 60, 224, .75), rgba(226, 60, 224, .35));
+}
+.approach::after {
+  content: ""; position: absolute; left: 50%; top: -5px; width: 9px; height: 9px; margin-left: -4px;
+  border-radius: 50%; background: var(--magenta); box-shadow: 0 0 14px rgba(226, 60, 224, .8);
+}
+.approach .constraint .num { color: var(--magenta); }
+@media (max-width: 600px) { .approach { padding: 32px 22px 24px; } }
 .approach .statement { font-size: clamp(1.4rem, 2.8vw, 2.2rem); }
 .approach .constraints { margin-top: 44px; }
 
