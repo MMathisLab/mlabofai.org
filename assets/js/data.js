@@ -26,6 +26,7 @@ window.MLAB = window.MLAB || {};
 
 MLAB.publications = [
   // ---- 2026 ----
+  { title: "Closed-loop imitation learning reveals muscle-centric and latent-goal codes in primate sensorimotor cortex", authors: "Marin Vargas A., et al., <b>Mathis M.W.</b>, Mathis A.", venue: "bioRxiv", year: 2026, url: "https://www.biorxiv.org/content/10.64898/2026.02.01.703133", doi: "10.64898/2026.02.01.703133", areas: ["bio", "neuro"] },
   { title: "Programmable Semantic Interventions: Learning Causal Carriers from Behavioral Programs", authors: "<b>Muratore P.</b>, <b>Mathis M.W.</b>", venue: "arXiv", year: 2026, url: "https://arxiv.org/abs/2611.21307", areas: ["ml"], latest: true },
   { thumb: "assets/img/papers/benquet2026-curbio.webp", title: "Visual uncertainty and active sensing in mice", /* CHECK */ authors: "<b>Benquet C.</b>*, et al., <b>Mathis M.W.</b>", venue: "Current Biology", year: 2026, url: "https://www.cell.com/current-biology/fulltext/S0960-9822(26)00722-0", areas: ["neuro"], latest: true },
   { thumb: "assets/img/papers/angelaki2026-neuron.webp", title: "Simons Collaboration on Ecological Neuroscience", /* CHECK */ authors: "Angelaki D.E., et al.", venue: "Neuron", year: 2026, url: "https://www.cell.com/neuron/abstract/S0896-6273(26)00331-4", areas: ["neuro"] },
@@ -37,6 +38,7 @@ MLAB.publications = [
   { thumb: "assets/img/papers/mathis2026-conb.webp", title: "AI is reshaping neuroscience across scales", /* CHECK */ authors: "<b>Mathis M.W.</b>", venue: "Current Opinion in Neurobiology", year: 2026, url: "https://www.sciencedirect.com/science/article/pii/S0959438826001017", areas: ["ml", "neuro"] },
 
   // ---- 2025 ----
+  { title: "A Contrastive Teacher-Student Framework for Novelty Detection under Style Shifts", authors: "<b>Mirzaei H.</b>, et al., <b>Mathis M.W.</b>, et al.", venue: "arXiv", year: 2025, url: "https://arxiv.org/abs/2501.17289", areas: ["ml"] },
   { thumb: "assets/img/papers/mathis2025-nrn.webp", title: "Joint modelling of brain and behaviour dynamics with artificial intelligence", authors: "<b>Mathis M.W.</b>, Mathis A.", venue: "Nature Reviews Neuroscience", year: 2025, url: "https://www.nature.com/articles/s41583-025-00996-1", areas: ["ml", "neuro"], latest: true },
   { thumb: "assets/img/papers/distil2025-iccv.webp", title: "DISTIL: Data-Free Inversion of Suspicious Trojan Inputs via Latent Diffusion", authors: "<b>Mirzaei H.</b>, et al., <b>Mathis M.W.</b>", venue: "ICCV", year: 2025, arxiv: "2507.22813", url: "https://openaccess.thecvf.com/content/ICCV2025/papers/Mirzaei_DISTIL_Data-Free_Inversion_of_Suspicious_Trojan_Inputs_via_Latent_Diffusion_ICCV_2025_paper.pdf", areas: ["ml", "cv"], latest: true },
   { thumb: "assets/img/papers/gilbert2025-cell.webp", title: "Neuropeptides and the division of labor in leafcutter ants", /* CHECK */ authors: "Gilbert M.B., et al.", venue: "Cell", year: 2025, url: "https://www.cell.com/cell/fulltext/S0092-8674(25)00573-2", areas: ["cv", "neuro"] },
@@ -44,6 +46,7 @@ MLAB.publications = [
   { thumb: "assets/img/papers/schneider2025-aistats.webp", title: "Time-series attribution maps with regularized contrastive learning", authors: "<b>Schneider S.</b>, et al., <b>Mathis M.W.</b>", venue: "AISTATS", year: 2025, url: "https://arxiv.org/abs/2502.12977", areas: ["ml"], latest: true },
 
   // ---- 2024 ----
+  { title: "Molecular and neural mechanisms of behavioural integration in the extended-amygdala", authors: "Chang S., Fermani F., Huang L., <b>Schneider S.</b>, <b>Mathis M.W.</b>, Deussing J.M., Cai N.", venue: "bioRxiv", year: 2024, url: "https://www.biorxiv.org/content/10.1101/2024.04.29.591588", doi: "10.1101/2024.04.29.591588", areas: ["neuro"] },
   { title: "Neuro-musculoskeletal modeling reveals muscle-level neural dynamics of adaptive learning in sensorimotor cortex", authors: "<b>DeWolf T.</b>, <b>Schneider S.</b>, Soubiran P., <b>Roggenbach A.</b>, <b>Muratore P.</b>, <b>Mathis M.W.</b>", venue: "bioRxiv", year: 2024, url: "https://www.biorxiv.org/content/10.1101/2024.09.11.612513", doi: "10.1101/2024.09.11.612513", areas: ["bio", "neuro"] },
   { thumb: "assets/img/papers/mathis2024-cell.webp", title: "Decoding the brain: from neural representations to mechanistic models", authors: "<b>Mathis M.W.</b>, et al.", venue: "Cell", year: 2024, url: "https://www.cell.com/cell/fulltext/S0092-8674(24)00980-2", areas: ["ml", "neuro"], latest: true },
   { thumb: "assets/img/papers/weinreb2024-natmeth.webp", title: "Keypoint-MoSeq: parsing behavior by linking point tracking to pose dynamics", authors: "Weinreb C., et al.", venue: "Nature Methods", year: 2024, url: "https://www.nature.com/articles/s41592-024-02318-2", areas: ["cv"] },
