@@ -456,7 +456,9 @@ a.card:hover .go { transform: translate(3px, -3px); }
 /* --------------------------------------------------------------------------
    News timeline
    -------------------------------------------------------------------------- */
-.timeline { display: grid; grid-template-columns: 220px 1fr; gap: 0 40px; }
+.timeline { display: block; }
+/* one grid per period, so each sticky label only sticks within its own period */
+.tl-group { display: grid; grid-template-columns: 220px 1fr; gap: 0 40px; }
 .tl-period { padding: 26px 0; border-top: 1px solid var(--line); position: sticky; top: 90px; align-self: start; }
 .tl-period .mono { color: var(--dim); }
 .tl-period h3 { margin-top: 6px; font-size: 1.15rem; }
@@ -472,7 +474,7 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .tl-items li.n-people { --dot: var(--violet); }
 .tl-items li.n-grant { --dot: var(--amber); }
 @media (max-width: 760px) {
-  .timeline { grid-template-columns: 1fr; }
+  .tl-group { grid-template-columns: 1fr; }
   .tl-period { position: static; padding-bottom: 6px; }
   .tl-items { border-top: 0; }
 }

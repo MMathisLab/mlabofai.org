@@ -192,13 +192,13 @@
       var parts = g.period.split(" ");
       var year = parts[parts.length - 1];
       var season = parts.slice(0, -1).join(" ");
-      return '<div class="tl-period"><span class="mono">' + esc(year) + "</span><h3>" + esc(season || year) + "</h3></div>" +
+      return '<div class="tl-group"><div class="tl-period"><span class="mono">' + esc(year) + "</span><h3>" + esc(season || year) + "</h3></div>" +
         '<div><ul class="tl-items">' + g.items.map(function (it) {
           return '<li class="n-' + esc(it.type) + '">' + esc(it.text) + "</li>";
         }).join("") + "</ul>" +
         (g.images && g.images.length ? '<div class="tl-photos">' + g.images.map(function (src) {
           return '<a href="' + esc(src) + '" target="_blank" rel="noopener"><img src="' + esc(src) + '" alt="Lab photo, ' + esc(g.period) + '" loading="lazy"></a>';
-        }).join("") + "</div>" : "") + "</div>";
+        }).join("") + "</div>" : "") + "</div></div>";
     }).join("");
   }
 
