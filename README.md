@@ -40,7 +40,7 @@ Paper thumbnails (`assets/img/papers/`) and team photos (`assets/img/people/`) w
 
 ## Before launch: please check
 
-1. Titles in `data.js` marked `// CHECK` were transcribed from the old site and may be shortened. Paste exact titles.
+1. Paper titles, months and full author lists were checked against Crossref/OpenAlex/arXiv in Nov 2026; keep the same format (`Family I.I.`, lab members in `<b>…</b>`) when adding papers.
 2. Spellings that differ across the old site: Ananda/Anada Wolz, Sander/Sanders Meisen, Melony/Melody Tong.
 3. There is no contact email on the site (same as before). Add one to `join.html` if you want one.
 
