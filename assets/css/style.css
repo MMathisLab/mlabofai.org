@@ -825,3 +825,23 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .hp-authors { font-size: .82rem !important; color: var(--dim) !important; }
 .card.hp .card-links { padding-top: 14px; }
 .card.bio, .card.hp.blue { --accent: var(--blue); }
+
+/* DeepLabCut page */
+.dlc-hero h1 sup { font-size: .35em; vertical-align: super; color: var(--muted); }
+.dlc-banner { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: #dfe6ef; align-self: center; }
+.dlc-banner img { width: 100%; height: auto; }
+.link-card h3 { font-size: 1.15rem; display: flex; justify-content: space-between; }
+.card-media.light-bg { background: #fff; }
+.card.zoo .card-media { height: 210px; }
+.mono-name { font-family: var(--mono); font-size: 1rem !important; font-weight: 500; letter-spacing: 0; }
+.card.zoo p a, .info-card p a, .contributors a { color: var(--teal); }
+.try { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 26px 0 8px; padding: 22px 26px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); }
+.try .card-links { padding: 0; margin: 0; }
+.sub-h { font-size: 1.3rem; margin: 56px 0 20px; }
+.contributors { color: var(--muted); font-size: .88rem; margin-top: 32px; line-height: 1.7; }
+.contributors b { color: var(--text); font-weight: 500; }
+.ref-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+.ref-list li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.ref-list a { font-weight: 500; display: block; line-height: 1.4; }
+.ref-list a:hover { color: var(--teal); }
+.ref-list span { display: block; color: var(--dim); font-size: .85rem; margin-top: 4px; }
