@@ -928,3 +928,4 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .bio-toggle span { display: inline-block; transition: transform .2s; }
 .bio[data-collapsed="false"] .bio-toggle span { transform: rotate(180deg); }
 @media (min-width: 861px) { .pi > .pi-photo { position: sticky; top: 100px; align-self: start; } }
+.facts.one { grid-template-columns: 1fr; }
