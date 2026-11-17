@@ -250,6 +250,18 @@
     });
   });
 
+  /* PI bio: expand / collapse */
+  document.querySelectorAll(".bio-toggle").forEach(function (btn) {
+    var bio = btn.closest(".bio");
+    btn.addEventListener("click", function () {
+      var open = bio.getAttribute("data-collapsed") === "true";
+      bio.setAttribute("data-collapsed", open ? "false" : "true");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.firstChild.nodeValue = open ? "Show less " : "Read full bio ";
+      if (!open) bio.scrollIntoView({ block: "nearest" });
+    });
+  });
+
   /* links like #highlights with data-hl="musbiomaus" open that tab */
   function openHighlight(id) {
     var t = document.getElementById("tab-" + id);
