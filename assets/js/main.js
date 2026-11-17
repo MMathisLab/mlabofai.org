@@ -48,6 +48,13 @@
 
   /* ---------- helpers ---------- */
   var M = window.MLAB || {};
+  /* newest first by year, then month (stable: same-month papers keep their order in data.js) */
+  if (M.publications) {
+    M.publications = M.publications
+      .map(function (p, i) { return { p: p, i: i }; })
+      .sort(function (a, b) { return (b.p.year - a.p.year) || ((b.p.month || 0) - (a.p.month || 0)) || (a.i - b.i); })
+      .map(function (x) { return x.p; });
+  }
   var areaName = { cv: "Computer vision", ml: "Machine learning", neuro: "Neuroscience", bio: "Biomechanics" };
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function stripTags(s) { return String(s).replace(/<[^>]*>/g, ""); }
