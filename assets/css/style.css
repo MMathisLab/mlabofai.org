@@ -932,3 +932,7 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .pi-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(var(--fg-rgb), .35); text-underline-offset: 3px; transition: color .2s, text-decoration-color .2s; }
 .pi-link:hover { color: var(--text); text-decoration-color: var(--teal); }
 #mackenzie { scroll-margin-top: 96px; }
+.n-links { white-space: normal; }
+.n-links a { color: var(--teal); font-size: .9em; text-decoration: none; white-space: nowrap; }
+.n-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+:root[data-theme="light"] .n-links a { color: #0a8a7a; }
