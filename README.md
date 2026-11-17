@@ -38,11 +38,6 @@ CNAME                 Custom domain for GitHub Pages
 
 Paper thumbnails (`assets/img/papers/`) and team photos (`assets/img/people/`) were migrated from the old Squarespace site and converted to WebP. `assets/img/SOURCES.json` records where each one came from. To add a new one, drop a `.webp`/`.jpg` in the folder and point `thumb:` (papers, in `data.js`) or the person's `<img>` (in `people.html`) at it. Missing images fall back to topic icons and initials.
 
-## Before launch: please check
-
-1. Titles in `data.js` marked `// CHECK` were transcribed from the old site and may be shortened. Paste exact titles.
-2. Spellings that differ across the old site: Ananda/Anada Wolz, Sander/Sanders Meisen, Melony/Melody Tong.
-3. There is no contact email on the site (same as before). Add one to `join.html` if you want one.
 
 ## Preview locally
 
@@ -51,28 +46,4 @@ python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
-## Deploy on GitHub Pages (free, HTTPS included)
 
-1. Create a GitHub repository (for example `mlabofai.org`) and push the contents of this folder to the `main` branch.
-2. Repository → **Settings → Pages** → Source: *Deploy from a branch* → `main` / `(root)` → Save.
-3. Under **Custom domain**, enter `mlabofai.org` and save (the `CNAME` file already contains it).
-4. At your DNS provider, add:
-
-   | Type  | Host  | Value                     |
-   |-------|-------|---------------------------|
-   | A     | @     | 185.199.108.153           |
-   | A     | @     | 185.199.109.153           |
-   | A     | @     | 185.199.110.153           |
-   | A     | @     | 185.199.111.153           |
-   | AAAA  | @     | 2606:50c0:8000::153       |
-   | AAAA  | @     | 2606:50c0:8001::153       |
-   | AAAA  | @     | 2606:50c0:8002::153       |
-   | AAAA  | @     | 2606:50c0:8003::153       |
-   | CNAME | www   | `<your-github-user-or-org>.github.io` |
-
-   Remove the existing Squarespace A/CNAME records for `@` and `www` first. Leave MX/email records untouched.
-5. Wait for DNS to propagate (up to 24 hours), then tick **Enforce HTTPS** in Settings → Pages.
-
-**Where is the DNS?** Google Domains was sold to Squarespace, and Google Domains registrations were migrated to Squarespace Domains. Manage DNS at squarespace.com → Domains → mlabofai.org → DNS settings → Custom records. Once the new site is live you can cancel the Squarespace *website* plan, but confirm in your Squarespace billing settings that this does not affect the *domain* registration first.
-
-Netlify or Cloudflare Pages also work: point them at this folder, no build command, publish directory `/`.
