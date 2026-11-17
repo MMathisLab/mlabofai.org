@@ -845,3 +845,10 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .ref-list a { font-weight: 500; display: block; line-height: 1.4; }
 .ref-list a:hover { color: var(--teal); }
 .ref-list span { display: block; color: var(--dim); font-size: .85rem; margin-top: 4px; }
+
+/* DeepLabCut page: logo hero */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.dlc-logo { margin: 18px 0 8px; line-height: 0; }
+.dlc-logo img { width: min(760px, 100%); height: auto; }
+#papers .sub-h { margin-bottom: 12px; }
+#papers .mt-64 { margin-top: 56px; }

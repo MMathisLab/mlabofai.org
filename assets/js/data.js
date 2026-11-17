@@ -29,7 +29,7 @@ MLAB.publications = [
   { title: "Programmable Semantic Interventions: Learning Causal Carriers from Behavioral Programs", authors: "<b>Muratore P.</b>, <b>Mathis M.W.</b>", venue: "arXiv", year: 2026, url: "https://arxiv.org/abs/2611.21307", areas: ["ml"], latest: true },
   { thumb: "assets/img/papers/benquet2026-curbio.webp", title: "Visual uncertainty and active sensing in mice", /* CHECK */ authors: "<b>Benquet C.</b>*, et al., <b>Mathis M.W.</b>", venue: "Current Biology", year: 2026, url: "https://www.cell.com/current-biology/fulltext/S0960-9822(26)00722-0", areas: ["neuro"], latest: true },
   { thumb: "assets/img/papers/angelaki2026-neuron.webp", title: "Simons Collaboration on Ecological Neuroscience", /* CHECK */ authors: "Angelaki D.E., et al.", venue: "Neuron", year: 2026, url: "https://www.cell.com/neuron/abstract/S0896-6273(26)00331-4", areas: ["neuro"] },
-  { title: "FMPose3D: monocular 3D pose estimation via flow matching", authors: "<b>Wang T.</b>, <b>Yu X.</b>, <b>Mathis M.W.</b>", venue: "CVPR", year: 2026, url: "https://arxiv.org/abs/2602.05755", areas: ["cv"], latest: true },
+  { thumb: "assets/img/papers/fmpose3d2026-cvpr.webp", title: "FMPose3D: monocular 3D pose estimation via flow matching", authors: "<b>Wang T.</b>, <b>Yu X.</b>, <b>Mathis M.W.</b>", venue: "CVPR", year: 2026, url: "https://arxiv.org/abs/2602.05755", areas: ["cv"], latest: true },
   { thumb: "assets/img/papers/llavaction2026-iclr.webp", title: "LLaVAction: evaluating and training multi-modal large language models for action recognition", authors: "Qi H.*, et al., <b>Mathis M.W.</b>", venue: "ICLR", year: 2026, url: "https://arxiv.org/abs/2503.18712", areas: ["cv", "ml"], latest: true },
   { thumb: "assets/img/papers/mathis2026-natneuro.webp", title: "Adaptive Intelligence: leveraging insights from adaptive behavior in animals to build flexible AI systems", /* CHECK: arXiv title; journal title may differ */ authors: "<b>Mathis M.W.</b>", venue: "Nature Neuroscience", year: 2026, url: "https://www.nature.com/articles/s41593-025-02169-w", areas: ["ml", "neuro"], latest: true },
   { thumb: "assets/img/papers/rosenberg2026-curbio.webp", title: "Individual identification of brown bears with pose-aware metric learning", /* CHECK */ authors: "Rosenberg B., et al.", venue: "Current Biology", year: 2026, url: "https://www.sciencedirect.com/science/article/pii/S0960982225016707", areas: ["cv"] },
@@ -225,3 +225,25 @@ MLAB.news = [
     { type: "people", text: "September 1: The lab opens at Harvard." }
   ]}
 ];
+
+// DeepLabCut page: key papers, matched by title against M.publications (extras fill gaps)
+MLAB.dlcPapers = {
+  primary: [
+    "DeepLabCut: markerless pose estimation of user-defined body parts with deep learning",
+    "Using DeepLabCut for 3D markerless pose estimation across species and behaviors",
+    "Real-time, low-latency closed-loop feedback using markerless posture tracking",
+    "Multi-animal pose estimation, identification and tracking with DeepLabCut",
+    "SuperAnimal pretrained pose estimation models for behavioral analysis",
+    "Rethinking pose estimation in crowds: overcoming the detection information bottleneck and ambiguity",
+    "FMPose3D: monocular 3D pose estimation via flow matching"
+  ],
+  more: [
+    "A Primer on Motion Capture with Deep Learning: Principles, Pitfalls, and Perspectives",
+    "Deep learning tools for the measurement of animal behavior in neuroscience",
+    "Pretraining boosts out-of-domain robustness for pose estimation",
+    "On the inference speed and video-compression robustness of DeepLabCut"
+  ],
+  extras: [
+    { title: "On the inference speed and video-compression robustness of DeepLabCut", authors: "Mathis A., Warren R.", venue: "bioRxiv", year: 2018, url: "https://www.biorxiv.org/content/10.1101/457242v1", doi: "10.1101/457242", areas: ["cv"] }
+  ]
+};

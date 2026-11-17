@@ -120,6 +120,19 @@
     initAltmetric();
   }
 
+  /* ---------- DeepLabCut page: key papers ---------- */
+  if (M.dlcPapers && M.publications) {
+    var pool = M.publications.concat(M.dlcPapers.extras || []);
+    ["primary", "more"].forEach(function (k) {
+      var el = document.getElementById("dlc-pubs-" + k);
+      if (!el) return;
+      el.innerHTML = M.dlcPapers[k].map(function (t) {
+        return pool.filter(function (p) { return p.title === t; })[0];
+      }).filter(Boolean).map(pubItem).join("");
+    });
+    initAltmetric();
+  }
+
   /* ---------- homepage: recent news ---------- */
   var recentEl = document.getElementById("recent-news");
   if (recentEl && M.news) {
