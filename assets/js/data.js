@@ -330,7 +330,11 @@ MLAB.research = {
       "Through large-scale neural recordings and behavioral measurements, we investigate how the brain builds, maintains and updates internal models during skilled motor learning. By developing consistent latent representations of neural activity and behavior, we aim to uncover the underlying structure and dynamics of neural population activity, and understand how these dynamics relate to movement, sensory feedback and adaptation.",
       "Ultimately, our goal is to reveal how the brain learns to control the body, how it adjusts to changing environments and bodily conditions, and how these processes support flexible and adaptive behavior."
     ],
-    media: { img: "assets/img/media/cebra-sphere.webp", alt: "A CEBRA latent embedding of neural data" },
+    media: [
+      { video: "assets/video/cebra-s1m1.mp4", poster: "assets/video/cebra-s1m1.jpg", fit: "contain", alt: "CEBRA embeddings of S1 and M1 activity in mice during a joystick reach-and-pull task, alongside hand position and joystick traces", caption: "cebra.ai", link: "https://cebra.ai" },
+      { video: "assets/video/dysco.mp4", poster: "assets/video/dysco-poster.jpg", fit: "contain", alt: "DYSCO latent dynamics of motor cortex across held-out reaches, colored by reach direction", caption: "DYSCO paper", link: "https://arxiv.org/abs/2606.13260" },
+      { video: "assets/video/schizophrenia-latent.mp4", poster: "assets/video/schizophrenia-latent.jpg", fit: "contain", bg: "#fff", alt: "Animated maps of the cerebellum and cortex colored by probability, from an explainable AI latent space of brain dynamics", caption: "Brain dynamics in schizophrenia", link: "https://www.biorxiv.org/content/10.64898/2026.08.25.746991" }
+    ],
     projects: [
       { name: "CEBRA", pub: "Learnable latent embeddings", tag: "Consistent latent embeddings of neural and behavioral data.", video: "assets/video/cebra-allen.mp4", poster: "assets/video/cebra-allen-poster.jpg", links: [["cebra.ai", "https://cebra.ai"]] },
       { name: "DYSCO", pub: "Extracting Governing Equations", tag: "The equations of motor cortex, learned from spikes." },

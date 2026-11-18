@@ -1067,3 +1067,5 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .r-dots { position: absolute; right: 12px; bottom: 16px; display: flex; gap: 6px; z-index: 2; }
 .r-dots button { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: rgba(255,255,255,.45); cursor: pointer; }
 .r-dots button[aria-current="true"] { background: #fff; }
+.r-dots button { box-shadow: 0 0 0 1px rgba(0,0,0,.35); }
+.r-dots button[aria-current="true"] { background: var(--accent, #fff); box-shadow: 0 0 0 1px rgba(255,255,255,.6); }
