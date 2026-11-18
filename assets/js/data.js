@@ -278,7 +278,7 @@ MLAB.dlcPapers = {
 MLAB.research = {
   cv: {
     name: "Computer vision", accent: "teal",
-    title: "Measure behavior when labels are scarce",
+    title: "Robustly measure behavior",
     lede: "MLAI develops machine learning and computer vision approaches to measure, reconstruct and understand animal movement and behavior from video, particularly in settings where labeled data are scarce and behaviors are complex.",
     intro: [
       "Our work includes markerless pose estimation, pretrained animal foundation models, 3D pose reconstruction from single-camera recordings, and multimodal models for action and behavior understanding. Beyond tracking keypoints, we aim to capture the full visual and functional complexity of movement, with a focus on pose, body shape and action: how bodies are configured, how they move, and what actions they perform.",
