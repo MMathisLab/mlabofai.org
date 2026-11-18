@@ -284,7 +284,11 @@ MLAB.research = {
       "Our work includes markerless pose estimation, pretrained animal foundation models, 3D pose reconstruction from single-camera recordings, and multimodal models for action and behavior understanding. Beyond tracking keypoints, we aim to capture the full visual and functional complexity of movement, with a focus on pose, body shape and action: how bodies are configured, how they move, and what actions they perform.",
       "A central direction is to bridge computer vision and biomechanics by connecting visual observations to body structure, musculoskeletal models and the underlying mechanics of movement. Ultimately, we seek to move beyond describing behavior in pixels toward understanding how the body produces movement, how movement relates to function, and how these processes connect to neural control and adaptation."
     ],
-    media: { video: "assets/video/reel/cheetah.mp4", poster: "assets/video/reel/cheetah.jpg", alt: "A cheetah tracked with DeepLabCut" },
+    /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
+    media: [
+      { video: "assets/video/reel/cheetah.mp4", poster: "assets/video/reel/cheetah.jpg", alt: "A cheetah tracked with DeepLabCut", caption: "DeepLabCut tracking a cheetah", link: "deeplabcut.html" },
+      { video: "assets/video/fmpose3d-biomech.mp4", poster: "assets/video/fmpose3d-biomech.jpg", fit: "contain", alt: "A runner filmed with one camera, the 3D pose FMPose3D recovers, and a skeletal model driven by that pose", caption: "FMPose3D: from one camera to 3D pose to a skeletal model", link: "https://xiu-cs.github.io/FMPose3D/" }
+    ],
     projects: [
       { name: "FMPose3D", pub: "FMPose3D", tag: "3D pose from a single camera, with flow matching.", video: "assets/video/fmpose3d.mp4", poster: "assets/video/fmpose3d-poster.jpg", links: [["Project page", "https://xiu-cs.github.io/FMPose3D/"]] },
       { name: "PRIMA", pub: "PRIMA", tag: "3D animal body meshes from images, guided by taxonomic priors.", links: [["Project page", "https://lexiyutou.github.io/PRIMA/"]] },
@@ -298,10 +302,7 @@ MLAB.research = {
     title: "Model the body that produces behavior",
     lede: "Musculoskeletal models across species, from the mouse to the human arm, plus body-constrained 3D pose, linking movement to muscles and back to the brain.",
     /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
-    media: [
-      { video: "assets/video/fmpose3d-biomech.mp4", poster: "assets/video/fmpose3d-biomech.jpg", fit: "contain", alt: "A runner filmed with one camera, the 3D pose FMPose3D recovers, and a skeletal model driven by that pose", caption: "FMPose3D: from one camera to 3D pose to a skeletal model", link: "https://xiu-cs.github.io/FMPose3D/" },
-      { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" }
-    ],
+    media: { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return" },
     projects: [
       { name: "MusBioMaus", pub: "Neuro-musculoskeletal modeling", tag: "From brain to muscle: a neuro-musculoskeletal model of the mouse.", video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
       { name: "Primate imitation learning", pub: "Closed-loop imitation learning", tag: "Closed-loop imitation learning reveals muscle-centric and latent-goal codes in primate sensorimotor cortex." },
