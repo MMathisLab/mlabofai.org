@@ -1018,3 +1018,28 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .filter[data-area]:not([data-area="all"]):hover { border-color: var(--fc); }
 .filter[data-area]:not([data-area="all"])[aria-pressed="true"] { background: var(--fc); border-color: var(--fc); color: #000; }
 .filters .filter[data-area="ml"][aria-pressed="true"], .filters .filter[data-area="neuro"][aria-pressed="true"], .filters .filter[data-area="bio"][aria-pressed="true"] { color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Research area pages
+   -------------------------------------------------------------------------- */
+.r-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+.r-hero .eyebrow { color: var(--accent); }
+.r-hero h1 { margin: 12px 0 16px; }
+.r-led { color: var(--muted); font-size: .9rem; margin-top: 18px; }
+.r-led a { color: var(--text); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 60%, transparent); text-underline-offset: 3px; }
+.r-hero-media { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--surface); aspect-ratio: 16 / 10; }
+.r-hero-media video, .r-hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.r-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 40px; }
+.r-switch a.filter { text-decoration: none; }
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.proj { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; transition: border-color .2s; }
+.proj:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.proj-media { aspect-ratio: 16 / 9; background: #fff; overflow: hidden; }
+.proj-media video, .proj-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj-media img { object-fit: contain; }
+.proj-body { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 22px; }
+.proj-body .badge { align-self: flex-start; --accent: inherit; }
+.proj-body h3 { margin: 12px 0 6px; font-size: 1.15rem; }
+.proj-body p { color: var(--muted); font-size: .92rem; margin: 0; }
+@media (max-width: 900px) { .r-hero-grid { grid-template-columns: 1fr; gap: 28px; } }
+.pillar-more { margin-top: 16px; font-size: .9rem; }

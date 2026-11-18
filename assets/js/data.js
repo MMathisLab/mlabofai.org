@@ -272,3 +272,59 @@ MLAB.dlcPapers = {
     { title: "On the inference speed and video-compression robustness of DeepLabCut", authors: "Alexander Mathis, Richard Warren", venue: "bioRxiv", year: 2018, url: "https://www.biorxiv.org/content/10.1101/457242v1", doi: "10.1101/457242", areas: ["cv"] }
   ]
 };
+
+/* Research area pages (research-<key>.html). Projects point at publications by title
+   prefix ("pub"), so venue, year, link and thumbnail come from MLAB.publications. */
+MLAB.research = {
+  cv: {
+    name: "Computer vision", accent: "teal",
+    title: "Measure behavior when labels are scarce",
+    lede: "Markerless pose estimation, pretrained animal foundation models, 3D lifting from a single camera and multimodal models for action understanding.",
+    media: { video: "assets/video/reel/cheetah.mp4", poster: "assets/video/reel/cheetah.jpg", alt: "A cheetah tracked with DeepLabCut" },
+    projects: [
+      { name: "FMPose3D", pub: "FMPose3D", tag: "3D pose from a single camera, with flow matching.", video: "assets/video/fmpose3d.mp4", poster: "assets/video/fmpose3d-poster.jpg", links: [["Project page", "https://xiu-cs.github.io/FMPose3D/"]] },
+      { name: "PRIMA", pub: "PRIMA", tag: "3D animal body meshes from images, guided by taxonomic priors.", links: [["Project page", "https://lexiyutou.github.io/PRIMA/"]] },
+      { name: "SuperAnimal", pub: "SuperAnimal pretrained pose estimation models", tag: "Pretrained pose estimation models for behavioral analysis across species.", links: [["DeepLabCut", "deeplabcut.html"]] },
+      { name: "LLaVAction", pub: "LLaVAction", tag: "Multimodal large language models for action understanding.", links: [["Project page", "https://llavaction.epfl.ch/"]] },
+      { name: "Brown bear ID", pub: "Individual identification of brown bears", tag: "Recognizing individual bears with pose-aware metric learning." }
+    ]
+  },
+  bio: {
+    name: "Biomechanics", accent: "blue",
+    title: "Model the body that produces behavior",
+    lede: "Musculoskeletal models across species, from the mouse to the human arm, plus body-constrained 3D pose, linking movement to muscles and back to the brain.",
+    media: { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return" },
+    projects: [
+      { name: "MusBioMaus", pub: "Neuro-musculoskeletal modeling", tag: "From brain to muscle: a neuro-musculoskeletal model of the mouse.", video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
+      { name: "Primate imitation learning", pub: "Closed-loop imitation learning", tag: "Closed-loop imitation learning reveals muscle-centric and latent-goal codes in primate sensorimotor cortex." },
+      { name: "DeepDraw", pub: "Contrasting action and posture coding", tag: "Deep network models of proprioception in the human arm." },
+      { name: "FMPose3D", pub: "FMPose3D", tag: "Plausible 3D poses from a single camera, for humans and animals.", links: [["Project page", "https://xiu-cs.github.io/FMPose3D/"]] }
+    ]
+  },
+  neuro: {
+    name: "Neural dynamics", accent: "violet",
+    title: "Uncover how the brain controls the body and adapts",
+    lede: "How brains build and update internal models during skilled motor learning, studied with large-scale recordings and consistent latent embeddings of neural and behavioral data.",
+    media: { img: "assets/img/media/cebra-sphere.webp", alt: "A CEBRA latent embedding of neural data" },
+    projects: [
+      { name: "CEBRA", pub: "Learnable latent embeddings", tag: "Consistent latent embeddings of neural and behavioral data.", video: "assets/video/cebra-allen.mp4", poster: "assets/video/cebra-allen-poster.jpg", links: [["cebra.ai", "https://cebra.ai"]] },
+      { name: "DYSCO", pub: "Extracting Governing Equations", tag: "The equations of motor cortex, learned from spikes." },
+      { name: "Active sensing", pub: "Visual uncertainty and task demands", tag: "Mice actively seek better views to make visual decisions." },
+      { name: "Brain dynamics in schizophrenia", pub: "An explainable AI latent space", tag: "An explainable latent space of brain dynamics reveals a cerebello-prefrontal signature of symptoms." },
+      { name: "SCENE", pub: "The Simons Collaboration on Ecological Neuroscience", tag: "Studying how the brain interacts with the world.", links: [["project-scene.org", "https://www.project-scene.org"]] }
+    ]
+  },
+  ml: {
+    name: "Machine learning", accent: "magenta",
+    title: "Make representations consistent, robust and causal",
+    lede: "Identifiable representations, governing equations recovered from latent dynamics, attribution you can trust, and models that hold up under adversarial and out-of-distribution inputs.",
+    media: { video: "assets/video/dysco-duffing.mp4", poster: "assets/video/dysco-duffing.jpg", alt: "DYSCO recovering the Duffing equation from data" },
+    projects: [
+      { name: "DYSCO", pub: "Extracting Governing Equations", tag: "Governing equations, recovered from latent dynamics with multi-view contrastive learning.", video: "assets/video/dysco.mp4", poster: "assets/video/dysco-poster.jpg" },
+      { name: "PSI", pub: "Programmable Semantic Interventions", tag: "Finds where a frozen language model carries a named variable, without labels." },
+      { name: "AROS", pub: "Adversarially Robust Out-of-Distribution", tag: "Out-of-distribution detection that holds up under adversarial attack." },
+      { name: "DISTIL", pub: "DISTIL", tag: "Data-free inversion of trojan triggers via latent diffusion." },
+      { name: "Time-series attribution", pub: "Time-series attribution maps", tag: "Attribution maps for time-series models, with regularized contrastive learning." }
+    ]
+  }
+};

@@ -36,7 +36,14 @@
       </button>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./#research">Research</a></li>
+        <li class="has-sub"><a href="./#research" aria-haspopup="true">Research<svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="sub" aria-label="Research areas">
+            <li><a href="research-cv.html"><b>Computer vision</b><span>Measure behavior when labels are scarce</span></a></li>
+            <li><a href="research-bio.html"><b>Biomechanics</b><span>Model the body that produces behavior</span></a></li>
+            <li><a href="research-neuro.html"><b>Neural dynamics</b><span>How the brain controls the body and adapts</span></a></li>
+            <li><a href="research-ml.html"><b>Machine learning</b><span>Consistent, robust and causal representations</span></a></li>
+          </ul>
+        </li>
         <li class="has-sub"><a href="software.html" aria-haspopup="true">Software<svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="sub" aria-label="Key tools">
             <li><a href="deeplabcut.html" aria-current="page"><b>DeepLabCut</b><span>Markerless pose estimation, any species</span></a></li>

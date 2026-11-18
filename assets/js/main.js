@@ -26,16 +26,19 @@
 
   /* Software dropdown on touch screens wide enough for the desktop nav:
      first tap opens the menu, a second tap on "Software" follows the link. */
-  var sub = document.querySelector(".has-sub");
-  if (sub) {
+  document.querySelectorAll(".has-sub").forEach(function (sub) {
     var subLink = sub.querySelector(":scope > a");
     subLink.addEventListener("click", function (e) {
       var desktopNav = window.matchMedia("(min-width: 901px)").matches;
       var noHover = window.matchMedia("(hover: none)").matches;
-      if (desktopNav && noHover && !sub.classList.contains("open")) { e.preventDefault(); sub.classList.add("open"); }
+      if (desktopNav && noHover && !sub.classList.contains("open")) {
+        e.preventDefault();
+        document.querySelectorAll(".has-sub.open").forEach(function (o) { o.classList.remove("open"); });
+        sub.classList.add("open");
+      }
     });
     document.addEventListener("click", function (e) { if (!sub.contains(e.target)) sub.classList.remove("open"); });
-  }
+  });
 
   /* ---------- light / dark toggle ---------- */
   var root = document.documentElement;
@@ -235,6 +238,77 @@
           return '<a href="' + esc(src) + '" target="_blank" rel="noopener"><img src="' + esc(src) + '" alt="Lab photo, ' + esc(g.period) + '" loading="lazy"></a>';
         }).join("") + "</div>" : "") + "</div></div>";
     }).join("");
+  }
+
+  /* ---------- research area pages ---------- */
+  var rRoot = document.querySelector(".research-page");
+  if (rRoot && M.research && M.research[rRoot.getAttribute("data-area")]) {
+    var rk = rRoot.getAttribute("data-area"), R = M.research[rk];
+    var rq = function (n) { return rRoot.querySelector('[data-r="' + n + '"]'); };
+    var findPub = function (t) { return (M.publications || []).filter(function (p) { return p.title.indexOf(t) === 0; })[0]; };
+    var linkHTML = function (l) {
+      var ext = /^https?:/.test(l[1]);
+      return '<a href="' + esc(l[1]) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" + esc(l[0]) + (ext ? " ↗" : " →") + "</a>";
+    };
+    rRoot.style.setProperty("--accent", "var(--" + R.accent + ")");
+    rq("name").textContent = R.name;
+    rq("title").textContent = R.title;
+    rq("lede").textContent = R.lede;
+    rq("media").innerHTML = R.media.video
+      ? '<video src="' + esc(R.media.video) + '" poster="' + esc(R.media.poster) + '" muted loop playsinline autoplay aria-label="' + esc(R.media.alt) + '"></video>'
+      : '<img src="' + esc(R.media.img) + '" alt="' + esc(R.media.alt) + '">';
+    rq("switch").innerHTML = Object.keys(M.research).map(function (k) {
+      var a = M.research[k];
+      return '<a class="filter" data-area="' + k + '" href="research-' + k + '.html"' + (k === rk ? ' aria-pressed="true" aria-current="page"' : ' aria-pressed="false"') + ">" + esc(a.name) + "</a>";
+    }).join("");
+
+    /* key projects: venue, year, paper link and image come from the matching publication */
+    rq("projects").innerHTML = R.projects.map(function (pr) {
+      var p = pr.pub ? findPub(pr.pub) : null;
+      var media = pr.video
+        ? '<video src="' + esc(pr.video) + '" poster="' + esc(pr.poster || "") + '" muted loop playsinline preload="none" aria-label="' + esc(pr.name) + '"></video>'
+        : (p && p.thumb ? '<img src="' + esc(p.thumb) + '" alt="" loading="lazy">' : "");
+      var links = (p ? [["Paper", p.url]] : []).concat(pr.links || []);
+      return '<article class="proj">' +
+        (media ? '<div class="proj-media">' + media + "</div>" : "") +
+        '<div class="proj-body">' +
+        (p ? '<span class="badge">' + esc(p.venue) + " · " + p.year + "</span>" : "") +
+        "<h3>" + esc(pr.name) + "</h3><p>" + esc(pr.tag) + "</p>" +
+        '<div class="card-links">' + links.map(linkHTML).join("") + "</div></div></article>";
+    }).join("");
+    rq("projects").querySelectorAll("video").forEach(function (v) {
+      if (reduceMotion || !("IntersectionObserver" in window)) return;
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { var pp = v.play(); if (pp && pp.catch) pp.catch(function () {}); } else v.pause(); });
+      }, { threshold: 0.3 }).observe(v);
+    });
+    if (reduceMotion) { var hv = rq("media").querySelector("video"); if (hv) { hv.removeAttribute("autoplay"); hv.pause(); } }
+
+    /* papers in this area, newest first */
+    var rp = (M.publications || []).filter(function (p) { return p.areas && p.areas.indexOf(rk) !== -1 && !p.pre; });
+    rq("papers").innerHTML = rp.slice(0, 10).map(function (p) { return pubItem(p).replace(" reveal", ""); }).join("");
+    var all = (M.publications || []).filter(function (p) { return p.areas && p.areas.indexOf(rk) !== -1; }).length;
+    rq("all-link").href = "publications.html#" + rk;
+    rq("all-link").textContent = "All " + all + " papers";
+    initAltmetric();
+
+    /* people: read the cards from the People page, keep those tagged with this area */
+    var peopleEl = rq("people");
+    fetch("people.html").then(function (r) { return r.text(); }).then(function (html) {
+      var doc = new DOMParser().parseFromString(html, "text/html");
+      var cards = [].filter.call(doc.querySelectorAll(".person"), function (c) { return c.querySelector(".th-" + rk); });
+      peopleEl.innerHTML = "";
+      cards.forEach(function (c) { c.classList.remove("reveal"); peopleEl.appendChild(document.importNode(c, true)); });
+      if (!cards.length) peopleEl.innerHTML = '<p class="muted">See the <a href="people.html">People page</a>.</p>';
+    }).catch(function () {
+      peopleEl.innerHTML = '<p class="muted">See the <a href="people.html">People page</a>.</p>';
+    });
+  }
+
+  /* publications page: #cv, #ml … preselects a filter */
+  if (pubRoot) {
+    var ha = location.hash.slice(1), fb = ha && document.querySelector('.filter[data-area="' + ha + '"]');
+    if (fb) fb.click();
   }
 
   /* ---------- reveal on scroll ---------- */
