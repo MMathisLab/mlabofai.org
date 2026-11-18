@@ -320,6 +320,10 @@
   {
    "file": "assets/img/papers/mathis2017-phd.webp",
    "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/media/cellseg3d-napari.webp",
+   "original": "https://adaptivemotorcontrollab.github.io/CellSeg3D/_images/plugin_welcome.png"
   }
  ]
 }
