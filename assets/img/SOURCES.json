@@ -220,6 +220,78 @@
   {
    "file": "assets/img/people/leo-bruneau.webp",
    "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1780600631744-ENTD67AHPRZ8SEVZEUNK/1730826079995.jpeg"
+  },
+  {
+   "file": "assets/img/papers/dysco2026-neurips.webp",
+   "original": "frame of assets/video/dysco-duffing.mp4"
+  },
+  {
+   "file": "assets/img/papers/psi2026-arxiv.webp",
+   "original": "arXiv:2611.21307 Fig. 1a (intro-psi.svg)"
+  },
+  {
+   "file": "assets/img/papers/distil-ts2025-arxiv.webp",
+   "original": "arXiv:2501.17289 Fig. 1 (Causal_Motivation.png), cropped"
+  },
+  {
+   "file": "assets/img/papers/musbiomaus2024-biorxiv.webp",
+   "original": "assets/img/media/musbiomaus.webp"
+  },
+  {
+   "file": "assets/img/papers/cebra2023-naturenews.webp",
+   "original": "assets/img/media/cebra-sphere.webp"
+  },
+  {
+   "file": "assets/img/papers/vargas2026-biorxiv.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/chang2024-biorxiv.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/sainsbury2023-cell.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/mathis2020-conb.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/ho2016-natneuro.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/li2016-cellrep.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/cohen2015-elife.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/re2014-neuron.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/amoroso2013-jneurosci.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/takazawa2012-plosone.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/nedelec2012-jneurosci.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/boulting2011-natbiotech.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/bock2011-cell.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
   }
  ]
 }
