@@ -68,7 +68,7 @@
       .sort(function (a, b) { return (b.p.year - a.p.year) || ((b.p.month || 0) - (a.p.month || 0)) || (a.i - b.i); })
       .map(function (x) { return x.p; });
   }
-  var areaName = { cv: "Computer vision", ml: "Machine learning", neuro: "Neural dynamics", bio: "Biomechanics", dev: "Developmental neuroscience" };
+  var areaName = { cv: "Computer vision", ml: "Machine learning", neuro: "Neural dynamics", bio: "Biomechanics", dev: "Dev neuro" };
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function stripTags(s) { return String(s).replace(/<[^>]*>/g, ""); }
 
