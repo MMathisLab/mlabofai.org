@@ -240,6 +240,38 @@
     }).join("");
   }
 
+  /* ---------- person cards: list each member's lab papers (matched by first + last name in the author list) ---------- */
+  function normName(x) {
+    return String(x).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/<[^>]+>/g, "").replace(/[*\u2020]/g, "").trim().toLowerCase();
+  }
+  function papersFor(name) {
+    var w = normName(name).split(/\s+/), f = w[0], l = w[w.length - 1];
+    return (M.publications || []).filter(function (p) {
+      return !p.pre && p.authors.split(/,\s*/).some(function (a) {
+        var t = normName(a).split(/\s+/);
+        return t[0] === f && t[t.length - 1] === l;
+      });
+    });
+  }
+  function addPersonPapers(scope) {
+    [].forEach.call(scope.querySelectorAll(".person"), function (card) {
+      if (card.querySelector(".person-papers")) return;
+      var h = card.querySelector("h4");
+      if (!h) return;
+      var list = papersFor(h.textContent);
+      if (!list.length) return;
+      var d = document.createElement("details");
+      d.className = "person-papers";
+      d.innerHTML = "<summary>" + list.length + (list.length === 1 ? " paper" : " papers") + "</summary><ul>" +
+        list.map(function (p) {
+          return '<li><a href="' + esc(p.url) + '" target="_blank" rel="noopener"><span class="pp-y">' + p.year + "</span>" + esc(p.title) + "</a></li>";
+        }).join("") + "</ul>";
+      card.appendChild(d);
+    });
+  }
+  var teamRoot = document.querySelector("#main");
+  if (teamRoot && document.querySelector(".people .person") && M.publications) addPersonPapers(teamRoot);
+
   /* ---------- research area pages ---------- */
   var rRoot = document.querySelector(".research-page");
   if (rRoot && M.research && M.research[rRoot.getAttribute("data-area")]) {
@@ -330,6 +362,7 @@
       var cards = [].filter.call(doc.querySelectorAll(".person"), function (c) { return c.querySelector(".th-" + rk); });
       peopleEl.innerHTML = "";
       cards.forEach(function (c) { c.classList.remove("reveal"); peopleEl.appendChild(document.importNode(c, true)); });
+      addPersonPapers(peopleEl);
       if (!cards.length) peopleEl.innerHTML = '<p class="muted">See the <a href="people.html">People page</a>.</p>';
     }).catch(function () {
       peopleEl.innerHTML = '<p class="muted">See the <a href="people.html">People page</a>.</p>';
