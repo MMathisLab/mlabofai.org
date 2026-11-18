@@ -324,12 +324,22 @@ MLAB.research = {
   neuro: {
     name: "Neural dynamics", accent: "violet",
     title: "Uncover how the brain controls the body and adapts",
-    lede: "How brains build and update internal models during skilled motor learning, studied with large-scale recordings and consistent latent embeddings of neural and behavioral data.",
-    media: { img: "assets/img/media/cebra-sphere.webp", alt: "A CEBRA latent embedding of neural data" },
+    lede: "MLAI investigates how the brain controls the body, integrates sensory information and adapts to changing conditions and new motor demands.",
+    intro: [
+      "Our research combines the development and application of advanced analytical methods, including CEBRA and DYSCO, with carefully designed experiments to understand the neural mechanisms underlying motor control, learning and adaptation. We focus particularly on vision and proprioception as key sensory systems, studying how the brain integrates these sources of information to guide movement and continuously update its representation of the body and the external world.",
+      "Through large-scale neural recordings and behavioral measurements, we investigate how the brain builds, maintains and updates internal models during skilled motor learning. By developing consistent latent representations of neural activity and behavior, we aim to uncover the underlying structure and dynamics of neural population activity, and understand how these dynamics relate to movement, sensory feedback and adaptation.",
+      "Ultimately, our goal is to reveal how the brain learns to control the body, how it adjusts to changing environments and bodily conditions, and how these processes support flexible and adaptive behavior."
+    ],
+    media: [
+      { video: "assets/video/dysco.mp4", poster: "assets/video/dysco-poster.jpg", fit: "contain", alt: "DYSCO latent dynamics of motor cortex across held-out reaches, colored by reach direction", caption: "DYSCO paper", link: "https://arxiv.org/abs/2606.13260" },
+      { video: "assets/video/cebra-s1m1.mp4", poster: "assets/video/cebra-s1m1.jpg", fit: "contain", alt: "CEBRA embeddings of S1 and M1 activity in mice during a joystick reach-and-pull task, alongside hand position and joystick traces", caption: "cebra.ai", link: "https://cebra.ai" },
+      { video: "assets/video/schizophrenia-latent.mp4", poster: "assets/video/schizophrenia-latent.jpg", fit: "contain", bg: "#fff", alt: "Animated maps of the cerebellum and cortex colored by probability, from an explainable AI latent space of brain dynamics", caption: "Brain dynamics in schizophrenia", link: "https://www.biorxiv.org/content/10.64898/2026.08.25.746991" }
+    ],
     projects: [
       { name: "CEBRA", pub: "Learnable latent embeddings", tag: "Consistent latent embeddings of neural and behavioral data.", video: "assets/video/cebra-allen.mp4", poster: "assets/video/cebra-allen-poster.jpg", links: [["cebra.ai", "https://cebra.ai"]] },
+      { name: "Prediction errors in S1", pub: "Neuro-musculoskeletal modeling", tag: "Neuro-musculoskeletal modeling and large-scale imaging across multiple brain areas reveal muscle-level prediction errors in S1 cortex during adaptive learning.", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
       { name: "DYSCO", pub: "Extracting Governing Equations", tag: "The equations of motor cortex, learned from spikes." },
-      { name: "Active sensing", pub: "Visual uncertainty and task demands", tag: "Mice actively seek better views to make visual decisions." },
+      { name: "Active sensing", pub: "Visual uncertainty and task demands", tag: "Mice use internal models to actively seek better views to make visual decisions." },
       { name: "Brain dynamics in schizophrenia", pub: "An explainable AI latent space", tag: "An explainable latent space of brain dynamics reveals a cerebello-prefrontal signature of symptoms." },
       { name: "SCENE", pub: "The Simons Collaboration on Ecological Neuroscience", tag: "Studying how the brain interacts with the world.", links: [["project-scene.org", "https://www.project-scene.org"]] }
     ]
@@ -337,7 +347,12 @@ MLAB.research = {
   ml: {
     name: "Machine learning", accent: "magenta",
     title: "Make representations consistent, robust and causal",
-    lede: "Identifiable representations, governing equations recovered from latent dynamics, attribution you can trust, and models that hold up under adversarial and out-of-distribution inputs.",
+    lede: "MLAI develops machine learning methods to make learned representations more consistent, robust, interpretable and causally meaningful.",
+    intro: [
+      "Our work goes beyond applying machine learning to neural and behavioral data, focusing on fundamental questions of how models learn, what their internal representations capture, and whether their predictions reflect underlying mechanisms. We develop methods for mechanistic interpretability (PSI), robustness and reliability (AROS, DISTIL), and causal understanding (DYSCO), with the goal of moving beyond black-box prediction toward models that reveal meaningful structure and governing principles.",
+      "This includes learning identifiable representations, recovering governing equations from latent dynamics, developing trustworthy attribution methods, and building models that remain reliable under adversarial perturbations and out-of-distribution conditions.",
+      "Ultimately, we aim to develop machine learning systems that do not simply fit data, but provide robust, interpretable and causally grounded explanations of complex biological systems and their dynamics."
+    ],
     media: { video: "assets/video/dysco-duffing.mp4", poster: "assets/video/dysco-duffing.jpg", fit: "contain", bg: "#fff", alt: "DYSCO recovering the Duffing equation from data" },
     projects: [
       { name: "DYSCO", pub: "Extracting Governing Equations", tag: "Governing equations, recovered from latent dynamics with multi-view contrastive learning.", video: "assets/video/dysco.mp4", poster: "assets/video/dysco-poster.jpg" },
