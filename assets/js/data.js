@@ -300,8 +300,13 @@ MLAB.research = {
   },
   bio: {
     name: "Biomechanics", accent: "blue",
-    title: "Model the body that produces behavior",
-    lede: "Musculoskeletal models across species, from the mouse to the human arm, plus body-constrained 3D pose, linking movement to muscles and back to the brain.",
+    title: "Biomechanics at MLAI",
+    lede: "MLAI develops biomechanical approaches to understand how body structure, muscle activity and neural control interact to produce movement.",
+    intro: [
+      "Our work spans musculoskeletal modeling across species, from modeling and analyzing the human arm using OpenSim to developing our own biomechanical model of the mouse arm in MuJoCo. Building on this foundation, we are now extending our work across species and developing the sugar glider as a new model organism for investigating neural-body dynamics.",
+      "Our research combines musculoskeletal modeling, body-constrained 3D pose estimation and movement analysis to connect observed kinematics with underlying muscle function and biomechanics. A central goal is to understand movement as a continuous interaction between the brain, muscles and body: how neural commands shape muscle activity, how muscles generate movement, and how sensory feedback from the moving body informs and influences the brain. By linking computer vision, biomechanical models and neural dynamics, we aim to develop a unified understanding of movement across scales and species.",
+      "Ultimately, this work provides an important foundation for understanding how the nervous and musculoskeletal systems function together in health, how their interactions change in disease, and how these changes contribute to motor impairments and opportunities for therapeutic intervention."
+    ],
     /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
     media: [
       { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" },
