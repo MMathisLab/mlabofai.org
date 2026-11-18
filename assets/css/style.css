@@ -1043,3 +1043,8 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .proj-body p { color: var(--muted); font-size: .92rem; margin: 0; }
 @media (max-width: 900px) { .r-hero-grid { grid-template-columns: 1fr; gap: 28px; } }
 .pillar-more { margin-top: 16px; font-size: .9rem; }
+.r-intro { color: var(--muted); font-size: .98rem; line-height: 1.7; margin: 14px 0 0; max-width: 62ch; }
+.r-hero .lede { max-width: 62ch; }
+.r-hero-grid { align-items: start; }
+.r-hero-media { margin-top: 36px; position: sticky; top: 100px; }
+@media (max-width: 900px) { .r-hero-media { position: static; margin-top: 0; } }

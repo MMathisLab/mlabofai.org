@@ -254,6 +254,9 @@
     rq("name").textContent = R.name;
     rq("title").textContent = R.title;
     rq("lede").textContent = R.lede;
+    if (R.intro && R.intro.length) {
+      rq("lede").insertAdjacentHTML("afterend", R.intro.map(function (t) { return '<p class="r-intro">' + esc(t) + "</p>"; }).join(""));
+    }
     rq("media").innerHTML = R.media.video
       ? '<video src="' + esc(R.media.video) + '" poster="' + esc(R.media.poster) + '" muted loop playsinline autoplay aria-label="' + esc(R.media.alt) + '"></video>'
       : '<img src="' + esc(R.media.img) + '" alt="' + esc(R.media.alt) + '">';
