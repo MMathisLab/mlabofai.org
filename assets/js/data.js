@@ -346,7 +346,12 @@ MLAB.research = {
   ml: {
     name: "Machine learning", accent: "magenta",
     title: "Make representations consistent, robust and causal",
-    lede: "Identifiable representations, governing equations recovered from latent dynamics, attribution you can trust, and models that hold up under adversarial and out-of-distribution inputs.",
+    lede: "MLAI develops machine learning methods to make learned representations more consistent, robust, interpretable and causally meaningful.",
+    intro: [
+      "Our work goes beyond applying machine learning to neural and behavioral data, focusing on fundamental questions of how models learn, what their internal representations capture, and whether their predictions reflect underlying mechanisms. We develop methods for mechanistic interpretability (PSI), robustness and reliability (AROS, DISTIL), and causal understanding (DYSCO), with the goal of moving beyond black-box prediction toward models that reveal meaningful structure and governing principles.",
+      "This includes learning identifiable representations, recovering governing equations from latent dynamics, developing trustworthy attribution methods, and building models that remain reliable under adversarial perturbations and out-of-distribution conditions.",
+      "Ultimately, we aim to develop machine learning systems that do not simply fit data, but provide robust, interpretable and causally grounded explanations of complex biological systems and their dynamics."
+    ],
     media: { video: "assets/video/dysco-duffing.mp4", poster: "assets/video/dysco-duffing.jpg", fit: "contain", bg: "#fff", alt: "DYSCO recovering the Duffing equation from data" },
     projects: [
       { name: "DYSCO", pub: "Extracting Governing Equations", tag: "Governing equations, recovered from latent dynamics with multi-view contrastive learning.", video: "assets/video/dysco.mp4", poster: "assets/video/dysco-poster.jpg" },
