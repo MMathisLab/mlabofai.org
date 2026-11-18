@@ -63,7 +63,7 @@
   });
   var byKey = {}; THEMES.forEach(function (t) { byKey[t.key] = t; });
   people.forEach(function (p, i) {
-    if (p.pi) { p.x = CX; p.y = CY; return; }
+    if (p.pi) { p.x = CX - R - 40; p.y = CY - R + 30; return; }  // PI sits off to the left of the ring
     // weighted centroid of the person's themes; data-lean="ml" on a card pulls that person toward one theme
     var sx = 0, sy = 0, sw = 0;
     p.themes.forEach(function (k) { var w = k === p.lean ? 4 : 1; sx += w * byKey[k].x; sy += w * byKey[k].y; sw += w; });
@@ -135,7 +135,13 @@
     var cp = el("clipPath", { id: id }, defs);
     el("circle", { cx: p.x, cy: p.y, r: r }, cp);
     el("circle", { cx: p.x, cy: p.y, r: r + 3, "class": "tg-ring" }, g);
-    if (p.img) el("image", { href: p.img, x: p.x - r, y: p.y - r, width: 2 * r, height: 2 * r, "clip-path": "url(#" + id + ")", preserveAspectRatio: "xMidYMid slice" }, g);
+    /* initials sit underneath; they show through when there is no photo or it fails to load */
+    var ini = el("text", { x: p.x, y: p.y + 4, "text-anchor": "middle", "class": "tg-init" }, g);
+    ini.textContent = p.name.split(/\s+/).map(function (w) { return w[0]; }).slice(0, 2).join("").toUpperCase();
+    if (p.img) {
+      var im = el("image", { href: p.img, x: p.x - r, y: p.y - r, width: 2 * r, height: 2 * r, "clip-path": "url(#" + id + ")", preserveAspectRatio: "xMidYMid slice" }, g);
+      im.addEventListener("error", function () { im.remove(); });
+    }
     var label = el("text", { x: p.x, y: p.y + r + 14, "text-anchor": "middle", "class": "tg-name" }, g);
     label.textContent = p.name.split(" ")[0];
     p.g = g;

@@ -1098,3 +1098,29 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .gliders-on .glider-bg { opacity: .35; animation: glide-in 2.4s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes glide-in { from { transform: translate(-6vw, 3vh); } to { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .gliders-on .glider-bg { animation: none; } }
+/* Home research cards open their area page */
+a.pillar-media { display: block; }
+.pillar { cursor: pointer; }
+.pillar-link { color: inherit; text-decoration: none; }
+.pillar:hover .pillar-link { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent, currentColor) 60%, transparent); text-underline-offset: 4px; }
+.tg-init { fill: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .04em; pointer-events: none; }
+/* Person cards: their lab papers */
+.person-papers { margin-top: 10px; font-size: .78rem; text-align: left; }
+.person-papers summary { cursor: pointer; color: var(--muted); list-style: none; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border: 1px solid var(--line-strong); border-radius: 999px; }
+.person-papers summary::-webkit-details-marker { display: none; }
+.person-papers summary::after { content: "▾"; font-size: .7rem; transition: transform .2s; }
+.person-papers[open] summary::after { transform: rotate(180deg); }
+.person-papers summary:hover { color: var(--text); border-color: var(--teal); }
+.person-papers ul { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
+.person-papers a { color: var(--text-2, var(--muted)); line-height: 1.35; display: block; }
+.person-papers a:hover { color: var(--text); }
+.pp-y { display: block; font-family: var(--mono); font-size: .68rem; color: var(--dim); }
+.alumni-group li .person-papers { margin-top: 6px; }
+.alumni-group .person-papers li { border: 0; padding: 0; font-size: .78rem; }
+.alumni-group .person-papers a { text-decoration: none; }
+.alumni-group .person-papers ul { margin-bottom: 4px; }
+.person-papers ul { display: flex; flex-wrap: wrap; gap: 6px; }
+.person-papers li a { display: inline-block; padding: 2px 9px; border-radius: 999px; background: rgba(var(--fg-rgb), .06); color: var(--text); font-size: .74rem; white-space: nowrap; }
+.person-papers li a:hover { background: rgba(var(--fg-rgb), .12); }
+.pub.pub-flash { animation: pub-flash 2.6s ease .4s 1; border-radius: 12px; }
+@keyframes pub-flash { 0%, 60% { background: color-mix(in srgb, var(--teal) 16%, transparent); } 100% { background: transparent; } }

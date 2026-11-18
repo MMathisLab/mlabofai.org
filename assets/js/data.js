@@ -365,3 +365,9 @@ MLAB.research = {
     ]
   }
 };
+
+/* "Lab papers" on People cards and alumni are matched by name automatically.
+   To limit someone to specific papers (e.g. only those from their time in the lab), list title prefixes here. */
+MLAB.labPapers = {
+  "Alexander Mathis": ["DeepLabCut: markerless pose estimation", "Using DeepLabCut for 3D markerless"]
+};

@@ -106,6 +106,9 @@
     return null;
   }
 
+  function pubId(p) {
+    return "pub-" + normName(p.title).replace(/[^a-z0-9]+/g, "-").slice(0, 48).replace(/^-+|-+$/g, "") + "-" + p.year;
+  }
   function pubItem(p) {
     var area = (p.areas && p.areas[0]) || "ml";
     var icon = p.thumb
@@ -115,7 +118,7 @@
     var badge = am
       ? '<div class="altmetric-embed" data-badge-type="donut" data-badge-popover="left" data-hide-no-mentions="true" data-link-target="_blank" data-' + am.type + '="' + esc(am.id) + '"></div>'
       : "";
-    return '<li class="pub reveal">' +
+    return '<li class="pub reveal" id="' + pubId(p) + '">' +
       '<div class="pub-icon a-' + area + (p.thumb ? " has-thumb" : "") + '"' + (p.areas && p.areas.length ? ' title="' + esc(areaName[area]) + '"' : '') + '>' + icon + "</div>" +
       '<div class="pub-venue">' + esc(p.venue) + '<span class="yr">' + p.year + "</span></div>" +
       '<div class="pub-main"><div class="pub-title"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></div>" +
@@ -240,6 +243,45 @@
     }).join("");
   }
 
+  /* ---------- person cards: list each member's lab papers (matched by first + last name in the author list) ---------- */
+  function normName(x) {
+    return String(x).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/<[^>]+>/g, "").replace(/[*\u2020]/g, "").trim().toLowerCase();
+  }
+  function papersFor(name) {
+    var only = M.labPapers && M.labPapers[name.trim()];
+    if (only) return (M.publications || []).filter(function (p) {
+      return only.some(function (t) { return p.title.indexOf(t) === 0; });
+    });
+    var w = normName(name).split(/\s+/), f = w[0], l = w[w.length - 1];
+    return (M.publications || []).filter(function (p) {
+      return !p.pre && p.authors.split(/,\s*/).some(function (a) {
+        var t = normName(a).split(/\s+/);
+        return t[0] === f && t[t.length - 1] === l;
+      });
+    });
+  }
+  function addPersonPapers(scope) {
+    [].forEach.call(scope.querySelectorAll(".person, .alumni-group li"), function (card) {
+      if (card.querySelector(".person-papers")) return;
+      if (card.closest("#collaborators")) return;
+      var h = card.matches(".person") ? card.querySelector("h4") : card.firstChild;
+      var nm = h ? (h.nodeType === 3 ? h.textContent : h.textContent) : "";
+      nm = nm.trim();
+      if (!nm) return;
+      var list = papersFor(nm);
+      if (!list.length) return;
+      var d = document.createElement("details");
+      d.className = "person-papers";
+      d.innerHTML = "<summary>Lab papers</summary><ul>" +
+        list.map(function (p) {
+          return '<li><a href="publications.html#' + pubId(p) + '" title="' + esc(p.title) + '">' + esc(p.venue) + " " + p.year + "</a></li>";
+        }).join("") + "</ul>";
+      card.appendChild(d);
+    });
+  }
+  var teamRoot = document.querySelector("#main");
+  if (teamRoot && document.querySelector(".people .person") && M.publications) addPersonPapers(teamRoot);
+
   /* ---------- research area pages ---------- */
   var rRoot = document.querySelector(".research-page");
   if (rRoot && M.research && M.research[rRoot.getAttribute("data-area")]) {
@@ -330,17 +372,36 @@
       var cards = [].filter.call(doc.querySelectorAll(".person"), function (c) { return c.querySelector(".th-" + rk); });
       peopleEl.innerHTML = "";
       cards.forEach(function (c) { c.classList.remove("reveal"); peopleEl.appendChild(document.importNode(c, true)); });
+      addPersonPapers(peopleEl);
       if (!cards.length) peopleEl.innerHTML = '<p class="muted">See the <a href="people.html">People page</a>.</p>';
     }).catch(function () {
       peopleEl.innerHTML = '<p class="muted">See the <a href="people.html">People page</a>.</p>';
     });
   }
 
-  /* publications page: #cv, #ml … preselects a filter */
+  /* publications page: #cv, #ml … preselects a filter; #pub-… jumps to one paper and highlights it */
   if (pubRoot) {
     var ha = location.hash.slice(1), fb = ha && document.querySelector('.filter[data-area="' + ha + '"]');
     if (fb) fb.click();
+    if (/^pub-/.test(ha)) {
+      var target = document.getElementById(ha);
+      if (target) {
+        target.classList.add("pub-flash");
+        setTimeout(function () { target.scrollIntoView({ block: "center", behavior: reduceMotion ? "auto" : "smooth" }); }, 60);
+      }
+    }
   }
+
+  /* ---------- home: a click anywhere on a research card (outside its own links) opens that area's page ---------- */
+  document.querySelectorAll(".pillar").forEach(function (card) {
+    var main = card.querySelector(".pillar-link");
+    if (!main) return;
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("a, button")) return;
+      if (window.getSelection && String(window.getSelection())) return;
+      window.location.href = main.getAttribute("href");
+    });
+  });
 
   /* ---------- easter egg: sugar gliders behind the home page hero ---------- */
   (function () {
