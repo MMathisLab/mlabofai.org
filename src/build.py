@@ -19,6 +19,16 @@ AREAS={'cv':('Computer vision','markerless pose estimation, animal foundation mo
 for k,(n,d) in AREAS.items():
     open(P+f'research-{k}.html','w').write(open(P+'research.html').read().replace('__AREA__',k))
     pages[f'research-{k}.html']=(f'{n} · Research · M-Lab of Adaptive Intelligence',f'{n} at the M-Lab of Adaptive Intelligence, EPFL: {d}. People, key projects and papers.',f'research-{k}.html')
+
+# Cache-busting: tag CSS/JS links with a short hash of their contents so browsers
+# pick up new versions right after a push (GitHub Pages caches files for 10 minutes).
+import hashlib, glob
+def _v(f): return hashlib.md5(open(ROOT+'/'+f,'rb').read()).hexdigest()[:8]
+VER={f:_v(f) for f in ['assets/css/style.css','assets/js/data.js','assets/js/main.js']}
+def bust(html):
+    for f,v in VER.items():
+        html=re.sub(r'(["\'])(/?)'+re.escape(f)+r'(\?v=[0-9a-f]+)?(["\'])', lambda m: m.group(1)+m.group(2)+f+'?v='+v+m.group(4), html)
+    return html
 for f,(title,desc,path) in pages.items():
     h=head
     h=re.sub(r'<title>.*?</title>',f'<title>{title}</title>',h)
@@ -32,5 +42,10 @@ for f,(title,desc,path) in pages.items():
     if f=='404.html':
         html=re.sub(r'(href|src)="(?!https?:|/|#|mailto:)(\./)?',r'\1="/',html)
         html=html.replace('<meta property="og:url"','<meta name="robots" content="noindex">\n  <meta property="og:url"')
-    open(OUT+f,'w').write(html)
+    open(OUT+f,'w').write(bust(html))
     print('wrote',f)
+
+# index.html is edited by hand; just refresh its asset versions
+_idx=open(OUT+'index.html').read()
+open(OUT+'index.html','w').write(bust(_idx))
+print('versioned', VER)

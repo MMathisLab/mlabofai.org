@@ -331,7 +331,7 @@ MLAB.research = {
     name: "Machine learning", accent: "magenta",
     title: "Make representations consistent, robust and causal",
     lede: "Identifiable representations, governing equations recovered from latent dynamics, attribution you can trust, and models that hold up under adversarial and out-of-distribution inputs.",
-    media: { video: "assets/video/dysco-duffing.mp4", poster: "assets/video/dysco-duffing.jpg", alt: "DYSCO recovering the Duffing equation from data" },
+    media: { video: "assets/video/dysco-duffing.mp4", poster: "assets/video/dysco-duffing.jpg", fit: "contain", bg: "#fff", alt: "DYSCO recovering the Duffing equation from data" },
     projects: [
       { name: "DYSCO", pub: "Extracting Governing Equations", tag: "Governing equations, recovered from latent dynamics with multi-view contrastive learning.", video: "assets/video/dysco.mp4", poster: "assets/video/dysco-poster.jpg" },
       { name: "PSI", pub: "Programmable Semantic Interventions", tag: "Finds where a frozen language model carries a named variable, without labels." },
