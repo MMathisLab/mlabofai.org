@@ -106,6 +106,9 @@
     return null;
   }
 
+  function pubId(p) {
+    return "pub-" + normName(p.title).replace(/[^a-z0-9]+/g, "-").slice(0, 48).replace(/^-+|-+$/g, "") + "-" + p.year;
+  }
   function pubItem(p) {
     var area = (p.areas && p.areas[0]) || "ml";
     var icon = p.thumb
@@ -115,7 +118,7 @@
     var badge = am
       ? '<div class="altmetric-embed" data-badge-type="donut" data-badge-popover="left" data-hide-no-mentions="true" data-link-target="_blank" data-' + am.type + '="' + esc(am.id) + '"></div>'
       : "";
-    return '<li class="pub reveal">' +
+    return '<li class="pub reveal" id="' + pubId(p) + '">' +
       '<div class="pub-icon a-' + area + (p.thumb ? " has-thumb" : "") + '"' + (p.areas && p.areas.length ? ' title="' + esc(areaName[area]) + '"' : '') + '>' + icon + "</div>" +
       '<div class="pub-venue">' + esc(p.venue) + '<span class="yr">' + p.year + "</span></div>" +
       '<div class="pub-main"><div class="pub-title"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></div>" +
@@ -267,7 +270,7 @@
       d.className = "person-papers";
       d.innerHTML = "<summary>Lab papers</summary><ul>" +
         list.map(function (p) {
-          return '<li><a href="' + esc(p.url) + '" target="_blank" rel="noopener"><span class="pp-y">' + p.year + "</span>" + esc(p.title) + "</a></li>";
+          return '<li><a href="publications.html#' + pubId(p) + '" title="' + esc(p.title) + '">' + esc(p.venue) + " " + p.year + "</a></li>";
         }).join("") + "</ul>";
       card.appendChild(d);
     });
@@ -372,10 +375,17 @@
     });
   }
 
-  /* publications page: #cv, #ml … preselects a filter */
+  /* publications page: #cv, #ml … preselects a filter; #pub-… jumps to one paper and highlights it */
   if (pubRoot) {
     var ha = location.hash.slice(1), fb = ha && document.querySelector('.filter[data-area="' + ha + '"]');
     if (fb) fb.click();
+    if (/^pub-/.test(ha)) {
+      var target = document.getElementById(ha);
+      if (target) {
+        target.classList.add("pub-flash");
+        setTimeout(function () { target.scrollIntoView({ block: "center", behavior: reduceMotion ? "auto" : "smooth" }); }, 60);
+      }
+    }
   }
 
   /* ---------- home: a click anywhere on a research card (outside its own links) opens that area's page ---------- */

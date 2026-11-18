@@ -1119,3 +1119,8 @@ a.pillar-media { display: block; }
 .alumni-group .person-papers li { border: 0; padding: 0; font-size: .78rem; }
 .alumni-group .person-papers a { text-decoration: none; }
 .alumni-group .person-papers ul { margin-bottom: 4px; }
+.person-papers ul { display: flex; flex-wrap: wrap; gap: 6px; }
+.person-papers li a { display: inline-block; padding: 2px 9px; border-radius: 999px; background: rgba(var(--fg-rgb), .06); color: var(--text); font-size: .74rem; white-space: nowrap; }
+.person-papers li a:hover { background: rgba(var(--fg-rgb), .12); }
+.pub.pub-flash { animation: pub-flash 2.6s ease .4s 1; border-radius: 12px; }
+@keyframes pub-flash { 0%, 60% { background: color-mix(in srgb, var(--teal) 16%, transparent); } 100% { background: transparent; } }
