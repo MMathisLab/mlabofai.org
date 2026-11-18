@@ -1103,3 +1103,4 @@ a.pillar-media { display: block; }
 .pillar { cursor: pointer; }
 .pillar-link { color: inherit; text-decoration: none; }
 .pillar:hover .pillar-link { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent, currentColor) 60%, transparent); text-underline-offset: 4px; }
+.tg-init { fill: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .04em; pointer-events: none; }
