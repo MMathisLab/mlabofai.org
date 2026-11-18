@@ -303,7 +303,10 @@ MLAB.research = {
     title: "Model the body that produces behavior",
     lede: "Musculoskeletal models across species, from the mouse to the human arm, plus body-constrained 3D pose, linking movement to muscles and back to the brain.",
     /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
-    media: { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return" },
+    media: [
+      { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" },
+      { video: "assets/video/cebra-s1m1.mp4", poster: "assets/video/cebra-s1m1.jpg", fit: "contain", alt: "CEBRA embeddings of S1 and M1 activity in mice during a joystick reach-and-pull task, alongside hand position and joystick traces", caption: "cebra.ai", link: "https://cebra.ai" }
+    ],
     projects: [
       { name: "MusBioMaus", pub: "Neuro-musculoskeletal modeling", tag: "From brain to muscle: a neuro-musculoskeletal model of the mouse.", video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
       { name: "Primate imitation learning", pub: "Closed-loop imitation learning", tag: "Closed-loop imitation learning reveals muscle-centric and latent-goal codes in primate sensorimotor cortex." },
