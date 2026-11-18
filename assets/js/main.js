@@ -403,16 +403,23 @@
     });
   });
 
-  /* ---------- easter egg: sugar gliders behind the home page hero ---------- */
+  /* ---------- easter eggs behind the home page hero: sugar gliders, and a mouse in motion (one at a time) ---------- */
   (function () {
-    var egg = document.querySelector(".glider-egg"), hero = document.querySelector(".hero");
-    if (!egg || !hero) return;
-    var layer = document.createElement("div");
-    layer.className = "glider-bg"; layer.setAttribute("aria-hidden", "true");
-    hero.insertBefore(layer, hero.firstChild);
-    egg.addEventListener("click", function () {
-      var on = hero.classList.toggle("gliders-on");
-      egg.setAttribute("aria-pressed", on ? "true" : "false");
+    var hero = document.querySelector(".hero");
+    if (!hero) return;
+    var eggs = [
+      { btn: document.querySelector(".glider-egg"), on: "gliders-on", layer: "glider-bg" },
+      { btn: document.querySelector(".mice-egg"), on: "mice-on", layer: "mice-bg" }
+    ].filter(function (e) { return e.btn; });
+    eggs.forEach(function (e) {
+      var layer = document.createElement("div");
+      layer.className = e.layer; layer.setAttribute("aria-hidden", "true");
+      hero.insertBefore(layer, hero.firstChild);
+      e.btn.addEventListener("click", function () {
+        var turnOn = !hero.classList.contains(e.on);
+        eggs.forEach(function (o) { hero.classList.remove(o.on); o.btn.setAttribute("aria-pressed", "false"); });
+        if (turnOn) { hero.classList.add(e.on); e.btn.setAttribute("aria-pressed", "true"); }
+      });
     });
   })();
 

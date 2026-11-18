@@ -1124,3 +1124,16 @@ a.pillar-media { display: block; }
 .person-papers li a:hover { background: rgba(var(--fg-rgb), .12); }
 .pub.pub-flash { animation: pub-flash 2.6s ease .4s 1; border-radius: 12px; }
 @keyframes pub-flash { 0%, 60% { background: color-mix(in srgb, var(--teal) 16%, transparent); } 100% { background: transparent; } }
+
+/* Easter egg 2: a mouse in motion, glowing floor in dark mode, ink trail in light mode */
+.mice-egg { display: inline-flex; vertical-align: -3px; margin-left: 2px; padding: 2px; border: 0; background: none; color: var(--dim); cursor: pointer; border-radius: 6px; transition: color .2s, transform .3s; }
+.mice-egg svg { width: 18px; height: 18px; }
+.mice-egg .eye { fill: var(--bg); }
+.mice-egg:hover, .mice-egg[aria-pressed="true"] { color: var(--magenta); transform: translateX(3px); }
+.mice-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity 1.4s ease;
+  background: url("../img/mice-trail-dark.webp") center 62% / min(100vw, 1500px) auto no-repeat; }
+:root[data-theme="light"] .mice-bg { background-image: url("../img/mice-trail-light.webp"); }
+.mice-on .mice-bg { opacity: .55; animation: mice-in 3s cubic-bezier(.2,.7,.2,1) both; }
+:root[data-theme="light"] .mice-on .mice-bg { opacity: .32; }
+@keyframes mice-in { from { transform: translateX(-4vw); filter: blur(6px); } to { transform: none; filter: none; } }
+@media (prefers-reduced-motion: reduce) { .mice-on .mice-bg { animation: none; } }
