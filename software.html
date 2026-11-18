@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=37e7ef90">
+  <link rel="stylesheet" href="assets/css/style.css?v=d4ac652b">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -76,43 +76,41 @@
 
     <section class="section tight">
       <div class="container">
-        <div class="grid grid-3">
-          <article class="card feature sw teal reveal" id="deeplabcut">
+        <div class="grid grid-3 sw-grid">
+          <article class="card sw teal reveal" id="deeplabcut">
             <div class="card-media"><video src="assets/video/reel/mice-multi.mp4" poster="assets/video/reel/mice-multi.jpg" muted loop playsinline preload="none" aria-label="Multi-animal tracking with DeepLabCut"></video></div>
             <span class="badge">Pose estimation</span>
             <h3>DeepLabCut</h3>
-            <p>Markerless pose estimation of user-defined body parts with deep learning, for animals of any species. DeepLabCut supports 3D and multi-animal tracking, and ships the SuperAnimal pretrained foundation models, so you can analyze behavior with few or no labels.</p>
+            <p>Markerless pose estimation for any species, with 3D and multi-animal tracking and the SuperAnimal pretrained models.</p>
             <ul class="sw-papers">
-              <li><a href="https://www.nature.com/articles/s41593-018-0209-y" target="_blank" rel="noopener">Nature Neuroscience 2018</a></li>
-              <li><a href="https://www.nature.com/articles/s41596-019-0176-0" target="_blank" rel="noopener">Nature Protocols 2019</a></li>
-              <li><a href="https://www.nature.com/articles/s41592-022-01443-0" target="_blank" rel="noopener">Nature Methods 2022</a></li>
-              <li><a href="https://www.nature.com/articles/s41467-024-48792-2" target="_blank" rel="noopener">Nature Communications 2024</a></li>
+              <li><a href="https://www.nature.com/articles/s41593-018-0209-y" target="_blank" rel="noopener">Nat. Neurosci. 2018</a></li>
+              <li><a href="https://www.nature.com/articles/s41596-019-0176-0" target="_blank" rel="noopener">Nat. Protoc. 2019</a></li>
+              <li><a href="https://www.nature.com/articles/s41592-022-01443-0" target="_blank" rel="noopener">Nat. Methods 2022</a></li>
+              <li><a href="https://www.nature.com/articles/s41467-024-48792-2" target="_blank" rel="noopener">Nat. Commun. 2024</a></li>
             </ul>
-            <div class="card-links"><a href="deeplabcut.html">DeepLabCut page →</a><a href="https://deeplabcut.github.io/DeepLabCut/README.html" target="_blank" rel="noopener">Docs ↗</a><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank" rel="noopener">Code ↗</a></div>
+            <div class="card-links"><a href="deeplabcut.html">More →</a><a href="https://deeplabcut.github.io/DeepLabCut/README.html" target="_blank" rel="noopener">Docs ↗</a><a href="https://github.com/DeepLabCut/DeepLabCut" target="_blank" rel="noopener">Code ↗</a></div>
           </article>
-          <article class="card feature sw violet reveal" id="cebra">
+          <article class="card sw violet reveal" id="cebra">
             <div class="card-media contain"><img src="assets/img/media/cebra-sphere.webp" alt="A CEBRA latent embedding" loading="lazy"></div>
             <span class="badge">Representation learning</span>
             <h3>CEBRA</h3>
-            <p>Self-supervised learning that produces consistent, identifiable latent embeddings of behavioral and neural data, across sessions, animals and recording modalities, with attribution maps to see what drives them.</p>
+            <p>Consistent, identifiable latent embeddings of behavioral and neural data, across sessions, animals and modalities.</p>
             <ul class="sw-papers">
               <li><a href="https://www.nature.com/articles/s41586-023-06031-6" target="_blank" rel="noopener">Nature 2023</a></li>
               <li><a href="https://arxiv.org/abs/2502.12977" target="_blank" rel="noopener">AISTATS 2025</a></li>
             </ul>
             <div class="card-links"><a href="https://cebra.ai" target="_blank" rel="noopener">Website ↗</a><a href="https://github.com/AdaptiveMotorControlLab/CEBRA" target="_blank" rel="noopener">Code ↗</a></div>
           </article>
-          <article class="card feature sw blue reveal" id="musbiomaus">
+          <article class="card sw blue reveal" id="musbiomaus">
             <div class="card-media mm"><video src="assets/video/musbiomaus-mimic.mp4" poster="assets/video/musbiomaus-mimic.jpg" muted loop playsinline preload="none" aria-label="MusBioMaus re-enacting a mouse reach"></video></div>
             <span class="badge">Biomechanics</span>
             <h3>MusBioMaus</h3>
-            <p>A neuro-musculoskeletal model of the mouse that merges neural control and musculoskeletal modeling, to study adaptive motor control from cortex to individual muscles.</p>
+            <p>A neuro-musculoskeletal model of the mouse, linking cortex to individual muscles.</p>
             <ul class="sw-papers"><li><a href="https://www.biorxiv.org/content/10.1101/2024.09.11.612513" target="_blank" rel="noopener">bioRxiv 2024</a></li></ul>
             <div class="card-links"><a href="https://www.mausspaun.org/" target="_blank" rel="noopener">Website ↗</a></div>
           </article>
-        </div>
-
-        <div class="grid grid-3 mt-24">
           <article class="card sw violet reveal" id="llavaction">
+            <div class="card-media contain light-bg"><img src="assets/img/papers/llavaction2026-iclr.webp" alt="LLaVAction overview figure" loading="lazy"></div>
             <span class="badge">Multimodal LLM</span>
             <h3>LLaVAction</h3>
             <p>Evaluating and training multimodal large language models for action understanding.</p>
@@ -120,6 +118,7 @@
             <div class="card-links"><a href="https://mmathislab.github.io/llavaction" target="_blank" rel="noopener">Project ↗</a></div>
           </article>
           <article class="card sw violet reveal" id="amadeusgpt">
+            <div class="card-media contain"><img src="assets/img/media/amadeusgpt-logo.webp" width="1000" height="133" alt="AmadeusGPT logo" loading="lazy"></div>
             <span class="badge">Language interface</span>
             <h3>AmadeusGPT</h3>
             <p>A natural language interface for interactive animal behavioral analysis.</p>
@@ -127,6 +126,7 @@
             <div class="card-links"><a href="https://github.com/AdaptiveMotorControlLab/AmadeusGPT" target="_blank" rel="noopener">Code ↗</a></div>
           </article>
           <article class="card sw teal reveal" id="fmpose3d">
+            <div class="card-media contain"><video src="assets/video/fmpose3d-biomech.mp4" poster="assets/video/fmpose3d-biomech.jpg" muted loop playsinline preload="none" aria-label="FMPose3D lifting a runner from one camera to 3D pose and a skeletal model"></video></div>
             <span class="badge">3D pose</span>
             <h3>FMPose3D</h3>
             <p>Monocular 3D pose estimation via flow matching.</p>
@@ -134,18 +134,22 @@
             <div class="card-links"><a href="https://xiu-cs.github.io/FMPose3D/" target="_blank" rel="noopener">Project ↗</a></div>
           </article>
           <article class="card sw magenta reveal" id="cellseg3d">
+            <div class="card-media"><img src="assets/img/media/cellseg3d-napari.webp" width="1000" height="651" alt="The napari-cellseg3d plugin in napari, showing a 3D microscopy volume of labeled cells" loading="lazy"></div>
             <span class="badge">Microscopy</span>
             <h3>CellSeg3D</h3>
             <p>Self-supervised (and supervised) 3D cell segmentation with deep learning, primarily for mesoSPIM data.</p>
+            <ul class="sw-papers"><li><a href="https://elifesciences.org/articles/99848" target="_blank" rel="noopener">eLife 2025</a></li></ul>
             <div class="card-links"><a href="https://github.com/AdaptiveMotorControlLab/CellSeg3D" target="_blank" rel="noopener">Code ↗</a></div>
           </article>
           <article class="card sw teal reveal" id="dlc2kinematics">
+            <div class="card-media contain"><img src="assets/img/media/dlc2kinematics.webp" width="1000" height="482" alt="DLC2Kinematics logo" loading="lazy"></div>
             <span class="badge">Kinematics</span>
             <h3>DLC2Kinematics</h3>
             <p>A post-DeepLabCut module for kinematic analysis of pose estimation outputs.</p>
             <div class="card-links"><a href="https://github.com/AdaptiveMotorControlLab/DLC2Kinematics" target="_blank" rel="noopener">Code ↗</a></div>
           </article>
           <article class="card sw magenta reveal">
+            <div class="card-media contain"><img class="only-dark" src="assets/img/overview-dark.webp" alt="Overview of the M-Lab's research" loading="lazy"><img class="only-light" src="assets/img/overview-light.webp" alt="Overview of the M-Lab's research" loading="lazy"></div>
             <span class="badge">More</span>
             <h3>Everything else</h3>
             <p>Code for our other papers, research releases and datasets.</p>
@@ -210,7 +214,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/data.js?v=68014c5c"></script>
+  <script src="assets/js/data.js?v=015ee08f"></script>
   <script src="assets/js/main.js?v=940117df"></script>
 </body>
 </html>

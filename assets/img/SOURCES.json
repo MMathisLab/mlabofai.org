@@ -320,6 +320,18 @@
   {
    "file": "assets/img/papers/mathis2017-phd.webp",
    "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/media/cellseg3d-napari.webp",
+   "original": "https://adaptivemotorcontrollab.github.io/CellSeg3D/_images/plugin_welcome.png"
+  },
+  {
+   "file": "assets/img/media/dlc2kinematics.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1628452157953-RBVUGI7M3ABF9AOSUMMS/DLC2k.jpg (DLC2Kinematics README)"
+  },
+  {
+   "file": "assets/img/media/amadeusgpt-logo.webp",
+   "original": "https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/8555eac6-6af0-4538-bda4-c1a8a2c7bed8/amadeusgpt_logo.png (AmadeusGPT README)"
   }
  ]
 }
