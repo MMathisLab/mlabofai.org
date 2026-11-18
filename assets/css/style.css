@@ -1007,3 +1007,14 @@ a.card:hover .go { transform: translate(3px, -3px); }
 @media (max-width: 800px) { .alumni.collab { grid-template-columns: 1fr; } }
 
 .pub-icon.a-dev { --accent: var(--amber); }
+
+/* Publication filters carry their category color */
+.filter[data-area="cv"] { --fc: var(--teal); }
+.filter[data-area="ml"] { --fc: var(--magenta); }
+.filter[data-area="neuro"] { --fc: var(--violet); }
+.filter[data-area="bio"] { --fc: var(--blue); }
+.filter[data-area="dev"] { --fc: var(--amber); }
+.filter[data-area]:not([data-area="all"]) { color: var(--fc); border-color: color-mix(in srgb, var(--fc) 45%, transparent); }
+.filter[data-area]:not([data-area="all"]):hover { border-color: var(--fc); }
+.filter[data-area]:not([data-area="all"])[aria-pressed="true"] { background: var(--fc); border-color: var(--fc); color: #000; }
+.filters .filter[data-area="ml"][aria-pressed="true"], .filters .filter[data-area="neuro"][aria-pressed="true"], .filters .filter[data-area="bio"][aria-pressed="true"] { color: #fff; }
