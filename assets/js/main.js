@@ -116,6 +116,7 @@
       '<div class="pub-venue">' + esc(p.venue) + '<span class="yr">' + p.year + "</span></div>" +
       '<div class="pub-main"><div class="pub-title"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></div>" +
       '<div class="pub-authors">' + p.authors + "</div>" +
+      (p.note ? '<div class="pub-note">' + esc(p.note) + "</div>" : "") +
       (p.press && p.press.length ? '<div class="pub-press">' + p.press.map(function (l) {
         return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + " ↗</a>";
       }).join(" · ") + "</div>" : "") + "</div>" +
