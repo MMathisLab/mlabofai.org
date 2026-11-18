@@ -342,6 +342,17 @@
     if (fb) fb.click();
   }
 
+  /* ---------- home: a click anywhere on a research card (outside its own links) opens that area's page ---------- */
+  document.querySelectorAll(".pillar").forEach(function (card) {
+    var main = card.querySelector(".pillar-link");
+    if (!main) return;
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("a, button")) return;
+      if (window.getSelection && String(window.getSelection())) return;
+      window.location.href = main.getAttribute("href");
+    });
+  });
+
   /* ---------- easter egg: sugar gliders behind the home page hero ---------- */
   (function () {
     var egg = document.querySelector(".glider-egg"), hero = document.querySelector(".hero");
