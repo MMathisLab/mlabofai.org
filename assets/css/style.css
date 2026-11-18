@@ -1018,3 +1018,52 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .filter[data-area]:not([data-area="all"]):hover { border-color: var(--fc); }
 .filter[data-area]:not([data-area="all"])[aria-pressed="true"] { background: var(--fc); border-color: var(--fc); color: #000; }
 .filters .filter[data-area="ml"][aria-pressed="true"], .filters .filter[data-area="neuro"][aria-pressed="true"], .filters .filter[data-area="bio"][aria-pressed="true"] { color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Research area pages
+   -------------------------------------------------------------------------- */
+.r-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+.r-hero .eyebrow { color: var(--accent); }
+.r-hero h1 { margin: 12px 0 16px; }
+.r-led { color: var(--muted); font-size: .9rem; margin-top: 18px; }
+.r-led a { color: var(--text); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 60%, transparent); text-underline-offset: 3px; }
+.r-hero-media { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--surface); aspect-ratio: 16 / 10; }
+.r-hero-media video, .r-hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.r-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 40px; }
+.r-switch a.filter { text-decoration: none; }
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.proj { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; transition: border-color .2s; }
+.proj:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.proj-media { aspect-ratio: 16 / 9; background: #fff; overflow: hidden; }
+.proj-media video, .proj-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj-media img { object-fit: contain; }
+.proj-body { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 22px; }
+.proj-body .badge { align-self: flex-start; --accent: inherit; }
+.proj-body h3 { margin: 12px 0 6px; font-size: 1.15rem; }
+.proj-body p { color: var(--muted); font-size: .92rem; margin: 0; }
+@media (max-width: 900px) { .r-hero-grid { grid-template-columns: 1fr; gap: 28px; } }
+.pillar-more { margin-top: 16px; font-size: .9rem; }
+.r-intro { color: var(--muted); font-size: .98rem; line-height: 1.7; margin: 14px 0 0; max-width: 62ch; }
+.r-hero .lede { max-width: 62ch; }
+.r-hero-grid { align-items: start; }
+.r-hero-media { margin-top: 36px; position: sticky; top: 100px; }
+@media (max-width: 900px) { .r-hero-media { position: static; margin-top: 0; } }
+/* hero text wraps around the media */
+.r-hero-wrap::after { content: ""; display: block; clear: both; }
+.r-hero-wrap .r-hero-media { float: right; width: min(46%, 560px); margin: 6px 0 24px 48px; position: relative; top: auto; }
+.r-hero-wrap .lede, .r-hero-wrap .r-intro { max-width: none; }
+@media (max-width: 800px) { .r-hero-wrap .r-hero-media { float: none; width: 100%; margin: 0 0 24px; } }
+/* rotating header media */
+.r-hero-media { position: relative; }
+.r-slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity .7s ease; pointer-events: none; }
+.r-slide.on { opacity: 1; pointer-events: auto; }
+.r-slide video, .r-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.r-slide.contain { background: #000; }
+.r-slide.contain video, .r-slide.contain img { object-fit: contain; }
+.r-cap { position: absolute; left: 12px; bottom: 12px; right: 70px; font-size: .78rem; }
+.r-cap, .r-cap a { color: #fff; }
+.r-cap a, .r-cap:not(:has(a)) { display: inline-block; background: rgba(0,0,0,.6); backdrop-filter: blur(6px); padding: 5px 10px; border-radius: 999px; text-decoration: none; }
+.r-cap a:hover { background: rgba(0,0,0,.8); }
+.r-dots { position: absolute; right: 12px; bottom: 16px; display: flex; gap: 6px; z-index: 2; }
+.r-dots button { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: rgba(255,255,255,.45); cursor: pointer; }
+.r-dots button[aria-current="true"] { background: #fff; }

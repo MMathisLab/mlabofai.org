@@ -12,6 +12,13 @@ pages={
  'deeplabcut.html':('DeepLabCut · M-Lab of Adaptive Intelligence','DeepLabCut: markerless 2D and 3D pose estimation for any species, with the SuperAnimal Model Zoo. Open source, from the M-Lab of Adaptive Intelligence at EPFL.','deeplabcut.html'),
  '404.html':('Page not found · M-Lab of Adaptive Intelligence','Page not found.','404.html'),
 }
+AREAS={'cv':('Computer vision','markerless pose estimation, animal foundation models, 3D pose and action understanding'),
+ 'bio':('Biomechanics','musculoskeletal models across species and body-constrained 3D pose'),
+ 'neuro':('Neural dynamics','how the brain controls the body and adapts, with consistent latent embeddings of neural and behavioral data'),
+ 'ml':('Machine learning','consistent, robust and causal representations')}
+for k,(n,d) in AREAS.items():
+    open(P+f'research-{k}.html','w').write(open(P+'research.html').read().replace('__AREA__',k))
+    pages[f'research-{k}.html']=(f'{n} · Research · M-Lab of Adaptive Intelligence',f'{n} at the M-Lab of Adaptive Intelligence, EPFL: {d}. People, key projects and papers.',f'research-{k}.html')
 for f,(title,desc,path) in pages.items():
     h=head
     h=re.sub(r'<title>.*?</title>',f'<title>{title}</title>',h)
