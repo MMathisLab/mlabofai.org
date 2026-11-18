@@ -211,7 +211,8 @@ p { margin: 0 0 1em; }
   }
   .nav-open .nav-links { opacity: 1; transform: none; pointer-events: auto; }
   .nav-links a { padding: 14px 4px; border-radius: 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
-  .nav-links .nav-cta a { margin: 14px 0 0; text-align: center; border-radius: 999px; border: 0; }
+  .nav-links .nav-cta a { margin: 0; color: var(--muted); background: none; font-weight: inherit; text-align: left; }
+  .nav-links .nav-cta a:hover, .nav-links .nav-cta a[aria-current="page"] { color: var(--text); background: none; }
 }
 
 /* --------------------------------------------------------------------------
