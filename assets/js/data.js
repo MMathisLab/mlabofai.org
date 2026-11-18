@@ -279,7 +279,7 @@ MLAB.research = {
   cv: {
     name: "Computer vision", accent: "teal",
     title: "Measure behavior when labels are scarce",
-    lede: "The M-Lab develops machine learning and computer vision approaches to measure, reconstruct and understand animal movement and behavior from video, particularly in settings where labeled data are scarce and behaviors are complex.",
+    lede: "MLAI develops machine learning and computer vision approaches to measure, reconstruct and understand animal movement and behavior from video, particularly in settings where labeled data are scarce and behaviors are complex.",
     intro: [
       "Our work includes markerless pose estimation, pretrained animal foundation models, 3D pose reconstruction from single-camera recordings, and multimodal models for action and behavior understanding. Beyond tracking keypoints, we aim to capture the full visual and functional complexity of movement, with a focus on pose, body shape and action: how bodies are configured, how they move, and what actions they perform.",
       "A central direction is to bridge computer vision and biomechanics by connecting visual observations to body structure, musculoskeletal models and the underlying mechanics of movement. Ultimately, we seek to move beyond describing behavior in pixels toward understanding how the body produces movement, how movement relates to function, and how these processes connect to neural control and adaptation."

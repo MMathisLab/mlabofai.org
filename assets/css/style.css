@@ -1048,3 +1048,8 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .r-hero-grid { align-items: start; }
 .r-hero-media { margin-top: 36px; position: sticky; top: 100px; }
 @media (max-width: 900px) { .r-hero-media { position: static; margin-top: 0; } }
+/* hero text wraps around the media */
+.r-hero-wrap::after { content: ""; display: block; clear: both; }
+.r-hero-wrap .r-hero-media { float: right; width: min(46%, 560px); margin: 6px 0 24px 48px; position: static; }
+.r-hero-wrap .lede, .r-hero-wrap .r-intro { max-width: none; }
+@media (max-width: 800px) { .r-hero-wrap .r-hero-media { float: none; width: 100%; margin: 0 0 24px; } }
