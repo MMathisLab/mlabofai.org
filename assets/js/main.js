@@ -112,7 +112,7 @@
       ? '<div class="altmetric-embed" data-badge-type="donut" data-badge-popover="left" data-hide-no-mentions="true" data-link-target="_blank" data-' + am.type + '="' + esc(am.id) + '"></div>'
       : "";
     return '<li class="pub reveal">' +
-      '<div class="pub-icon a-' + area + (p.thumb ? " has-thumb" : "") + '" title="' + esc(areaName[area]) + '">' + icon + "</div>" +
+      '<div class="pub-icon a-' + area + (p.thumb ? " has-thumb" : "") + '"' + (p.areas && p.areas.length ? ' title="' + esc(areaName[area]) + '"' : '') + '>' + icon + "</div>" +
       '<div class="pub-venue">' + esc(p.venue) + '<span class="yr">' + p.year + "</span></div>" +
       '<div class="pub-main"><div class="pub-title"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></div>" +
       '<div class="pub-authors">' + p.authors + "</div>" +
