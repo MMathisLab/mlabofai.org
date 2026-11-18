@@ -1090,11 +1090,11 @@ a.card:hover .go { transform: translate(3px, -3px); }
 
 /* Easter egg: sugar gliders drift across the background */
 .glider-egg { display: inline-flex; vertical-align: -3px; margin-left: 6px; padding: 2px; border: 0; background: none; color: var(--dim); cursor: pointer; border-radius: 6px; transition: color .2s, transform .3s; }
-.glider-egg svg { width: 15px; height: 15px; }
+.glider-ico { width: 18px; height: 18px; background: currentColor; -webkit-mask: url("../img/glider-icon.png") center / contain no-repeat; mask: url("../img/glider-icon.png") center / contain no-repeat; }
 .glider-egg:hover, .glider-egg[aria-pressed="true"] { color: var(--teal); transform: rotate(-12deg) scale(1.15); }
 .glider-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0; transition: opacity 1.2s ease;
   background: url("../img/sugar-gliders.webp") center 58% / min(92vw, 1150px) auto no-repeat; }
-:root[data-theme="light"] .gliders-on .glider-bg { opacity: .1; }
-.gliders-on .glider-bg { opacity: .22; animation: glide-in 2.4s cubic-bezier(.2,.7,.2,1) both; }
+:root[data-theme="light"] .gliders-on .glider-bg { opacity: .18; }
+.gliders-on .glider-bg { opacity: .35; animation: glide-in 2.4s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes glide-in { from { transform: translate(-6vw, 3vh); } to { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .gliders-on .glider-bg { animation: none; } }
