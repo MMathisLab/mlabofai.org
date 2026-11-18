@@ -300,7 +300,7 @@ MLAB.research = {
   },
   bio: {
     name: "Biomechanics", accent: "blue",
-    title: "Biomechanics at MLAI",
+    title: "Model the body that produces behavior",
     lede: "MLAI develops biomechanical approaches to understand how body structure, muscle activity and neural control interact to produce movement.",
     intro: [
       "Our work spans musculoskeletal modeling across species, from modeling and analyzing the human arm using OpenSim to developing our own biomechanical model of the mouse arm in MuJoCo. Building on this foundation, we are now extending our work across species and developing the sugar glider as a new model organism for investigating neural-body dynamics.",
@@ -312,7 +312,7 @@ MLAB.research = {
       { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" },
       { video: "assets/video/smpe-perturbation.mp4", poster: "assets/video/smpe-perturbation.jpg", fit: "contain", alt: "A mouse arm model during a perturbed reach next to its linearized counterpart, with the Level 1 SmPE magnitude and neural activity plotted over time", caption: "Perturbed vs. linearized: arm model and neural activity" },
       { video: "assets/video/skeleton-rotation.mp4", poster: "assets/video/skeleton-rotation.jpg", alt: "A 3D skeletal model rotating as the camera zooms out", caption: "3D skeletal model" },
-      { video: "assets/video/skeleton-explosion.mp4", poster: "assets/video/skeleton-explosion.jpg", alt: "Exploded view of a 3D skeletal model, its bones separating", caption: "Exploded view of the skeletal model" }
+      { video: "assets/video/skeleton-explosion.mp4", poster: "assets/video/skeleton-explosion.jpg", alt: "Exploded view of a 3D mouse skeletal model, its bones separating", caption: "Mouse biomechanical model" }
     ],
     projects: [
       { name: "MusBioMaus", pub: "Neuro-musculoskeletal modeling", tag: "From brain to muscle: a neuro-musculoskeletal model of the mouse.", video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
