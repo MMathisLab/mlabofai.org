@@ -310,7 +310,7 @@ MLAB.research = {
     /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
     media: [
       { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" },
-      { video: "assets/video/cebra-s1m1.mp4", poster: "assets/video/cebra-s1m1.jpg", fit: "contain", alt: "CEBRA embeddings of S1 and M1 activity in mice during a joystick reach-and-pull task, alongside hand position and joystick traces", caption: "cebra.ai", link: "https://cebra.ai" }
+      { video: "assets/video/smpe-perturbation.mp4", poster: "assets/video/smpe-perturbation.jpg", fit: "contain", alt: "A mouse arm model during a perturbed reach next to its linearized counterpart, with the Level 1 SmPE magnitude and neural activity plotted over time", caption: "Perturbed vs. linearized: arm model and neural activity" }
     ],
     projects: [
       { name: "MusBioMaus", pub: "Neuro-musculoskeletal modeling", tag: "From brain to muscle: a neuro-musculoskeletal model of the mouse.", video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
