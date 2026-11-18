@@ -324,7 +324,12 @@ MLAB.research = {
   neuro: {
     name: "Neural dynamics", accent: "violet",
     title: "Uncover how the brain controls the body and adapts",
-    lede: "How brains build and update internal models during skilled motor learning, studied with large-scale recordings and consistent latent embeddings of neural and behavioral data.",
+    lede: "MLAI investigates how the brain controls the body, integrates sensory information and adapts to changing conditions and new motor demands.",
+    intro: [
+      "Our research combines the development and application of advanced analytical methods, including CEBRA and DYSCO, with carefully designed experiments to understand the neural mechanisms underlying motor control, learning and adaptation. We focus particularly on vision and proprioception as key sensory systems, studying how the brain integrates these sources of information to guide movement and continuously update its representation of the body and the external world.",
+      "Through large-scale neural recordings and behavioral measurements, we investigate how the brain builds, maintains and updates internal models during skilled motor learning. By developing consistent latent representations of neural activity and behavior, we aim to uncover the underlying structure and dynamics of neural population activity, and understand how these dynamics relate to movement, sensory feedback and adaptation.",
+      "Ultimately, our goal is to reveal how the brain learns to control the body, how it adjusts to changing environments and bodily conditions, and how these processes support flexible and adaptive behavior."
+    ],
     media: { img: "assets/img/media/cebra-sphere.webp", alt: "A CEBRA latent embedding of neural data" },
     projects: [
       { name: "CEBRA", pub: "Learnable latent embeddings", tag: "Consistent latent embeddings of neural and behavioral data.", video: "assets/video/cebra-allen.mp4", poster: "assets/video/cebra-allen-poster.jpg", links: [["cebra.ai", "https://cebra.ai"]] },
