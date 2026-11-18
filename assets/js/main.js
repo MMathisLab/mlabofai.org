@@ -342,6 +342,19 @@
     if (fb) fb.click();
   }
 
+  /* ---------- easter egg: sugar gliders behind the home page hero ---------- */
+  (function () {
+    var egg = document.querySelector(".glider-egg"), hero = document.querySelector(".hero");
+    if (!egg || !hero) return;
+    var layer = document.createElement("div");
+    layer.className = "glider-bg"; layer.setAttribute("aria-hidden", "true");
+    hero.insertBefore(layer, hero.firstChild);
+    egg.addEventListener("click", function () {
+      var on = hero.classList.toggle("gliders-on");
+      egg.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  })();
+
   /* ---------- reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {
