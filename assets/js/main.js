@@ -257,9 +257,36 @@
     if (R.intro && R.intro.length) {
       rq("lede").insertAdjacentHTML("afterend", R.intro.map(function (t) { return '<p class="r-intro">' + esc(t) + "</p>"; }).join(""));
     }
-    rq("media").innerHTML = R.media.video
-      ? '<video src="' + esc(R.media.video) + '" poster="' + esc(R.media.poster) + '" muted loop playsinline autoplay aria-label="' + esc(R.media.alt) + '"></video>'
-      : '<img src="' + esc(R.media.img) + '" alt="' + esc(R.media.alt) + '">';
+    /* header media: one item or several slides that rotate */
+    var slides = [].concat(R.media);
+    var mediaEl = rq("media");
+    mediaEl.innerHTML = slides.map(function (m, i) {
+      var inner = m.video
+        ? '<video src="' + esc(m.video) + '" poster="' + esc(m.poster || "") + '" muted loop playsinline' + (i === 0 && !reduceMotion ? " autoplay" : "") + ' preload="' + (i === 0 ? "auto" : "none") + '" aria-label="' + esc(m.alt) + '"></video>'
+        : '<img src="' + esc(m.img) + '" alt="' + esc(m.alt) + '">';
+      var cap = m.caption ? '<figcaption class="r-cap">' + (m.link
+        ? '<a href="' + esc(m.link) + '"' + (/^https?:/.test(m.link) ? ' target="_blank" rel="noopener"' : "") + ">" + esc(m.caption) + " ↗</a>"
+        : esc(m.caption)) + "</figcaption>" : "";
+      return '<figure class="r-slide' + (m.fit === "contain" ? " contain" : "") + (i === 0 ? " on" : "") + '">' + inner + cap + "</figure>";
+    }).join("") + (slides.length > 1 ? '<div class="r-dots" role="group" aria-label="Choose video">' + slides.map(function (m, i) {
+      return '<button type="button" aria-label="Show video ' + (i + 1) + '"' + (i === 0 ? ' aria-current="true"' : "") + "></button>";
+    }).join("") + "</div>" : "");
+    if (slides.length > 1) {
+      var figs = mediaEl.querySelectorAll(".r-slide"), dots = mediaEl.querySelectorAll(".r-dots button"), cur = 0, timer = null;
+      var show = function (n) {
+        figs[cur].classList.remove("on"); dots[cur].removeAttribute("aria-current");
+        var ov = figs[cur].querySelector("video"); if (ov) ov.pause();
+        cur = (n + figs.length) % figs.length;
+        figs[cur].classList.add("on"); dots[cur].setAttribute("aria-current", "true");
+        var nv = figs[cur].querySelector("video");
+        if (nv && !reduceMotion) { nv.currentTime = 0; var pp = nv.play(); if (pp && pp.catch) pp.catch(function () {}); }
+      };
+      var start = function () { if (!reduceMotion) { clearInterval(timer); timer = setInterval(function () { show(cur + 1); }, 8000); } };
+      dots.forEach(function (d, i) { d.addEventListener("click", function () { show(i); start(); }); });
+      mediaEl.addEventListener("mouseenter", function () { clearInterval(timer); });
+      mediaEl.addEventListener("mouseleave", start);
+      start();
+    }
     rq("switch").innerHTML = Object.keys(M.research).map(function (k) {
       var a = M.research[k];
       return '<a class="filter" data-area="' + k + '" href="research-' + k + '.html"' + (k === rk ? ' aria-pressed="true" aria-current="page"' : ' aria-pressed="false"') + ">" + esc(a.name) + "</a>";

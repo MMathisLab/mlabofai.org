@@ -297,7 +297,11 @@ MLAB.research = {
     name: "Biomechanics", accent: "blue",
     title: "Model the body that produces behavior",
     lede: "Musculoskeletal models across species, from the mouse to the human arm, plus body-constrained 3D pose, linking movement to muscles and back to the brain.",
-    media: { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return" },
+    /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
+    media: [
+      { video: "assets/video/fmpose3d-biomech.mp4", poster: "assets/video/fmpose3d-biomech.jpg", fit: "contain", alt: "A runner filmed with one camera, the 3D pose FMPose3D recovers, and a skeletal model driven by that pose", caption: "FMPose3D: from one camera to 3D pose to a skeletal model", link: "https://xiu-cs.github.io/FMPose3D/" },
+      { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" }
+    ],
     projects: [
       { name: "MusBioMaus", pub: "Neuro-musculoskeletal modeling", tag: "From brain to muscle: a neuro-musculoskeletal model of the mouse.", video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
       { name: "Primate imitation learning", pub: "Closed-loop imitation learning", tag: "Closed-loop imitation learning reveals muscle-centric and latent-goal codes in primate sensorimotor cortex." },
