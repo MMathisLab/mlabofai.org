@@ -254,15 +254,18 @@
     });
   }
   function addPersonPapers(scope) {
-    [].forEach.call(scope.querySelectorAll(".person"), function (card) {
+    [].forEach.call(scope.querySelectorAll(".person, .alumni-group li"), function (card) {
       if (card.querySelector(".person-papers")) return;
-      var h = card.querySelector("h4");
-      if (!h) return;
-      var list = papersFor(h.textContent);
+      if (card.closest("#collaborators")) return;
+      var h = card.matches(".person") ? card.querySelector("h4") : card.firstChild;
+      var nm = h ? (h.nodeType === 3 ? h.textContent : h.textContent) : "";
+      nm = nm.trim();
+      if (!nm) return;
+      var list = papersFor(nm);
       if (!list.length) return;
       var d = document.createElement("details");
       d.className = "person-papers";
-      d.innerHTML = "<summary>" + list.length + (list.length === 1 ? " paper" : " papers") + "</summary><ul>" +
+      d.innerHTML = "<summary>Lab papers</summary><ul>" +
         list.map(function (p) {
           return '<li><a href="' + esc(p.url) + '" target="_blank" rel="noopener"><span class="pp-y">' + p.year + "</span>" + esc(p.title) + "</a></li>";
         }).join("") + "</ul>";

@@ -1115,3 +1115,7 @@ a.pillar-media { display: block; }
 .person-papers a { color: var(--text-2, var(--muted)); line-height: 1.35; display: block; }
 .person-papers a:hover { color: var(--text); }
 .pp-y { display: block; font-family: var(--mono); font-size: .68rem; color: var(--dim); }
+.alumni-group li .person-papers { margin-top: 6px; }
+.alumni-group .person-papers li { border: 0; padding: 0; font-size: .78rem; }
+.alumni-group .person-papers a { text-decoration: none; }
+.alumni-group .person-papers ul { margin-bottom: 4px; }
