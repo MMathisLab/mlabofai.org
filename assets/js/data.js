@@ -138,7 +138,7 @@ MLAB.news = [
   { period: "Summer / Fall 2025", images: ["assets/img/news/news-247b158b61.webp", "assets/img/news/news-be936da0a8.webp", "assets/img/news/news-f7f848cda2.webp"], items: [
     { type: "grant", text: "The lab joins the Simons Collaboration on Ecological Neuroscience (SCENE) with $8M in funding from the Simons Foundation, kicking off in July 2025. Mackenzie Weygandt Mathis heads the data science core and joins the mouse and theory teams.", links: [["project-scene.org", "https://project-scene.org"]] },
     { type: "award", text: "Mackenzie Weygandt Mathis receives the 2025 SGV Award for non-invasive animal tracking with DeepLabCut." },
-    { type: "people", text: "Ti Wang and Xiaohang Yu pass their candidacy exams; Ananda Wolz and Sander Meisen complete their master's theses." },
+    { type: "people", text: "Ti Wang and Xiaohang Yu pass their candidacy exams; Ananda Wolz and Sander Miesen complete their master's theses." },
     { type: "paper", text: "DISTIL is accepted to ICCV 2025 (Hossein Mirzaei, with interns Zeinab Taghavi, Sepehr Rezaee, Masoud Hadi and Moein Madadi).", links: [["Paper", "https://arxiv.org/abs/2507.22813"]] },
     { type: "people", text: "Hossein Mirzaei passes his candidacy exam." },
     { type: "award", text: "Célia Benquet is accepted to the EPFL PhD Excellence Program.", links: [["EPFL PhD Excellence Program", "https://actu.epfl.ch/news/welcoming-the-fourth-cohort-of-the-phd-excellenc-3/"]] },
