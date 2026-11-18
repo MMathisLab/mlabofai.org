@@ -626,10 +626,10 @@ a.card:hover .go { transform: translate(3px, -3px); }
 
 /* software page */
 .card.sw h3 { margin-top: 4px; }
-.sw-papers { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; }
-.sw-papers a { color: var(--muted); font-family: var(--mono); font-size: 0.78rem; }
-.sw-papers a::before { content: "↗ "; color: var(--accent); }
-.sw-papers a:hover { color: var(--text); }
+.sw-papers { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.sw-papers a { display: inline-block; font-size: 0.82rem; font-weight: 500; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text); transition: border-color .2s, background .2s; }
+.sw-papers a::after { content: " ↗"; }
+.sw-papers a:hover { border-color: color-mix(in srgb, var(--accent) 70%, transparent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
 .feature.sw { min-height: 0; }
 .grid-2 > .feature { grid-column: auto; }
 
@@ -1075,3 +1075,4 @@ a.card:hover .go { transform: translate(3px, -3px); }
 @media (max-width: 900px) { .brand-epfl { margin-left: 12px; padding-left: 12px; } .brand-epfl img { height: 16px; } }
 @media (max-width: 420px) { .brand-epfl { margin-left: 10px; padding-left: 10px; } .brand-epfl img { height: 14px; } .brand { gap: 8px; } .brand-logo { height: 36px; } }
 @media (max-width: 900px) { .brand-epfl { margin-right: 10px; } }
+.card-media.contain video { object-fit: contain; }
