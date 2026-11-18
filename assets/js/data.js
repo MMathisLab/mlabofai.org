@@ -323,6 +323,7 @@ MLAB.research = {
   },
   neuro: {
     name: "Neural dynamics", accent: "violet",
+    projectsTitle: "What we're discovering.",
     title: "Uncover how the brain controls the body and adapts",
     lede: "MLAI investigates how the brain controls the body, integrates sensory information and adapts to changing conditions and new motor demands.",
     intro: [
