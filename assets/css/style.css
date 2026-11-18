@@ -1076,3 +1076,8 @@ a.card:hover .go { transform: translate(3px, -3px); }
 @media (max-width: 420px) { .brand-epfl { margin-left: 10px; padding-left: 10px; } .brand-epfl img { height: 14px; } .brand { gap: 8px; } .brand-logo { height: 36px; } }
 @media (max-width: 900px) { .brand-epfl { margin-right: 10px; } }
 .card-media.contain video { object-fit: contain; }
+/* Software: one even grid */
+@media (min-width: 641px) { .sw-grid { grid-auto-rows: 1fr; } }
+.sw-grid .card-links { margin-top: auto; }
+.sw-papers { gap: 6px; }
+.sw-papers a { font-size: 0.75rem; padding: 4px 10px; }
