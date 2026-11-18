@@ -647,7 +647,7 @@ a.card:hover .go { transform: translate(3px, -3px); }
 }
 
 /* nav ordering with theme toggle */
-.nav > .brand { order: 1; }
+.nav > .brand, .nav > .brand-epfl { order: 1; }
 .nav > .nav-links { order: 2; margin-left: auto; }
 .nav > .theme-toggle { order: 3; margin-left: 12px; }
 .nav > .nav-toggle { order: 4; margin-left: 10px; }
@@ -1069,3 +1069,9 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .r-dots button[aria-current="true"] { background: #fff; }
 .r-dots button { box-shadow: 0 0 0 1px rgba(0,0,0,.35); }
 .r-dots button[aria-current="true"] { background: var(--accent, #fff); box-shadow: 0 0 0 1px rgba(255,255,255,.6); }
+/* EPFL logo beside the lab logo in the header */
+.brand-epfl { display: flex; align-items: center; margin-left: 18px; padding-left: 18px; border-left: 1px solid var(--line-strong); height: 32px; line-height: 0; }
+.brand-epfl img { height: 20px; width: auto; display: block; }
+@media (max-width: 900px) { .brand-epfl { margin-left: 12px; padding-left: 12px; } .brand-epfl img { height: 16px; } }
+@media (max-width: 420px) { .brand-epfl { margin-left: 10px; padding-left: 10px; } .brand-epfl img { height: 14px; } .brand { gap: 8px; } .brand-logo { height: 36px; } }
+@media (max-width: 900px) { .brand-epfl { margin-right: 10px; } }

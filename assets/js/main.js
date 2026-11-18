@@ -254,6 +254,7 @@
     rq("name").textContent = R.name;
     rq("title").textContent = R.title;
     rq("lede").textContent = R.lede;
+    if (R.projectsTitle) rq("proj-head").textContent = R.projectsTitle;
     if (R.intro && R.intro.length) {
       rq("lede").insertAdjacentHTML("afterend", R.intro.map(function (t) { return '<p class="r-intro">' + esc(t) + "</p>"; }).join(""));
     }

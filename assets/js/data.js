@@ -323,6 +323,7 @@ MLAB.research = {
   },
   neuro: {
     name: "Neural dynamics", accent: "violet",
+    projectsTitle: "What we're discovering.",
     title: "Uncover how the brain controls the body and adapts",
     lede: "MLAI investigates how the brain controls the body, integrates sensory information and adapts to changing conditions and new motor demands.",
     intro: [
@@ -338,7 +339,7 @@ MLAB.research = {
     projects: [
       { name: "CEBRA", pub: "Learnable latent embeddings", tag: "Consistent latent embeddings of neural and behavioral data.", video: "assets/video/cebra-allen.mp4", poster: "assets/video/cebra-allen-poster.jpg", links: [["cebra.ai", "https://cebra.ai"]] },
       { name: "Prediction errors in S1", pub: "Neuro-musculoskeletal modeling", tag: "Neuro-musculoskeletal modeling and large-scale imaging across multiple brain areas reveal muscle-level prediction errors in S1 cortex during adaptive learning.", links: [["MusBioMaus", "https://www.mausspaun.org/"]] },
-      { name: "DYSCO", pub: "Extracting Governing Equations", tag: "The equations of motor cortex, learned from spikes." },
+      { name: "DYSCO", pub: "Extracting Governing Equations", tag: "Extracts the governing equations of dynamical systems, such as neural populations, from their latent dynamics." },
       { name: "Active sensing", pub: "Visual uncertainty and task demands", tag: "Mice use internal models to actively seek better views to make visual decisions." },
       { name: "Brain dynamics in schizophrenia", pub: "An explainable AI latent space", tag: "An explainable latent space of brain dynamics reveals a cerebello-prefrontal signature of symptoms." },
       { name: "SCENE", pub: "The Simons Collaboration on Ecological Neuroscience", tag: "Studying how the brain interacts with the world.", links: [["project-scene.org", "https://www.project-scene.org"]] }
