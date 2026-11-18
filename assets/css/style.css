@@ -1081,3 +1081,9 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .sw-grid .card-links { margin-top: auto; }
 .sw-papers { gap: 6px; }
 .sw-papers a { font-size: 0.75rem; padding: 4px 10px; }
+/* Software cards: compact */
+.sw-grid .card { padding: 22px 24px; gap: 8px; }
+.sw-grid .card-media { height: 160px; margin: -22px -24px 12px; }
+.sw-grid .card h3 { margin: 0; }
+.sw-grid .card p { margin: 0; }
+.sw-grid .card-links { padding-top: 12px; }
