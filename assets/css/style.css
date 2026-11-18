@@ -211,7 +211,8 @@ p { margin: 0 0 1em; }
   }
   .nav-open .nav-links { opacity: 1; transform: none; pointer-events: auto; }
   .nav-links a { padding: 14px 4px; border-radius: 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
-  .nav-links .nav-cta a { margin: 14px 0 0; text-align: center; border-radius: 999px; border: 0; }
+  .nav-links .nav-cta a { margin: 0; color: var(--muted); background: none; font-weight: inherit; text-align: left; }
+  .nav-links .nav-cta a:hover, .nav-links .nav-cta a[aria-current="page"] { color: var(--text); background: none; }
 }
 
 /* --------------------------------------------------------------------------
@@ -998,3 +999,22 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .open-list li { position: relative; padding-left: 16px; color: var(--muted); font-size: .95rem; line-height: 1.55; }
 .open-list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent, var(--teal)); }
 .open-list b { color: var(--text); font-weight: 500; }
+
+/* Collaborators: labs | SCENE (two columns) */
+.alumni.collab { columns: auto; display: grid; grid-template-columns: 1fr 2fr; gap: 0 40px; align-items: start; }
+.alumni-group.scene ul { columns: 2 220px; column-gap: 40px; }
+.alumni-group.scene li { break-inside: avoid; }
+@media (max-width: 800px) { .alumni.collab { grid-template-columns: 1fr; } }
+
+.pub-icon.a-dev { --accent: var(--amber); }
+
+/* Publication filters carry their category color */
+.filter[data-area="cv"] { --fc: var(--teal); }
+.filter[data-area="ml"] { --fc: var(--magenta); }
+.filter[data-area="neuro"] { --fc: var(--violet); }
+.filter[data-area="bio"] { --fc: var(--blue); }
+.filter[data-area="dev"] { --fc: var(--amber); }
+.filter[data-area]:not([data-area="all"]) { color: var(--fc); border-color: color-mix(in srgb, var(--fc) 45%, transparent); }
+.filter[data-area]:not([data-area="all"]):hover { border-color: var(--fc); }
+.filter[data-area]:not([data-area="all"])[aria-pressed="true"] { background: var(--fc); border-color: var(--fc); color: #000; }
+.filters .filter[data-area="ml"][aria-pressed="true"], .filters .filter[data-area="neuro"][aria-pressed="true"], .filters .filter[data-area="bio"][aria-pressed="true"] { color: #fff; }
