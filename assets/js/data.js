@@ -309,7 +309,7 @@ MLAB.research = {
     ],
     /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
     media: [
-      { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" },
+      { video: "assets/video/musbiomaus-mimic.mp4", poster: "assets/video/musbiomaus-mimic.jpg", fit: "contain", alt: "MusBioMaus re-enacting a mouse reach, pull and return", caption: "MusBioMaus re-enacts a mouse's reach, pull and return", link: "https://www.mausspaun.org/" },
       { video: "assets/video/smpe-perturbation.mp4", poster: "assets/video/smpe-perturbation.jpg", fit: "contain", alt: "A mouse arm model during a perturbed reach next to its linearized counterpart, with the Level 1 SmPE magnitude and neural activity plotted over time", caption: "Perturbed vs. linearized: arm model and neural activity" },
       { video: "assets/video/skeleton-rotation.mp4", poster: "assets/video/skeleton-rotation.jpg", alt: "A 3D sugar glider skeletal model rotating as the camera zooms out", caption: "Sugar glider biomechanical model" },
       { video: "assets/video/skeleton-explosion.mp4", poster: "assets/video/skeleton-explosion.jpg", alt: "Exploded view of a 3D mouse skeletal model, its bones separating", caption: "Mouse biomechanical model" }
