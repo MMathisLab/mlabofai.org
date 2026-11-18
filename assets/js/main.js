@@ -248,6 +248,10 @@
     return String(x).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/<[^>]+>/g, "").replace(/[*\u2020]/g, "").trim().toLowerCase();
   }
   function papersFor(name) {
+    var only = M.labPapers && M.labPapers[name.trim()];
+    if (only) return (M.publications || []).filter(function (p) {
+      return only.some(function (t) { return p.title.indexOf(t) === 0; });
+    });
     var w = normName(name).split(/\s+/), f = w[0], l = w[w.length - 1];
     return (M.publications || []).filter(function (p) {
       return !p.pre && p.authors.split(/,\s*/).some(function (a) {
