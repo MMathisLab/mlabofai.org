@@ -295,6 +295,7 @@ MLAB.research = {
       { name: "PRIMA", pub: "PRIMA", tag: "3D animal body meshes from images, guided by taxonomic priors.", links: [["Project page", "https://lexiyutou.github.io/PRIMA/"]] },
       { name: "SuperAnimal", pub: "SuperAnimal pretrained pose estimation models", tag: "Pretrained pose estimation models for behavioral analysis across species.", links: [["DeepLabCut", "deeplabcut.html"]] },
       { name: "LLaVAction", pub: "LLaVAction", tag: "Multimodal large language models for action understanding.", links: [["Project page", "https://llavaction.epfl.ch/"]] },
+      { name: "CellSeg3D", pub: "CellSeg3D", tag: "Self-supervised 3D cell segmentation for fluorescence microscopy, as a napari plugin.", video: "assets/video/cellseg3d-demo.mp4", poster: "assets/video/cellseg3d-demo.jpg", links: [["Code", "https://github.com/AdaptiveMotorControlLab/CellSeg3D"]] },
       { name: "Brown bear ID", pub: "Individual identification of brown bears", tag: "Recognizing individual bears with pose-aware metric learning." }
     ]
   },
