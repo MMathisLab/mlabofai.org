@@ -66,7 +66,9 @@
     if (p.pi) { p.x = CX - R - 40; p.y = CY - R + 30; return; }  // PI sits off to the left of the ring
     // weighted centroid of the person's themes; data-lean="ml" on a card pulls that person toward one theme
     var sx = 0, sy = 0, sw = 0;
-    p.themes.forEach(function (k) { var w = k === p.lean ? 4 : 1; sx += w * byKey[k].x; sy += w * byKey[k].y; sw += w; });
+    // data-lean="neuro" pulls strongly toward one theme; data-lean="cv:1.5" sets how strongly
+    var lk = p.lean ? p.lean.split(":")[0] : null, lw = p.lean && p.lean.indexOf(":") > 0 ? parseFloat(p.lean.split(":")[1]) : 4;
+    p.themes.forEach(function (k) { var w = k === lk ? lw : 1; sx += w * byKey[k].x; sy += w * byKey[k].y; sw += w; });
     sx /= sw; sy /= sw;
     // single-theme people sit just inside their theme; multi-theme people sit between theirs
     var pull = p.lean ? 0.8 : (p.themes.length === 1 ? 0.7 : 0.78);
