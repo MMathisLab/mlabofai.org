@@ -342,6 +342,23 @@
     if (fb) fb.click();
   }
 
+  /* ---------- easter egg: sugar gliders (stays on while browsing this tab) ---------- */
+  (function () {
+    var layer = document.createElement("div");
+    layer.className = "glider-bg"; layer.setAttribute("aria-hidden", "true");
+    document.body.insertBefore(layer, document.body.firstChild);
+    var on = false;
+    try { on = sessionStorage.getItem("gliders") === "1"; } catch (e) {}
+    function set(v) {
+      on = v;
+      document.body.classList.toggle("gliders-on", v);
+      document.querySelectorAll(".glider-egg").forEach(function (b) { b.setAttribute("aria-pressed", v ? "true" : "false"); });
+      try { sessionStorage.setItem("gliders", v ? "1" : "0"); } catch (e) {}
+    }
+    set(on);
+    document.querySelectorAll(".glider-egg").forEach(function (b) { b.addEventListener("click", function () { set(!on); }); });
+  })();
+
   /* ---------- reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {
