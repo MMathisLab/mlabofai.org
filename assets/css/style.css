@@ -1069,3 +1069,7 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .r-dots button[aria-current="true"] { background: #fff; }
 .r-dots button { box-shadow: 0 0 0 1px rgba(0,0,0,.35); }
 .r-dots button[aria-current="true"] { background: var(--accent, #fff); box-shadow: 0 0 0 1px rgba(255,255,255,.6); }
+/* EPFL logo in the home hero */
+.hero-epfl { display: block; width: max-content; margin-bottom: 26px; line-height: 0; }
+.hero-epfl img { height: 32px; width: auto; display: block; }
+@media (max-width: 700px) { .hero-epfl img { height: 26px; } }
