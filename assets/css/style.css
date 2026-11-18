@@ -1062,7 +1062,7 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .r-slide.contain video, .r-slide.contain img { object-fit: contain; }
 .r-cap { position: absolute; left: 12px; bottom: 12px; right: 70px; font-size: .78rem; }
 .r-cap, .r-cap a { color: #fff; }
-.r-cap a, .r-cap:not(:has(a)) { display: inline-block; background: rgba(0,0,0,.6); backdrop-filter: blur(6px); padding: 5px 10px; border-radius: 999px; text-decoration: none; }
+.r-cap a, .r-cap span { display: inline-block; background: rgba(0,0,0,.6); backdrop-filter: blur(6px); padding: 5px 10px; border-radius: 999px; text-decoration: none; }
 .r-cap a:hover { background: rgba(0,0,0,.8); }
 .r-dots { position: absolute; right: 12px; bottom: 16px; display: flex; gap: 6px; z-index: 2; }
 .r-dots button { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: rgba(255,255,255,.45); cursor: pointer; }

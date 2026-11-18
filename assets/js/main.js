@@ -266,7 +266,7 @@
         : '<img src="' + esc(m.img) + '" alt="' + esc(m.alt) + '">';
       var cap = m.caption ? '<figcaption class="r-cap">' + (m.link
         ? '<a href="' + esc(m.link) + '"' + (/^https?:/.test(m.link) ? ' target="_blank" rel="noopener"' : "") + ">" + esc(m.caption) + " ↗</a>"
-        : esc(m.caption)) + "</figcaption>" : "";
+        : "<span>" + esc(m.caption) + "</span>") + "</figcaption>" : "";
       return '<figure class="r-slide' + (m.fit === "contain" ? " contain" : "") + (i === 0 ? " on" : "") + '"' + (m.bg ? ' style="background:' + esc(m.bg) + '"' : "") + ">" + inner + cap + "</figure>";
     }).join("") + (slides.length > 1 ? '<div class="r-dots" role="group" aria-label="Choose video">' + slides.map(function (m, i) {
       return '<button type="button" aria-label="Show video ' + (i + 1) + '"' + (i === 0 ? ' aria-current="true"' : "") + "></button>";
