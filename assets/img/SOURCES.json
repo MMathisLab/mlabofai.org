@@ -296,6 +296,14 @@
   {
    "file": "assets/img/papers/balci2023-neuron.webp",
    "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
+  },
+  {
+   "file": "assets/img/papers/vargas2025-neuripsw.webp",
+   "original": "same crop as vargas2026-biorxiv (Fig. 2A of the bioRxiv preprint)"
+  },
+  {
+   "file": "assets/img/papers/benjamin2025-neuripsw.webp",
+   "original": "generated placeholder tile (venue + year); replace with a paper figure when available"
   }
  ]
 }
