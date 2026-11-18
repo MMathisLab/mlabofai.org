@@ -24,6 +24,19 @@
     });
   }
 
+  /* Software dropdown on touch screens wide enough for the desktop nav:
+     first tap opens the menu, a second tap on "Software" follows the link. */
+  var sub = document.querySelector(".has-sub");
+  if (sub) {
+    var subLink = sub.querySelector(":scope > a");
+    subLink.addEventListener("click", function (e) {
+      var desktopNav = window.matchMedia("(min-width: 901px)").matches;
+      var noHover = window.matchMedia("(hover: none)").matches;
+      if (desktopNav && noHover && !sub.classList.contains("open")) { e.preventDefault(); sub.classList.add("open"); }
+    });
+    document.addEventListener("click", function (e) { if (!sub.contains(e.target)) sub.classList.remove("open"); });
+  }
+
   /* ---------- light / dark toggle ---------- */
   var root = document.documentElement;
   function setThemeLabel() {
@@ -103,6 +116,7 @@
       '<div class="pub-venue">' + esc(p.venue) + '<span class="yr">' + p.year + "</span></div>" +
       '<div class="pub-main"><div class="pub-title"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></div>" +
       '<div class="pub-authors">' + p.authors + "</div>" +
+      (p.note ? '<div class="pub-note">' + esc(p.note) + "</div>" : "") +
       (p.press && p.press.length ? '<div class="pub-press">' + p.press.map(function (l) {
         return '<a href="' + esc(l[1]) + '" target="_blank" rel="noopener">' + esc(l[0]) + " ↗</a>";
       }).join(" · ") + "</div>" : "") + "</div>" +

@@ -87,7 +87,7 @@
             <span class="eyebrow">Computer vision</span>
             <h3>Measure behavior when labels are scarce</h3>
             <p>Markerless pose estimation, pretrained animal foundation models, 3D lifting from a single camera and multimodal models for action understanding.</p>
-            <ul class="chips"><li><a class="chip chip-link" href="https://deeplabcut.org" target="_blank" rel="noopener">DeepLabCut<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://www.nature.com/articles/s41467-024-48792-2" target="_blank" rel="noopener">SuperAnimal<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://xiu-cs.github.io/FMPose3D/" target="_blank" rel="noopener">FMPose3D<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://mmathislab.github.io/llavaction" target="_blank" rel="noopener">LLaVAction<span aria-hidden="true">↗</span></a></li></ul>
+            <ul class="chips"><li><a class="chip chip-link" href="https://deeplabcut.org" target="_blank" rel="noopener">DeepLabCut<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://www.nature.com/articles/s41467-024-48792-2" target="_blank" rel="noopener">SuperAnimal<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://xiu-cs.github.io/FMPose3D/" target="_blank" rel="noopener">FMPose3D<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://lexiyutou.github.io/PRIMA/" target="_blank" rel="noopener">PRIMA<span aria-hidden="true">↗</span></a></li><li><a class="chip chip-link" href="https://mmathislab.github.io/llavaction" target="_blank" rel="noopener">LLaVAction<span aria-hidden="true">↗</span></a></li></ul>
           </article>
           <article class="pillar bio reveal">
             <div class="pillar-media"><video src="assets/video/musbiomaus-mimic.mp4" poster="assets/video/musbiomaus-mimic.jpg" muted loop playsinline preload="none" aria-label="MusBioMaus re-enacting a mouse reach, pull and return"></video></div>
@@ -169,7 +169,7 @@
             <h3>DYSCO</h3>
             <p class="hl-tag">The equations of motor cortex, learned from spikes.</p>
             <p>DYSCO uses multi-view contrastive learning to recover hidden neural trajectories and the dynamics that govern them, then writes those dynamics down as equations you can read.</p>
-            <p class="hl-authors">Paolo Muratore &amp; Mackenzie Weygandt Mathis</p>
+            <p class="hl-authors">Paolo Muratore &amp; Mackenzie Weygandt Mathis†</p>
             <div class="card-links" style="--accent:var(--magenta)"><a href="https://arxiv.org/abs/2606.13260" target="_blank" rel="noopener">Paper ↗</a><a href="assets/video/dysco.mp4" target="_blank" rel="noopener">Full video ↗</a></div>
           </div>
         </article>
@@ -183,8 +183,8 @@
             <h3>FMPose3D</h3>
             <p class="hl-tag">3D pose from a single camera, with flow matching.</p>
             <p>FMPose3D trains with 3D data, then lifts 2D keypoints from a single camera into plausible 3D poses, for humans and animals alike.</p>
-            <p class="hl-authors">Ti Wang, Xiaohang Yu &amp; Mackenzie Weygandt Mathis</p>
-            <div class="card-links" style="--accent:var(--teal)"><a href="https://arxiv.org/abs/2602.05755" target="_blank" rel="noopener">Paper ↗</a><a href="https://xiu-cs.github.io/FMPose3D/" target="_blank" rel="noopener">Project ↗</a></div>
+            <p class="hl-authors">Ti Wang, Xiaohang Yu &amp; Mackenzie Weygandt Mathis†</p>
+            <div class="card-links" style="--accent:var(--teal)"><a href="https://arxiv.org/abs/2602.05755" target="_blank" rel="noopener">Paper ↗</a><a href="assets/video/fmpose3d.mp4" target="_blank" rel="noopener">Full video ↗</a><a href="https://xiu-cs.github.io/FMPose3D/" target="_blank" rel="noopener">Project ↗</a></div>
           </div>
         </article>
         <article class="highlight" id="hl-musbiomaus" role="tabpanel" aria-labelledby="tab-musbiomaus" hidden>
@@ -197,7 +197,7 @@
             <h3>MusBioMaus</h3>
             <p class="hl-tag">From brain to muscle, across species.</p>
             <p>Behavior is produced by bodies, so we model them. MusBioMaus is a neuro-musculoskeletal model of the mouse that links sensorimotor cortex to individual muscles. Here it re-enacts a real mouse's reach, pull and return.</p>
-            <p class="hl-authors">Travis DeWolf, Steffen Schneider, Paul Soubiran, Adrian Roggenbach, Paolo Muratore &amp; Mackenzie Weygandt Mathis</p>
+            <p class="hl-authors">Travis DeWolf*, Steffen Schneider*, Paul Soubiran, Adrian Roggenbach, Paolo Muratore &amp; Mackenzie Weygandt Mathis†</p>
             <div class="card-links" style="--accent:var(--blue)"><a href="https://www.biorxiv.org/content/10.1101/2024.09.11.612513" target="_blank" rel="noopener">Preprint ↗</a><a href="https://www.mausspaun.org/" target="_blank" rel="noopener">MusBioMaus ↗</a></div>
             <p class="hl-also">Also in biomechanics: <a href="https://elifesciences.org/articles/81499" target="_blank" rel="noopener">DeepDraw</a>, human arm models of proprioception (eLife 2023), and <a href="https://ieeexplore.ieee.org/document/9561338" target="_blank" rel="noopener">AcinoSet</a>, body-constrained 3D pose of cheetahs in the wild (ICRA 2021).</p>
           </div>
@@ -212,8 +212,8 @@
             <h3>CEBRA</h3>
             <p class="hl-tag">Decoding what a mouse sees, from its neurons.</p>
             <p>CEBRA learns consistent latent embeddings of neural activity. Here, embeddings of Neuropixels and two-photon recordings from mouse visual cortex are used to decode which frame of a natural movie the mouse is watching.</p>
-            <p class="hl-authors">Steffen Schneider, Jin Hwa Lee &amp; Mackenzie Weygandt Mathis</p>
-            <div class="card-links" style="--accent:var(--violet)"><a href="https://www.nature.com/articles/s41586-023-06031-6" target="_blank" rel="noopener">Paper ↗</a><a href="https://cebra.ai" target="_blank" rel="noopener">cebra.ai ↗</a></div>
+            <p class="hl-authors">Steffen Schneider*, Jin Hwa Lee* &amp; Mackenzie Weygandt Mathis†</p>
+            <div class="card-links" style="--accent:var(--violet)"><a href="https://www.nature.com/articles/s41586-023-06031-6" target="_blank" rel="noopener">Paper ↗</a><a href="assets/video/cebra-allen.mp4" target="_blank" rel="noopener">Full video ↗</a><a href="https://cebra.ai" target="_blank" rel="noopener">cebra.ai ↗</a></div>
           </div>
         </article>
         </div>
