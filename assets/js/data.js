@@ -287,7 +287,8 @@ MLAB.research = {
     /* several slides rotate in the header; "fit": "contain" keeps wide videos uncropped */
     media: [
       { video: "assets/video/reel/cheetah.mp4", poster: "assets/video/reel/cheetah.jpg", alt: "A cheetah tracked with DeepLabCut", caption: "DeepLabCut tracking a cheetah", link: "deeplabcut.html" },
-      { video: "assets/video/fmpose3d-biomech.mp4", poster: "assets/video/fmpose3d-biomech.jpg", fit: "contain", alt: "A runner filmed with one camera, the 3D pose FMPose3D recovers, and a skeletal model driven by that pose", caption: "FMPose3D: from one camera to 3D pose to a skeletal model", link: "https://xiu-cs.github.io/FMPose3D/" }
+      { video: "assets/video/fmpose3d-biomech.mp4", poster: "assets/video/fmpose3d-biomech.jpg", fit: "contain", alt: "A runner filmed with one camera, the 3D pose FMPose3D recovers, and a skeletal model driven by that pose", caption: "FMPose3D: from one camera to 3D pose to a skeletal model", link: "https://xiu-cs.github.io/FMPose3D/" },
+      { video: "assets/video/prima-davis.mp4", poster: "assets/video/prima-davis.jpg", fit: "contain", alt: "PRIMA fitting 3D body meshes to a cow, a dog, a horse and a bear in video", caption: "PRIMA: 3D animal body meshes from video", link: "https://lexiyutou.github.io/PRIMA/" }
     ],
     projects: [
       { name: "FMPose3D", pub: "FMPose3D", tag: "3D pose from a single camera, with flow matching.", video: "assets/video/fmpose3d.mp4", poster: "assets/video/fmpose3d-poster.jpg", links: [["Project page", "https://xiu-cs.github.io/FMPose3D/"]] },
