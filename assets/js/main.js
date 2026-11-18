@@ -68,12 +68,13 @@
       .sort(function (a, b) { return (b.p.year - a.p.year) || ((b.p.month || 0) - (a.p.month || 0)) || (a.i - b.i); })
       .map(function (x) { return x.p; });
   }
-  var areaName = { cv: "Computer vision", ml: "Machine learning", neuro: "Neuroscience", bio: "Biomechanics" };
+  var areaName = { cv: "Computer vision", ml: "Machine learning", neuro: "Neural dynamics", bio: "Biomechanics", dev: "Developmental neuroscience" };
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function stripTags(s) { return String(s).replace(/<[^>]*>/g, ""); }
 
   /* Small topic icons (24x24, stroke = currentColor) */
   var ICONS = {
+    dev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.2V12M12 12l-5 5M12 12l5 5M7 17l-2 3M7 17l1 3.2M17 17l2 3M17 17l-1 3.2"/></svg>',
     cv: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 7.5v6.5M12 9.5l-4.5 3M12 9.5l4.5 3M12 14l-3.5 5.5M12 14l3.5 5.5"/><circle cx="12" cy="5" r="2" fill="currentColor" stroke="none"/><circle cx="7.5" cy="12.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="16.5" cy="12.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="8.5" cy="19.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="15.5" cy="19.5" r="1.3" fill="currentColor" stroke="none"/></svg>',
     ml: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 6l7 6M5 12h7M5 18l7-6M12 12l7-5M12 12l7 5" opacity=".6"/><circle cx="5" cy="6" r="1.8" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="5" cy="18" r="1.8" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/><circle cx="19" cy="7" r="1.8" fill="currentColor" stroke="none"/><circle cx="19" cy="17" r="1.8" fill="currentColor" stroke="none"/></svg>',
     bio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19l5-6 3 2 6-9"/><circle cx="5" cy="19" r="1.8" fill="currentColor" stroke="none"/><circle cx="10" cy="13" r="1.8" fill="currentColor" stroke="none"/><circle cx="13" cy="15" r="1.8" fill="currentColor" stroke="none"/><circle cx="19" cy="6" r="1.8" fill="currentColor" stroke="none"/><path d="M8 15.5c1.5 1.2 3 1.6 4 1.3" opacity=".5"/></svg>',

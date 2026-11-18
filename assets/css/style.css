@@ -1005,3 +1005,5 @@ a.card:hover .go { transform: translate(3px, -3px); }
 .alumni-group.scene ul { columns: 2 220px; column-gap: 40px; }
 .alumni-group.scene li { break-inside: avoid; }
 @media (max-width: 800px) { .alumni.collab { grid-template-columns: 1fr; } }
+
+.pub-icon.a-dev { --accent: var(--amber); }
