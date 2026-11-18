@@ -121,6 +121,7 @@ MLAB.publications = [
    images (optional): photos shown under that period */
 MLAB.news = [
   { period: "Fall 2026", items: [
+    { type: "paper", text: "PRIMA, which uses biological priors and test-time adaptation to recover 3D animal meshes, is accepted to WACV 2027 (Xiaohang Yu, Ti Wang, Mackenzie Weygandt Mathis).", links: [["Project page", "https://lexiyutou.github.io/PRIMA/"], ["Preprint", "https://arxiv.org/abs/2606.02366"]] },
     { type: "paper", text: "New preprint: PSI (Programmable Semantic Interventions) finds the subspace of a frozen language model's activations that carries a named variable, without labels (Paolo Muratore, Mackenzie Weygandt Mathis).", links: [["Preprint", "https://arxiv.org/abs/2611.21307"], ["Project page", "https://adaptivemotorcontrollab.github.io/psi/"]] }
   ]},
   { period: "Summer 2026", items: [
