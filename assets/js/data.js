@@ -358,7 +358,7 @@ MLAB.research = {
     media: { video: "assets/video/dysco-duffing.mp4", poster: "assets/video/dysco-duffing.jpg", fit: "contain", bg: "#fff", alt: "DYSCO recovering the Duffing equation from data" },
     projects: [
       { name: "DYSCO", pub: "Extracting Governing Equations", tag: "Governing equations, recovered from latent dynamics with multi-view contrastive learning.", video: "assets/video/dysco.mp4", poster: "assets/video/dysco-poster.jpg" },
-      { name: "PSI", pub: "Programmable Semantic Interventions", tag: "Finds where a frozen language model carries a named variable, without labels." },
+      { name: "PSI", pub: "Programmable Semantic Interventions", tag: "Finds where a frozen language model carries a named variable, without labels.", video: "assets/video/psi-dark.mp4", poster: "assets/video/psi-dark.jpg", videoLight: "assets/video/psi-light.mp4", posterLight: "assets/video/psi-light.jpg", fit: "contain", links: [["Project page", "https://adaptivemotorcontrollab.github.io/psi/"]] },
       { name: "AROS", pub: "Adversarially Robust Out-of-Distribution", tag: "Out-of-distribution detection that holds up under adversarial attack." },
       { name: "DISTIL", pub: "DISTIL", tag: "Data-free inversion of trojan triggers via latent diffusion." },
       { name: "Time-series attribution", pub: "Time-series attribution maps", tag: "Attribution maps for time-series models, with regularized contrastive learning." }

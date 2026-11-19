@@ -1137,3 +1137,8 @@ a.pillar-media { display: block; }
 :root[data-theme="light"] .mice-on .mice-bg { opacity: .32; }
 @keyframes mice-in { from { transform: translateX(-4vw); filter: blur(6px); } to { transform: none; filter: none; } }
 @media (prefers-reduced-motion: reduce) { .mice-on .mice-bg { animation: none; } }
+/* Highlights / project cards with a square or light/dark video: show it whole on a matching background */
+.highlight-media.hl-contain video { object-fit: contain; }
+:root[data-theme="light"] .highlight-media.hl-contain { background: #fff; }
+.proj-media.contain video { object-fit: contain; background: #000; }
+:root[data-theme="light"] .proj-media.contain video { background: #fff; }
