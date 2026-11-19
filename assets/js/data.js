@@ -147,7 +147,7 @@ MLAB.news = [
     { type: "people", text: "Ruth Gutjahr and Artur Schneider join as postdocs." },
     { type: "paper", text: "Our preprint on sensorimotor neural dynamics and mouse arm biomechanics is updated on bioRxiv (postdoc Paolo Muratore).", links: [["MusBioMaus", "https://www.mausspaun.org/"], ["Preprint", "https://www.biorxiv.org/content/10.1101/2024.09.11.612513v3"]] }
   ]},
-  { period: "Winter / Spring 2025", images: ["assets/img/news/news-b247909f3c.webp", "assets/img/news/news-a4443e27ec.webp", "assets/img/news/news-99ead6b026.webp", "assets/img/news/news-d3ceed45e9.webp"], items: [
+  { period: "Winter / Spring 2025", images: ["assets/img/news/news-b247909f3c.webp", "assets/img/news/news-a4443e27ec.webp", "assets/img/news/news-d3ceed45e9.webp"], items: [
     { type: "paper", text: "AROS is accepted to ICLR 2025 (Hossein Mirzaei, Mackenzie Weygandt Mathis).", links: [["Paper", "https://arxiv.org/abs/2410.10744"]] },
     { type: "paper", text: "COBRA is accepted to ICLR 2025 (Hossein Mirzaei).", links: [["Paper", "https://arxiv.org/pdf/2501.15434"]] },
     { type: "paper", text: "Time-series attribution maps are accepted to AISTATS 2025 (Steffen, Rodrigo, Anastasiia, Markus, Mackenzie Weygandt Mathis).", links: [["Paper", "https://arxiv.org/abs/2502.12977"]] },
@@ -166,7 +166,7 @@ MLAB.news = [
     { type: "paper", text: "CellSeg3D is preprinted and reviewed at eLife (Cyril).", links: [["EPFL News", "https://actu.epfl.ch/news/self-supervised-label-free-3d-cell-imaging-is-here/"], ["CellSeg3D", "https://github.com/AdaptiveMotorControlLab/CellSeg3d"]] },
     { type: "award", text: "Mackenzie Weygandt Mathis and Alexander Mathis give the FENS 2024 Kandel Prize Lecture in Vienna." }
   ]},
-  { period: "Winter / Spring 2024", images: ["assets/img/news/news-53d2fb9457.webp", "assets/img/news/news-0686d97fab.webp", "assets/img/news/news-bb05721350.webp", "assets/img/news/news-4efb3c09d5.webp", "assets/img/news/news-491b5a6b6e.webp"], items: [
+  { period: "Winter / Spring 2024", images: ["assets/img/news/news-53d2fb9457.webp", "assets/img/news/news-0686d97fab.webp", "assets/img/news/news-4efb3c09d5.webp", "assets/img/news/news-491b5a6b6e.webp"], items: [
     { type: "paper", text: "SuperAnimal is accepted in Nature Communications (Shaokai Ye), with a companion paper in Nature Methods.", links: [["Paper", "https://www.nature.com/articles/s41467-024-48792-2"], ["Companion paper", "https://www.nature.com/articles/s41592-024-02318-2"], ["EPFL news", "https://actu.epfl.ch/news/unifying-behavioral-analysis-through-animal-founda/"]] },
     { type: "people", text: "Célia Benquet becomes a PhD candidate." },
     { type: "award", text: "DeepLabCut receives the Frontiers of Science Award 2023.", links: [["Frontiers of Science Award", "https://2023.icbs.cn/en/web/index/18009_1581229__"]] }
