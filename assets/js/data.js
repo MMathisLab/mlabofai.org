@@ -135,7 +135,7 @@ MLAB.news = [
     { type: "paper", text: "Our review on jointly modeling neural and behavioral data is published in Nature Reviews Neuroscience.", links: [["Paper", "https://www.nature.com/articles/s41583-025-00996-1"]] },
     { type: "people", text: "The software team grows: Jaap, Cyril and Leonardo join to support the SCENE collaboration and DeepLabCut.", links: [["SCENE", "https://project-scene.org"]] }
   ]},
-  { period: "Summer / Fall 2025", images: ["assets/img/news/news-247b158b61.webp", "assets/img/news/news-be936da0a8.webp", "assets/img/news/news-f7f848cda2.webp"], items: [
+  { period: "Summer / Fall 2025", items: [
     { type: "grant", text: "The lab joins the Simons Collaboration on Ecological Neuroscience (SCENE) with $8M in funding from the Simons Foundation, kicking off in July 2025. Mackenzie Weygandt Mathis heads the data science core and joins the mouse and theory teams.", links: [["project-scene.org", "https://project-scene.org"]] },
     { type: "award", text: "Mackenzie Weygandt Mathis receives the 2025 SGV Award for non-invasive animal tracking with DeepLabCut." },
     { type: "people", text: "Ti Wang and Xiaohang Yu pass their candidacy exams; Ananda Wolz and Sander Miesen complete their master's theses." },
@@ -147,7 +147,7 @@ MLAB.news = [
     { type: "people", text: "Ruth Gutjahr and Artur Schneider join as postdocs." },
     { type: "paper", text: "Our preprint on sensorimotor neural dynamics and mouse arm biomechanics is updated on bioRxiv (postdoc Paolo Muratore).", links: [["MusBioMaus", "https://www.mausspaun.org/"], ["Preprint", "https://www.biorxiv.org/content/10.1101/2024.09.11.612513v3"]] }
   ]},
-  { period: "Winter / Spring 2025", images: ["assets/img/news/news-b247909f3c.webp", "assets/img/news/news-a4443e27ec.webp", "assets/img/news/news-d3ceed45e9.webp"], items: [
+  { period: "Winter / Spring 2025", items: [
     { type: "paper", text: "AROS is accepted to ICLR 2025 (Hossein Mirzaei, Mackenzie Weygandt Mathis).", links: [["Paper", "https://arxiv.org/abs/2410.10744"]] },
     { type: "paper", text: "COBRA is accepted to ICLR 2025 (Hossein Mirzaei).", links: [["Paper", "https://arxiv.org/pdf/2501.15434"]] },
     { type: "paper", text: "Time-series attribution maps are accepted to AISTATS 2025 (Steffen, Rodrigo, Anastasiia, Markus, Mackenzie Weygandt Mathis).", links: [["Paper", "https://arxiv.org/abs/2502.12977"]] },
@@ -166,7 +166,7 @@ MLAB.news = [
     { type: "paper", text: "CellSeg3D is preprinted and reviewed at eLife (Cyril).", links: [["EPFL News", "https://actu.epfl.ch/news/self-supervised-label-free-3d-cell-imaging-is-here/"], ["CellSeg3D", "https://github.com/AdaptiveMotorControlLab/CellSeg3d"]] },
     { type: "award", text: "Mackenzie Weygandt Mathis and Alexander Mathis give the FENS 2024 Kandel Prize Lecture in Vienna." }
   ]},
-  { period: "Winter / Spring 2024", images: ["assets/img/news/news-53d2fb9457.webp", "assets/img/news/news-0686d97fab.webp", "assets/img/news/news-4efb3c09d5.webp", "assets/img/news/news-491b5a6b6e.webp"], items: [
+  { period: "Winter / Spring 2024", items: [
     { type: "paper", text: "SuperAnimal is accepted in Nature Communications (Shaokai Ye), with a companion paper in Nature Methods.", links: [["Paper", "https://www.nature.com/articles/s41467-024-48792-2"], ["Companion paper", "https://www.nature.com/articles/s41592-024-02318-2"], ["EPFL news", "https://actu.epfl.ch/news/unifying-behavioral-analysis-through-animal-founda/"]] },
     { type: "people", text: "Célia Benquet becomes a PhD candidate." },
     { type: "award", text: "DeepLabCut receives the Frontiers of Science Award 2023.", links: [["Frontiers of Science Award", "https://2023.icbs.cn/en/web/index/18009_1581229__"]] }
@@ -245,7 +245,7 @@ MLAB.news = [
     { type: "paper", text: "April: The lab's first preprint (with Matthias Bethge) is posted on arXiv." },
     { type: "people", text: "February: Melony Tong completes her senior thesis." }
   ]},
-  { period: "Fall 2017", images: ["assets/img/news/news-532d3550a8.webp", "assets/img/news/news-7c49f01955.webp", "assets/img/news/news-2222fefa84.webp"], items: [
+  { period: "Fall 2017", items: [
     { type: "grant", text: "NVIDIA awards the lab a GPU grant." },
     { type: "people", text: "September 1: The lab opens at Harvard." }
   ]}
