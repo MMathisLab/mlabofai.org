@@ -339,16 +339,17 @@
     rq("projects").innerHTML = R.projects.map(function (pr) {
       var p = pr.pub ? findPub(pr.pub) : null;
       var media = pr.video
-        ? '<video src="' + esc(pr.video) + '" poster="' + esc(pr.poster || "") + '" muted loop playsinline preload="none" aria-label="' + esc(pr.name) + '"></video>'
+        ? '<video src="' + esc(pr.video) + '" poster="' + esc(pr.poster || "") + '"' + (pr.videoLight ? ' data-src-light="' + esc(pr.videoLight) + '" data-poster-light="' + esc(pr.posterLight || "") + '"' : "") + ' muted loop playsinline preload="none" aria-label="' + esc(pr.name) + '"></video>'
         : (p && p.thumb ? '<img src="' + esc(p.thumb) + '" alt="" loading="lazy">' : "");
       var links = (p ? [["Paper", p.url]] : []).concat(pr.links || []);
       return '<article class="proj">' +
-        (media ? '<div class="proj-media">' + media + "</div>" : "") +
+        (media ? '<div class="proj-media' + (pr.fit === "contain" ? " contain" : "") + '">' + media + "</div>" : "") +
         '<div class="proj-body">' +
         (p ? '<span class="badge">' + esc(p.venue) + " · " + p.year + "</span>" : "") +
         "<h3>" + esc(pr.name) + "</h3><p>" + esc(pr.tag) + "</p>" +
         '<div class="card-links">' + links.map(linkHTML).join("") + "</div></div></article>";
     }).join("");
+    themeVideos();
     rq("projects").querySelectorAll("video").forEach(function (v) {
       if (reduceMotion || !("IntersectionObserver" in window)) return;
       new IntersectionObserver(function (es) {
@@ -447,6 +448,23 @@
     }, { rootMargin: "100px" });
     loops.forEach(function (v) { lio.observe(v); });
   }
+
+  /* ---------- videos with a light-mode version (data-src-light) follow the theme ---------- */
+  function themeVideos() {
+    var light = document.documentElement.getAttribute("data-theme") === "light";
+    document.querySelectorAll("video[data-src-light]").forEach(function (v) {
+      if (!v.dataset.srcDark) { v.dataset.srcDark = v.getAttribute("src"); v.dataset.posterDark = v.getAttribute("poster") || ""; }
+      var want = light ? v.dataset.srcLight : v.dataset.srcDark;
+      if (v.getAttribute("src") === want) return;
+      var t = v.currentTime || 0, playing = !v.paused;
+      v.setAttribute("poster", light ? (v.dataset.posterLight || "") : v.dataset.posterDark);
+      v.setAttribute("src", want);
+      v.addEventListener("loadedmetadata", function once() { v.removeEventListener("loadedmetadata", once); try { v.currentTime = t; } catch (e) {} }, false);
+      if (playing) v.play().catch(function () {});
+    });
+  }
+  themeVideos();
+  new MutationObserver(themeVideos).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
   /* ---------- highlight tabs ---------- */
   var tabs = document.querySelectorAll('.hl-tabs [role="tab"]');

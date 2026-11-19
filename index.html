@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=d7e79a2c">
+  <link rel="stylesheet" href="assets/css/style.css?v=115a5288">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -172,13 +172,28 @@
           </div>
         </div>
         <div class="hl-tabs reveal" role="tablist" aria-label="Highlights">
-          <button role="tab" id="tab-dysco" aria-controls="hl-dysco" aria-selected="true">DYSCO</button>
+          <button role="tab" id="tab-psi" aria-controls="hl-psi" aria-selected="true">PSI</button>
+          <button role="tab" id="tab-dysco" aria-controls="hl-dysco" aria-selected="false">DYSCO</button>
           <button role="tab" id="tab-fmpose3d" aria-controls="hl-fmpose3d" aria-selected="false">FMPose3D</button>
           <button role="tab" id="tab-musbiomaus" aria-controls="hl-musbiomaus" aria-selected="false">MusBioMaus</button>
           <button role="tab" id="tab-cebra" aria-controls="hl-cebra" aria-selected="false">CEBRA</button>
         </div>
         <div class="hl-panels reveal">
-        <article class="highlight" id="hl-dysco" role="tabpanel" aria-labelledby="tab-dysco">
+        <article class="highlight" id="hl-psi" role="tabpanel" aria-labelledby="tab-psi">
+          <div class="highlight-media hl-contain">
+            <video class="hl-video" src="assets/video/psi-dark.mp4" poster="assets/video/psi-dark.jpg" data-src-light="assets/video/psi-light.mp4" data-poster-light="assets/video/psi-light.jpg" muted loop playsinline preload="none" aria-label="PSI explainer: Gemma 2 answers a multiple-choice question, PSI learns which directions inside the model to swap, and the user then chooses the model's answer"></video>
+            <button class="hl-toggle" type="button" aria-label="Pause video"><span class="i-pause" aria-hidden="true"></span></button>
+          </div>
+          <div class="highlight-text">
+            <span class="badge" style="--accent:var(--magenta)">arXiv · 2026</span>
+            <h3>PSI</h3>
+            <p class="hl-tag">Find where a language model carries a concept, then steer it.</p>
+            <p>Programmable Semantic Interventions learn, from unlabeled pairs of prompts, which directions in a frozen language model's activations carry a named variable. Swapping along those directions lets you choose the model's answer, as shown here with Gemma 2.</p>
+            <p class="hl-authors">Paolo Muratore† &amp; Mackenzie Weygandt Mathis†</p>
+            <div class="card-links" style="--accent:var(--magenta)"><a href="https://arxiv.org/abs/2611.21307" target="_blank" rel="noopener">Paper ↗</a><a href="https://adaptivemotorcontrollab.github.io/psi/" target="_blank" rel="noopener">Project page ↗</a></div>
+          </div>
+        </article>
+        <article class="highlight" id="hl-dysco" role="tabpanel" aria-labelledby="tab-dysco" hidden>
           <div class="highlight-media">
             <video class="hl-video" src="assets/video/dysco.mp4" poster="assets/video/dysco-poster.jpg" muted loop playsinline preload="none" aria-label="DYSCO video"></video>
             <button class="hl-toggle" type="button" aria-label="Pause video"><span class="i-pause" aria-hidden="true"></span></button>
@@ -360,7 +375,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/data.js?v=9203a8df"></script>
-  <script src="assets/js/main.js?v=d74600d8"></script>
+  <script src="assets/js/data.js?v=38e7f613"></script>
+  <script src="assets/js/main.js?v=01c6c4f5"></script>
 </body>
 </html>
